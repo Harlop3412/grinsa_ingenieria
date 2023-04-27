@@ -1,0 +1,342 @@
+/*******************utilidades_variables*********************/
+/*colors*/
+/*spacings*/
+/*font-sizes*/
+/************** base_reset.scss******************************/
+*::after,
+*::before,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+  html body {
+    font-family: 'Roboto', sans-serif; }
+    html body img {
+      width: 100%; }
+    html body a {
+      text-decoration: none; }
+    html body li {
+      list-style-type: none; }
+
+/********************utilidades_funciones*********************/
+/**************HEADER**************/
+/*color fondo nav, position*/
+.navbar {
+  background-color: #be4e04;
+  padding: 0px;
+  position: fixed;
+  z-index: 2;
+  /* size fuente nav*/
+  /*margenes contenedor logo prop clip-path da forma de punta al contenedor*/ }
+  .navbar .navbar-nav {
+    margin-left: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: none;
+    align-items: none;
+    flex-wrap: none; }
+    .navbar .navbar-nav a {
+      font-size: 2.8em;
+      font-weight: bold;
+      margin: 0rem 3.7rem 0rem 0rem; }
+    .navbar .navbar-nav .nav-link:hover {
+      color: white; }
+  .navbar .container {
+    background-color: white;
+    margin: 0px 0px 0px;
+    width: 40%;
+    justify-content: center;
+    clip-path: polygon(0% 0%, 90% 0, 100% 50%, 90% 100%, 0% 100%);
+    /*size contenedor img logo*/ }
+    .navbar .container img {
+      padding: 3.7rem;
+      width: 85%; }
+
+/**************MAIN***************/
+/**main__seccion-inicio**/
+.container__inicio {
+  display: flex;
+  flex-direction: column;
+  justify-content: none;
+  align-items: none;
+  flex-wrap: none;
+  /**contenedor imagen1**/
+  /*estilos texto 1 pading para menu fixed*/ }
+  .container__inicio .container__img1 {
+    max-width: 100%;
+    background-image: url(../recursos/seccion_inicio/imagenes/seccion_inicio.jpg);
+    background-position: center, center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    z-index: 1; }
+  .container__inicio h1 {
+    font-weight: bold;
+    font-size: 8em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    margin: 10rem;
+    padding-top: 20rem; }
+
+/***LAYUOT franjas****/
+/*estilos divs franja color*/
+.container__div1 {
+  background-color: #be4e04;
+  height: 3.7rem;
+  margin-bottom: 1rem; }
+
+.container__div2 {
+  background-color: #be4e04;
+  height: 2.3rem;
+  margin-bottom: 1rem; }
+
+.container__div3 {
+  background-color: #be4e04;
+  height: 1.5rem;
+  margin-bottom: 1rem; }
+
+/*section inicio__nosotros*/
+.contaniner__inicio-nosotros {
+  display: flex;
+  flex-direction: row;
+  justify-content: none;
+  align-items: center;
+  flex-wrap: none;
+  /*position de img inicio-nosotros */
+  /*fondo article LAYUOT FONDO ROSA ARTICLE*/
+  /*franjas de textos article*/
+  /*size h2 Nosotros*/ }
+  .contaniner__inicio-nosotros img {
+    position: relative;
+    right: 6rem;
+    z-index: 1; }
+  .contaniner__inicio-nosotros .container__article {
+    display: flex;
+    flex-direction: none;
+    justify-content: none;
+    align-items: none;
+    flex-wrap: none;
+    background-color: #fddddd;
+    width: 130%;
+    margin: 1rem 0 2rem 2rem;
+    /*size p - estilos texto inicio-nosotros*/
+    /*centrar texto inicio_nosotros*/ }
+    .contaniner__inicio-nosotros .container__article p {
+      text-align: justify;
+      font-size: 2.8em;
+      width: 60%; }
+    .contaniner__inicio-nosotros .container__article .container__article-texto {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: none; }
+  .contaniner__inicio-nosotros .container__div4 {
+    background-color: #be4e04;
+    height: 1rem;
+    margin-bottom: 1rem;
+    width: 60%; }
+  .contaniner__inicio-nosotros h2 {
+    font-size: 6em;
+    width: 60%; }
+
+/*estilos contenedor general contenedores mision-vision-valores*/
+.container__inicio-mision {
+  display: flex;
+  flex-direction: row;
+  justify-content: none;
+  align-items: none;
+  flex-wrap: none;
+  background-color: #be4e04;
+  margin: 0 0 2rem 0;
+  /*estilos y espacios contenedores internos inicio-mision*/ }
+  .container__inicio-mision .container__mision {
+    margin: 2rem;
+    /*h3 contenedores inicio-mision-calores*/
+    /*p contenedores inicio-mision-calores*/
+    /*estilos lineas mision-vision-valores*/ }
+    .container__inicio-mision .container__mision h3, .container__inicio-mision .container__mision p {
+      font-size: 2.8em;
+      font-weight: 800;
+      text-align: center;
+      color: white; }
+    .container__inicio-mision .container__mision p {
+      font-size: 2.3em; }
+    .container__inicio-mision .container__mision .container__div5 {
+      background-color: white;
+      height: 1rem;
+      margin-bottom: 0.4rem; }
+
+/*margin titulo del container__inicio-proyectos*/
+.container__inicio-proyectos {
+  margin-bottom: 1rem; }
+
+/*estilos titulos enteros*/
+.container__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: none;
+  align-items: none;
+  flex-wrap: none; }
+  .container__title h2 {
+    font-size: 7em;
+    color: #000000;
+    text-align: center;
+    font-weight: 900;
+    margin: 3.7rem 0 2.3rem 0; }
+
+/*clase boostrap lineas en parte inferior carousel*/
+.carousel-indicators {
+  z-index: 1; }
+
+/*clase boostrap agrega imagenes al carousel*/
+.carousel-item {
+  /*titulos de imagenes carousel inicio*/ }
+  .carousel-item h5 {
+    font-size: 4em;
+    font-weight: 900;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; }
+
+/* estilos svg inicio-servicios*/
+.container__inicio--servicios {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: none;
+  flex-wrap: none;
+  padding: 4rem;
+  /*estilos generales img svg*/
+  /*estilos h3 de svg inicio-servicios*/ }
+  .container__inicio--servicios img {
+    width: 60%;
+    margin: 0 0 1rem 7rem; }
+  .container__inicio--servicios h3, .container__inicio--servicios .container__inicio-mision .container__mision p, .container__inicio-mision .container__mision .container__inicio--servicios p {
+    font-size: 2.8em;
+    color: #be4e04;
+    font-weight: 600;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; }
+
+/**************FOOTER**************/
+/*estilos footer*/
+.footer__section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #be4e04;
+  /*size img footer*/
+  /*flex container logo-copy*/
+  /*container redes*/
+  /*ancho de los div*/
+  /*estilos contactanos boton ocupa ancho total de su div*/ }
+  .footer__section img {
+    width: 60%; }
+  .footer__section .footer__container, .footer__section .footer__container-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: none;
+    margin: 1rem 0 1rem 0; }
+    .footer__section .footer__container .footer__container-logo, .footer__section .footer__container-button .footer__container-logo {
+      margin-bottom: 1.5rem; }
+    .footer__section .footer__container a, .footer__section .footer__container-button a {
+      text-align: center; }
+  .footer__section .footer__container-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: none; }
+    .footer__section .footer__container-2 .footer__container-redes {
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: none;
+      /*size img mail-what*/
+      /*contenedor del texto  mail-whatsapp centrar p*/ }
+      .footer__section .footer__container-2 .footer__container-redes img {
+        width: 3.7rem; }
+      .footer__section .footer__container-2 .footer__container-redes .footer__container-mail {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: none;
+        width: 50%;
+        /*size texto mail-what*/
+        /*color textos mail-what*/ }
+        .footer__section .footer__container-2 .footer__container-redes .footer__container-mail p {
+          font-size: 2.8em;
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; }
+        .footer__section .footer__container-2 .footer__container-redes .footer__container-mail a {
+          color: white;
+          font-weight: 900; }
+  .footer__section div {
+    width: 33%; }
+  .footer__section .footer__container-button {
+    align-items: stretch;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /*estilos tipo de letra boton*/ }
+    .footer__section .footer__container-button button {
+      font-size: 2.3em; }
+
+/***** @ mediaquieries*****/
+/**** mobil_small**/
+@media screen and (min-width: 1px) and (max-width: 320px) {
+  /*****header******/
+  /*dejar fijo navbar 320px*/
+  .navbar {
+    position: fixed;
+    z-index: 2;
+    /*size contenedor logo*/
+    /*quitar borde iconolmenu*/
+    /*quitar borde al dar clic en menu*/ }
+    .navbar .container img {
+      width: 100%;
+      transform: scale(2.5); }
+    .navbar .navbar-toggler {
+      border: none; }
+    .navbar .navbar-toggler:focus {
+      box-shadow: none; }
+    .navbar .navbar-nav {
+      flex-direction: column;
+      align-items: flex-start; }
+      .navbar .navbar-nav a {
+        font-size: 2em; }
+  /******main******/
+  .container__img1 h1 {
+    padding: 10rem 2rem 2rem 2rem;
+    margin: 0;
+    font-size: 2.3em; }
+  /******footer****/
+  /*orientacion del footer*/
+  .footer__section {
+    flex-direction: column-reverse;
+    /*ancho del logo*/ }
+    .footer__section img {
+      width: 100%; }
+    .footer__section .footer__container-redes {
+      align-items: flex-start !important;
+      /*size textos mail-what*/ }
+      .footer__section .footer__container-redes .footer__container-mail p {
+        font-size: 2em !important; } }
+
+/**desktop_small**/
+@media screen and (min-width: 992px) {
+  /**header**/
+  .navbar-nav {
+    flex-wrap: wrap; }
+  /***main**/
+  /*espacio interno contenedor color-rosa*/
+  .container__article-texto {
+    margin: 4rem 0 4rem 0; } }
