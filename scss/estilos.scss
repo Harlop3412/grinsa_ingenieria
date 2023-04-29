@@ -424,7 +424,7 @@ html {
             align-items: flex-start;
 
             a {
-                font-size: 2em;
+                font-size: $text-small;
             }
         }
     }
@@ -440,7 +440,29 @@ html {
         }
     }
 
+    /*posicionar elementos inicio nosotros*/
+    .contaniner__inicio-nosotros {
+        flex-direction: column-reverse;
 
+        /*posicionar imagen 1 inicio nosotros*/
+        img {
+            right: 0;
+        }
+    }
+
+    /*posicionar elementos mision vision valores*/
+    .container__inicio-mision {
+        flex-direction: column;
+    }
+
+    /*posicionar elemntos inicio-servicios*/
+    
+    .container__inicio--servicios{
+
+        flex-direction: column;
+        row-gap: $space-smedium;
+    }
+    
     /******footer****/
     /*orientacion del footer*/
     .footer__section {
@@ -463,7 +485,6 @@ html {
             }
         }
     }
-
 
 }
 

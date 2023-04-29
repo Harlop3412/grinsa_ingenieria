@@ -318,6 +318,19 @@ html {
     padding: 10rem 2rem 2rem 2rem;
     margin: 0;
     font-size: 2.3em; }
+  /*posicionar elementos inicio nosotros*/
+  .contaniner__inicio-nosotros {
+    flex-direction: column-reverse;
+    /*posicionar imagen 1 inicio nosotros*/ }
+    .contaniner__inicio-nosotros img {
+      right: 0; }
+  /*posicionar elementos mision vision valores*/
+  .container__inicio-mision {
+    flex-direction: column; }
+  /*posicionar elemntos inicio-servicios*/
+  .container__inicio--servicios {
+    flex-direction: column;
+    row-gap: 2.3rem; }
   /******footer****/
   /*orientacion del footer*/
   .footer__section {
