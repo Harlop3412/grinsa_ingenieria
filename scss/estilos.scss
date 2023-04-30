@@ -8,6 +8,7 @@ $col-alternate1: #fddddd;
 /*spacings*/
 $space-super: 37rem;
 $space-xsuper: 20rem;
+$space-xxxlarge: 15rem;
 $space-xxlarge: 10rem;
 $space-xlarge: 7rem;
 $space-large: 6rem;
@@ -26,9 +27,11 @@ $text-xxlarge: 8em;
 $text-xlarge: 7em;
 $text-large: 6em;
 $text-medium: 4em;
+$text-xmedium:3.5em;
 $text-base: 2.8em;
 $text-sbase: 2.3em;
 $text-small: 2em;
+$text-small-button: 1.7em;
 $text-xsmall: 1em;
 
 /************** base_reset.scss******************************/
@@ -273,15 +276,21 @@ html {
     z-index: 1;
 }
 
+
 /*clase boostrap agrega imagenes al carousel*/
 .carousel-item {
 
-    /*titulos de imagenes carousel inicio*/
-    h5 {
+    .carousel__letra{
         font-size: $text-medium;
         font-weight: 900;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
+    /*titulos de imagenes carousel inicio*/
+    // h5 {
+    //     font-size: $text-medium;
+    //     font-weight: 900;
+    //     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    // }
 }
 
 /* estilos svg inicio-servicios*/
@@ -390,13 +399,12 @@ html {
 
 /***** @ mediaquieries*****/
 
-/**** mobil_small**/
+/**** mobil_xsmall**/
 @media screen and (min-width: 1px) and (max-width: 320px) {
-
 
     /*****header******/
 
-    /*dejar fijo navbar 320px*/
+    /*dejar fijo navbar */
     .navbar {
         position: fixed;
         z-index: 2;
@@ -448,6 +456,16 @@ html {
         img {
             right: 0;
         }
+
+        /*dar ancho normal al contenedor inicio-nosotros*/
+        .container__article {
+            width: 100%;
+            margin-left: 0;
+
+            h2{
+                width: 80%;
+            }
+        }
     }
 
     /*posicionar elementos mision vision valores*/
@@ -456,13 +474,22 @@ html {
     }
 
     /*posicionar elemntos inicio-servicios*/
-    
-    .container__inicio--servicios{
+
+    .container__inicio--servicios {
 
         flex-direction: column;
         row-gap: $space-smedium;
     }
-    
+
+    /*titulos grandes proyectos-servicios de inicio*/
+    .container__title{
+
+        /*size de los h2*/
+        h2{
+           font-size: $text-large;
+        }
+    }
+
     /******footer****/
     /*orientacion del footer*/
     .footer__section {
@@ -484,9 +511,249 @@ html {
                 }
             }
         }
+
+        /*reducir letra del boton contactanos*/
+        .footer__container-button {
+
+            /*boton contactanos*/
+            button {
+                font-size: $text-small-button;
+            }
+        }
     }
 
 }
+
+/*mobil small*/
+@media screen and (min-width: 321px) and (max-width: 576px) {
+
+    /*****header******/
+
+    /*dejar fijo navbar */
+    .navbar {
+        position: fixed;
+        z-index: 2;
+
+        /*size contenedor logo*/
+        .container {
+            img {
+                width: 100%;
+                
+            }
+        }
+
+        /*quitar borde iconolmenu*/
+        .navbar-toggler {
+            border: none;
+        }
+
+        /*quitar borde al dar clic en menu*/
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+
+        .navbar-nav {
+            flex-direction: column;
+            align-items: flex-start;
+
+            a {
+                font-size: $text-small;
+            }
+        }
+    }
+
+
+    /******main******/
+
+    /*parrafo 1 inicio-nosotros*/
+    .container__img1 {
+        h1 {
+            padding: $space-xxxlarge $space-small $space-small $space-small;
+            margin: 0;
+            font-size: $text-xmedium;
+        }
+    }
+
+    /*posicionar elementos inicio nosotros*/
+    .contaniner__inicio-nosotros {
+        flex-direction: column-reverse;
+
+        /*posicionar imagen 1 inicio nosotros*/
+        img {
+            right: 0;
+        }
+
+        /*dar ancho normal al contenedor inicio-nosotros*/
+        .container__article {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+
+    /*posicionar elementos mision vision valores*/
+    .container__inicio-mision {
+        flex-direction: column;
+    }
+
+    /*posicionar elemntos inicio-servicios*/
+
+    .container__inicio--servicios {
+
+        flex-direction: column;
+        row-gap: $space-smedium;
+    }
+
+    /******footer****/
+    /*orientacion del footer*/
+    .footer__section {
+        flex-direction: column-reverse;
+        row-gap: $space-ssmall;
+
+        /*ancho del logo*/
+        & img {
+            width: 100%;
+        }
+
+        .footer__container-redes {
+            align-items: flex-start !important;
+
+            /*size textos mail-what*/
+            .footer__container-mail {
+
+                p {
+                    font-size: $text-small !important;
+                }
+            }
+        }
+
+        /*reducir letra del boton contactanos*/
+        .footer__container-button {
+
+            /*boton contactanos*/
+            button {
+                font-size: $text-small-button;
+            }
+        }
+    }
+}
+
+/****mobil medium****/
+@media screen and (min-width: 577px) and (max-width: 768px) {
+
+    /*****header******/
+
+    /*dejar fijo navbar */
+    .navbar {
+        position: fixed;
+        z-index: 2;
+
+        /*size contenedor logo*/
+        .container {
+            img {
+                width: 100%;
+                
+            }
+        }
+
+        /*quitar borde iconolmenu*/
+        .navbar-toggler {
+            border: none;
+        }
+
+        /*quitar borde al dar clic en menu*/
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+
+        .navbar-nav {
+            flex-direction: column;
+            align-items: flex-start;
+
+            a {
+                font-size: $text-small;
+            }
+        }
+    }
+
+
+    /******main******/
+
+    /*parrafo 1 inicio-nosotros*/
+    .container__img1 {
+        h1 {
+            padding: $space-xsuper $space-xlarge $space-margin-article $space-xlarge;
+            margin: 0;
+            font-size: $text-xmedium;
+        }
+    }
+
+    /*posicionar elementos inicio nosotros*/
+    .contaniner__inicio-nosotros {
+        flex-direction: column-reverse;
+
+        /*posicionar imagen 1 inicio nosotros*/
+        img {
+            right: 0;
+        }
+
+        /*dar ancho normal al contenedor inicio-nosotros*/
+        .container__article {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+
+    /*posicionar elementos mision vision valores*/
+    .container__inicio-mision {
+        flex-direction: column;
+    }
+
+    /*posicionar elemntos inicio-servicios*/
+    .container__inicio--servicios {
+
+        flex-direction: column;
+        row-gap: $space-large;
+
+        h3{
+            font-size: $text-medium;
+        }
+    }
+
+    /******footer****/
+    /*orientacion del footer*/
+    .footer__section {
+        flex-direction: column-reverse;
+        row-gap: $space-ssmall;
+
+        /*ancho del logo*/
+        & img {
+            width: 100%;
+        }
+
+        .footer__container-redes {
+            align-items: flex-start !important;
+
+            /*size textos mail-what*/
+            .footer__container-mail {
+
+                p {
+                    font-size: $text-base !important;
+                }
+            }
+        }
+
+        /*reducir letra del boton contactanos*/
+        .footer__container-button {
+
+            /*boton contactanos*/
+            button {
+                font-size: $text-base;
+            }
+        }
+    }
+}
+
+
 
 /**desktop_small**/
 @media screen and (min-width: 992px) {

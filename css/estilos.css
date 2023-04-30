@@ -197,7 +197,7 @@ html {
 /*clase boostrap agrega imagenes al carousel*/
 .carousel-item {
   /*titulos de imagenes carousel inicio*/ }
-  .carousel-item h5 {
+  .carousel-item .carousel__letra {
     font-size: 4em;
     font-weight: 900;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; }
@@ -291,10 +291,10 @@ html {
       font-size: 2.3em; }
 
 /***** @ mediaquieries*****/
-/**** mobil_small**/
+/**** mobil_xsmall**/
 @media screen and (min-width: 1px) and (max-width: 320px) {
   /*****header******/
-  /*dejar fijo navbar 320px*/
+  /*dejar fijo navbar */
   .navbar {
     position: fixed;
     z-index: 2;
@@ -321,9 +321,82 @@ html {
   /*posicionar elementos inicio nosotros*/
   .contaniner__inicio-nosotros {
     flex-direction: column-reverse;
-    /*posicionar imagen 1 inicio nosotros*/ }
+    /*posicionar imagen 1 inicio nosotros*/
+    /*dar ancho normal al contenedor inicio-nosotros*/ }
     .contaniner__inicio-nosotros img {
       right: 0; }
+    .contaniner__inicio-nosotros .container__article {
+      width: 100%;
+      margin-left: 0; }
+      .contaniner__inicio-nosotros .container__article h2 {
+        width: 80%; }
+  /*posicionar elementos mision vision valores*/
+  .container__inicio-mision {
+    flex-direction: column; }
+  /*posicionar elemntos inicio-servicios*/
+  .container__inicio--servicios {
+    flex-direction: column;
+    row-gap: 2.3rem; }
+  /*titulos grandes proyectos-servicios de inicio*/
+  .container__title {
+    /*size de los h2*/ }
+    .container__title h2 {
+      font-size: 6em; }
+  /******footer****/
+  /*orientacion del footer*/
+  .footer__section {
+    flex-direction: column-reverse;
+    /*ancho del logo*/
+    /*reducir letra del boton contactanos*/ }
+    .footer__section img {
+      width: 100%; }
+    .footer__section .footer__container-redes {
+      align-items: flex-start !important;
+      /*size textos mail-what*/ }
+      .footer__section .footer__container-redes .footer__container-mail p {
+        font-size: 2em !important; }
+    .footer__section .footer__container-button {
+      /*boton contactanos*/ }
+      .footer__section .footer__container-button button {
+        font-size: 1.7em; } }
+
+/*mobil small*/
+@media screen and (min-width: 321px) and (max-width: 576px) {
+  /*****header******/
+  /*dejar fijo navbar */
+  .navbar {
+    position: fixed;
+    z-index: 2;
+    /*size contenedor logo*/
+    /*quitar borde iconolmenu*/
+    /*quitar borde al dar clic en menu*/ }
+    .navbar .container img {
+      width: 100%; }
+    .navbar .navbar-toggler {
+      border: none; }
+    .navbar .navbar-toggler:focus {
+      box-shadow: none; }
+    .navbar .navbar-nav {
+      flex-direction: column;
+      align-items: flex-start; }
+      .navbar .navbar-nav a {
+        font-size: 2em; }
+  /******main******/
+  /*parrafo 1 inicio-nosotros*/
+  .container__img1 h1 {
+    padding: 15rem 2rem 2rem 2rem;
+    margin: 0;
+    font-size: 3.5em; }
+  /*posicionar elementos inicio nosotros*/
+  .contaniner__inicio-nosotros {
+    flex-direction: column-reverse;
+    /*posicionar imagen 1 inicio nosotros*/
+    /*dar ancho normal al contenedor inicio-nosotros*/ }
+    .contaniner__inicio-nosotros img {
+      right: 0; }
+    .contaniner__inicio-nosotros .container__article {
+      width: 100%;
+      margin-left: 0; }
   /*posicionar elementos mision vision valores*/
   .container__inicio-mision {
     flex-direction: column; }
@@ -335,14 +408,85 @@ html {
   /*orientacion del footer*/
   .footer__section {
     flex-direction: column-reverse;
-    /*ancho del logo*/ }
+    row-gap: 1.5rem;
+    /*ancho del logo*/
+    /*reducir letra del boton contactanos*/ }
     .footer__section img {
       width: 100%; }
     .footer__section .footer__container-redes {
       align-items: flex-start !important;
       /*size textos mail-what*/ }
       .footer__section .footer__container-redes .footer__container-mail p {
-        font-size: 2em !important; } }
+        font-size: 2em !important; }
+    .footer__section .footer__container-button {
+      /*boton contactanos*/ }
+      .footer__section .footer__container-button button {
+        font-size: 1.7em; } }
+
+/****mobil medium****/
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  /*****header******/
+  /*dejar fijo navbar */
+  .navbar {
+    position: fixed;
+    z-index: 2;
+    /*size contenedor logo*/
+    /*quitar borde iconolmenu*/
+    /*quitar borde al dar clic en menu*/ }
+    .navbar .container img {
+      width: 100%; }
+    .navbar .navbar-toggler {
+      border: none; }
+    .navbar .navbar-toggler:focus {
+      box-shadow: none; }
+    .navbar .navbar-nav {
+      flex-direction: column;
+      align-items: flex-start; }
+      .navbar .navbar-nav a {
+        font-size: 2em; }
+  /******main******/
+  /*parrafo 1 inicio-nosotros*/
+  .container__img1 h1 {
+    padding: 20rem 7rem 4rem 7rem;
+    margin: 0;
+    font-size: 3.5em; }
+  /*posicionar elementos inicio nosotros*/
+  .contaniner__inicio-nosotros {
+    flex-direction: column-reverse;
+    /*posicionar imagen 1 inicio nosotros*/
+    /*dar ancho normal al contenedor inicio-nosotros*/ }
+    .contaniner__inicio-nosotros img {
+      right: 0; }
+    .contaniner__inicio-nosotros .container__article {
+      width: 100%;
+      margin-left: 0; }
+  /*posicionar elementos mision vision valores*/
+  .container__inicio-mision {
+    flex-direction: column; }
+  /*posicionar elemntos inicio-servicios*/
+  .container__inicio--servicios {
+    flex-direction: column;
+    row-gap: 6rem; }
+    .container__inicio--servicios h3, .container__inicio--servicios .container__inicio-mision .container__mision p, .container__inicio-mision .container__mision .container__inicio--servicios p {
+      font-size: 4em; }
+  /******footer****/
+  /*orientacion del footer*/
+  .footer__section {
+    flex-direction: column-reverse;
+    row-gap: 1.5rem;
+    /*ancho del logo*/
+    /*reducir letra del boton contactanos*/ }
+    .footer__section img {
+      width: 100%; }
+    .footer__section .footer__container-redes {
+      align-items: flex-start !important;
+      /*size textos mail-what*/ }
+      .footer__section .footer__container-redes .footer__container-mail p {
+        font-size: 2.8em !important; }
+    .footer__section .footer__container-button {
+      /*boton contactanos*/ }
+      .footer__section .footer__container-button button {
+        font-size: 2.8em; } }
 
 /**desktop_small**/
 @media screen and (min-width: 992px) {
