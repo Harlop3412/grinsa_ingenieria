@@ -371,7 +371,7 @@ html {
     /*quitar borde iconolmenu*/
     /*quitar borde al dar clic en menu*/ }
     .navbar .container img {
-      width: 100%; }
+      width: 19rem; }
     .navbar .navbar-toggler {
       border: none; }
     .navbar .navbar-toggler:focus {

@@ -8,6 +8,7 @@ $col-alternate1: #fddddd;
 /*spacings*/
 $space-super: 37rem;
 $space-xsuper: 20rem;
+$space-logo576px: 19rem;
 $space-xxxlarge: 15rem;
 $space-xxlarge: 10rem;
 $space-xlarge: 7rem;
@@ -537,7 +538,7 @@ html {
         /*size contenedor logo*/
         .container {
             img {
-                width: 100%;
+                width: $space-logo576px;
                 
             }
         }
