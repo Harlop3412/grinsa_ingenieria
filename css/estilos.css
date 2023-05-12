@@ -299,8 +299,7 @@ html {
 /*main*/
 /*contenedor imagen leyenda nosotros*/
 .container__nosotros .container__nosotros--img1 {
-  justify-content: center;
-  background-image: url(../recursos/seccion_nosotros/imagenes/seccion_nosotros_1.jpg); }
+  justify-content: center; }
   .container__nosotros .container__nosotros--img1 h1 {
     padding: 15rem 0 15rem 0; }
 
