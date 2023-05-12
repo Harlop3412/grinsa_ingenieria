@@ -4,11 +4,13 @@
 .container__nosotros {
     @extend .container__inicio;
 
+    /*imagen nosotros*/
     .container__nosotros--img1 {
         @extend .container__img1;
+        background-image: url(../recursos/seccion_nosotros/imagenes/seccion_nosotros_1.jpg);
         justify-content: center;
-        
 
+        /*h1 nosotros*/
         h1 {
             padding: $space-xxxlarge 0 $space-xxxlarge 0;
         }
@@ -67,13 +69,13 @@
     }
 
     /*pading top de h3 de svgs*/
-    h3{
+    h3 {
         @extend h2;
         padding-top: $space-small;
     }
 
     /*parrafo nuestros valores*/
-    p{
+    p {
         font-size: $text-base;
         font-weight: 500;
     }
@@ -85,14 +87,14 @@
     }
 
     /*contenedor general svg nuestros valores*/
-    .section__svg-valores{
+    .section__svg-valores {
         @include flex();
         flex-wrap: wrap;
-        align-items:center;
+        align-items: center;
         column-gap: 12rem;
 
         /*contenedores de cada svg calidad, pasion, disciplina*/
-        .container__svg-valores{
+        .container__svg-valores {
             width: 80%;
         }
     }

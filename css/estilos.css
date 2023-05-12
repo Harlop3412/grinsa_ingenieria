@@ -298,10 +298,14 @@ html {
 
 /*main*/
 /*contenedor imagen leyenda nosotros*/
-.container__nosotros .container__nosotros--img1 {
-  justify-content: center; }
-  .container__nosotros .container__nosotros--img1 h1 {
-    padding: 15rem 0 15rem 0; }
+.container__nosotros {
+  /*imagen nosotros*/ }
+  .container__nosotros .container__nosotros--img1 {
+    background-image: url(../recursos/seccion_nosotros/imagenes/seccion_nosotros_1.jpg);
+    justify-content: center;
+    /*h1 nosotros*/ }
+    .container__nosotros .container__nosotros--img1 h1 {
+      padding: 15rem 0 15rem 0; }
 
 /*contenedor del article e img de nosotros mision y vision*/
 .container__nosotros--mision {
