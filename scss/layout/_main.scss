@@ -1,0 +1,64 @@
+/***LAYUOT franjas****/
+/*estilos divs franja color*/
+.container__div1 {
+    background-color: $col-primary;
+    height: $space-medium;
+    margin-bottom: $space-xsmall;
+}
+
+.container__div2 {
+    background-color: $col-primary;
+    height: $space-smedium;
+    margin-bottom: $space-xsmall;
+}
+
+.container__div3 {
+    background-color: $col-primary;
+    height: $space-ssmall;
+    margin-bottom: $space-xsmall;
+}
+
+/*section inicio__nosotros*/
+.contaniner__inicio-nosotros {
+    @include flex1(row, none, center, none);
+
+    /*position de img inicio-nosotros */
+    & img {
+        position: relative;
+        right: 6rem;
+        z-index: 1;
+    }
+
+    /*fondo article LAYUOT FONDO ROSA ARTICLE*/
+    .container__article {
+        @include flex1(none, none, none, none);
+        background-color: $col-alternate1;
+        width: 130%;
+        margin: $space-xsmall 0 $space-small $space-small;
+
+        /*size p - estilos texto inicio-nosotros*/
+        & p {
+            text-align: justify;
+            font-size: $text-base;
+            width: 60%;
+        }
+
+        /*centrar texto inicio_nosotros*/
+        .container__article-texto {
+            @include flex1(column, center, center, none);
+        }
+    }
+
+    /*size h2 Nosotros*/
+    & h2 {
+        font-size: $text-large;
+        width: 60%;
+    }
+}
+ /*franjas de textos article*/
+ .container__div4 {
+    background-color: $col-primary;
+    height: $space-xsmall;
+    margin-bottom: $space-xsmall;
+    width: 60%;
+}

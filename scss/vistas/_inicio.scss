@@ -1,0 +1,123 @@
+/**main__seccion-inicio**/
+.container__inicio {
+    @include flex1(column, none, none, none);
+
+
+    /**contenedor imagen1**/
+    .container__img1 {
+        max-width: 100%;
+        background-image: url(../recursos/seccion_inicio/imagenes/seccion_inicio.jpg);
+        background-position: center, center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @include flex;
+        align-items: center;
+        text-align: center;
+        z-index: 1;
+        padding-top: $space-xxlarge;
+    }
+
+    /*estilos texto 1 pading para menu fixed*/
+    & h1 {
+        font-weight: bold;
+        font-size: $text-xxlarge;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: $col-secondary;
+        margin: $space-xxlarge;
+        padding: $space-xxlarge 0 $space-xxlarge 0;
+    }
+}
+
+/*estilos contenedor general contenedores mision-vision-valores*/
+.container__inicio-mision {
+    @include flex1(row, none, none, none);
+    background-color: $col-primary;
+    margin: 0 0 $space-small 0;
+
+    /*estilos y espacios contenedores internos inicio-mision*/
+    .container__mision {
+        margin: $space-small;
+
+        /*h3 contenedores inicio-mision-calores*/
+        h3 {
+            font-size: $text-base;
+            font-weight: 800;
+            text-align: center;
+            color: $col-secondary;
+        }
+
+        /*p contenedores inicio-mision-calores*/
+        p {
+            @extend h3;
+            font-size: $text-sbase;
+        }
+
+        /*estilos lineas mision-vision-valores*/
+        .container__div5 {
+            background-color: $col-secondary;
+            height: $space-xsmall;
+            margin-bottom: $space-xtrasmall ;
+        }
+    }
+}
+
+/*margin titulo del container__inicio-proyectos*/
+.container__inicio-proyectos {
+    margin-bottom: $space-xsmall;
+}
+
+/*estilos titulos enteros*/
+.container__title {
+    @include flex1(column, none, none, none);
+
+    h2 {
+        font-size: $text-xlarge;
+        color: $col-alternate;
+        text-align: center;
+        font-weight: 900;
+        margin: $space-medium 0 $space-smedium 0;
+    }
+}
+
+/*clase boostrap lineas en parte inferior carousel*/
+.carousel-indicators {
+    z-index: 1;
+}
+
+
+/*clase boostrap agrega imagenes al carousel*/
+.carousel-item {
+
+    .carousel__letra{
+        font-size: $text-medium;
+        font-weight: 900;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    /*titulos de imagenes carousel inicio*/
+    // h5 {
+    //     font-size: $text-medium;
+    //     font-weight: 900;
+    //     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    // }
+}
+
+/* estilos svg inicio-servicios*/
+.container__inicio--servicios {
+    @include flex1(row, space-evenly, none, none);
+    padding: 4rem;
+
+    /*estilos generales img svg*/
+    img {
+        width: 60%;
+        margin: 0 0 $space-xsmall $space-xlarge;
+    }
+
+    /*estilos h3 de svg inicio-servicios*/
+    h3 {
+        font-size: $text-base;
+        color: $col-primary;
+        font-weight: 600;
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+}

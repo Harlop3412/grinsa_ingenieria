@@ -1,0 +1,772 @@
+/*******************utilidades_variables*********************/
+/*colors*/
+$col-primary: #be4e04;
+$col-secondary: white;
+$col-alternate: #000000;
+$col-alternate1: #fddddd;
+
+/*spacings*/
+$space-super: 37rem;
+$space-xsuper: 20rem;
+$space-logo576px: 19rem;
+$space-xxxlarge: 15rem;
+$space-xxlarge: 10rem;
+$space-xlarge: 7rem;
+$space-large: 6rem;
+$space-margin-article: 4rem;
+$space-medium: 3.7rem;
+$space-smedium: 2.3rem;
+$space-small: 2rem;
+$space-ssmall: 1.5rem;
+$space-xsmall: 1rem;
+$space-xxsmall: .5rem;
+$space-border-bottom: 2px;
+$space-xtrasmall: .4rem;
+
+/*font-sizes*/
+$text-xxlarge: 8em;
+$text-xlarge: 7em;
+$text-large: 6em;
+$text-medium: 4em;
+$text-xmedium:3.5em;
+$text-base: 2.8em;
+$text-sbase: 2.3em;
+$text-small: 2em;
+$text-small-button: 1.7em;
+$text-xsmall: 1em;
+
+/************** base_reset.scss******************************/
+*::after,
+*::before,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+
+    body {
+        font-family: 'Roboto', sans-serif;
+
+        img {
+            width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        li {
+            list-style-type: none;
+        }
+    }
+
+}
+
+/********************utilidades_funciones*********************/
+@mixin flex1 ($direction, $justify, $aling, $wrap) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $aling;
+    flex-wrap: $wrap;
+}
+
+@mixin flex () {
+    display: flex;
+}
+
+
+/**************HEADER**************/
+
+/*color fondo nav, position*/
+.navbar {
+    background-color: $col-primary;
+    padding: 0px;
+    position: fixed;
+    z-index: 2;
+
+
+    /* size fuente nav*/
+    .navbar-nav {
+
+        margin-left: $space-ssmall;
+        @include flex1(row, none, none, none);
+
+        a {
+            font-size: $text-base;
+            font-weight: bold;
+            margin: 0rem $space-medium 0rem 0rem;
+        }
+
+        .nav-link:hover {
+            color: $col-secondary ;
+        }
+
+    }
+
+    /*margenes contenedor logo prop clip-path da forma de punta al contenedor*/
+    .container {
+        background-color: $col-secondary;
+        margin: 0px 0px 0px;
+        width: 40%;
+        justify-content: center;
+        clip-path: polygon(0% 0%, 90% 0, 100% 50%, 90% 100%, 0% 100%);
+        // border-radius: 50% 50% 50% 50% / 0% 50% 50% 0%;
+
+        /*size contenedor img logo*/
+        img {
+            padding: $space-medium;
+            width: 85%;
+        }
+    }
+}
+
+/**************MAIN***************/
+
+/**main__seccion-inicio**/
+.container__inicio {
+    @include flex1(column, none, none, none);
+
+
+    /**contenedor imagen1**/
+    .container__img1 {
+        max-width: 100%;
+        background-image: url(../recursos/seccion_inicio/imagenes/seccion_inicio.jpg);
+        background-position: center, center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @include flex;
+        align-items: center;
+        text-align: center;
+        z-index: 1;
+    }
+
+    /*estilos texto 1 pading para menu fixed*/
+    & h1 {
+        font-weight: bold;
+        font-size: $text-xxlarge;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: $col-secondary;
+        margin: $space-xxlarge;
+        padding-top: $space-xsuper;
+    }
+}
+
+/***LAYUOT franjas****/
+/*estilos divs franja color*/
+.container__div1 {
+    background-color: $col-primary;
+    height: $space-medium;
+    margin-bottom: $space-xsmall;
+}
+
+.container__div2 {
+    background-color: $col-primary;
+    height: $space-smedium;
+    margin-bottom: $space-xsmall;
+}
+
+.container__div3 {
+    background-color: $col-primary;
+    height: $space-ssmall;
+    margin-bottom: $space-xsmall;
+}
+
+/*section inicio__nosotros*/
+.contaniner__inicio-nosotros {
+    @include flex1(row, none, center, none);
+
+    /*position de img inicio-nosotros */
+    & img {
+        position: relative;
+        right: 6rem;
+        z-index: 1;
+    }
+
+    /*fondo article LAYUOT FONDO ROSA ARTICLE*/
+    .container__article {
+        @include flex1(none, none, none, none);
+        background-color: $col-alternate1;
+        width: 130%;
+        margin: $space-xsmall 0 $space-small $space-small;
+
+        /*size p - estilos texto inicio-nosotros*/
+        & p {
+            text-align: justify;
+            font-size: $text-base;
+            width: 60%;
+        }
+
+        /*centrar texto inicio_nosotros*/
+        .container__article-texto {
+            @include flex1(column, center, center, none);
+        }
+    }
+
+    /*franjas de textos article*/
+    .container__div4 {
+        background-color: $col-primary;
+        height: $space-xsmall;
+        margin-bottom: $space-xsmall;
+        width: 60%;
+    }
+
+    /*size h2 Nosotros*/
+    & h2 {
+        font-size: $text-large;
+        width: 60%;
+    }
+}
+
+/*estilos contenedor general contenedores mision-vision-valores*/
+.container__inicio-mision {
+    @include flex1(row, none, none, none);
+    background-color: $col-primary;
+    margin: 0 0 $space-small 0;
+
+    /*estilos y espacios contenedores internos inicio-mision*/
+    .container__mision {
+        margin: $space-small;
+
+        /*h3 contenedores inicio-mision-calores*/
+        h3 {
+            font-size: $text-base;
+            font-weight: 800;
+            text-align: center;
+            color: $col-secondary;
+        }
+
+        /*p contenedores inicio-mision-calores*/
+        p {
+            @extend h3;
+            font-size: $text-sbase;
+        }
+
+        /*estilos lineas mision-vision-valores*/
+        .container__div5 {
+            background-color: $col-secondary;
+            height: $space-xsmall;
+            margin-bottom: $space-xtrasmall ;
+        }
+    }
+}
+
+/*margin titulo del container__inicio-proyectos*/
+.container__inicio-proyectos {
+    margin-bottom: $space-xsmall;
+}
+
+/*estilos titulos enteros*/
+.container__title {
+    @include flex1(column, none, none, none);
+
+    h2 {
+        font-size: $text-xlarge;
+        color: $col-alternate;
+        text-align: center;
+        font-weight: 900;
+        margin: $space-medium 0 $space-smedium 0;
+    }
+}
+
+/*clase boostrap lineas en parte inferior carousel*/
+.carousel-indicators {
+    z-index: 1;
+}
+
+
+/*clase boostrap agrega imagenes al carousel*/
+.carousel-item {
+
+    .carousel__letra{
+        font-size: $text-medium;
+        font-weight: 900;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    /*titulos de imagenes carousel inicio*/
+    // h5 {
+    //     font-size: $text-medium;
+    //     font-weight: 900;
+    //     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    // }
+}
+
+/* estilos svg inicio-servicios*/
+.container__inicio--servicios {
+    @include flex1(row, space-evenly, none, none);
+    padding: 4rem;
+
+    /*estilos generales img svg*/
+    img {
+        width: 60%;
+        margin: 0 0 $space-xsmall $space-xlarge;
+    }
+
+    /*estilos h3 de svg inicio-servicios*/
+    h3 {
+        font-size: $text-base;
+        color: $col-primary;
+        font-weight: 600;
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+}
+
+
+/**************FOOTER**************/
+
+/*estilos footer*/
+.footer__section {
+    @include flex1(row, center, center, wrap);
+    background-color: $col-primary;
+
+    /*size img footer*/
+    & img {
+        width: 60%;
+    }
+
+    /*flex container logo-copy*/
+    .footer__container {
+        @include flex1(column, center, center, none);
+        margin: $space-xsmall 0 $space-xsmall 0;
+
+        .footer__container-logo {
+            margin-bottom: $space-ssmall;
+        }
+
+        & a {
+            text-align: center;
+        }
+    }
+
+    /*container redes*/
+    .footer__container-2 {
+        @include flex1(column, center, center, none);
+
+        .footer__container-redes {
+            color: $col-secondary;
+            @include flex1(column, center, center, none);
+
+            /*size img mail-what*/
+            & img {
+                width: $space-medium;
+            }
+
+            /*contenedor del texto  mail-whatsapp centrar p*/
+            .footer__container-mail {
+                @include flex1(column, center, center, none);
+                width: 50%;
+
+                /*size texto mail-what*/
+                & p {
+                    font-size: $text-base;
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+                }
+
+                /*color textos mail-what*/
+                & a {
+                    color: $col-secondary;
+                    font-weight: 900;
+                }
+            }
+        }
+    }
+
+    /*ancho de los div*/
+    div {
+        width: 33%;
+    }
+
+    /*estilos contactanos boton ocupa ancho total de su div*/
+    .footer__container-button {
+        @extend.footer__container;
+        align-items: stretch;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+        /*estilos tipo de letra boton*/
+        button {
+            font-size: $text-sbase;
+        }
+    }
+}
+
+
+
+
+
+/***** @ mediaquieries*****/
+
+/**** mobil_xsmall**/
+@media screen and (min-width: 1px) and (max-width: 320px) {
+
+    /*****header******/
+
+    /*dejar fijo navbar */
+    .navbar {
+        position: fixed;
+        z-index: 2;
+
+        /*size contenedor logo*/
+        .container {
+            img {
+                width: 100%;
+                transform: scale(2.5);
+            }
+        }
+
+        /*quitar borde iconolmenu*/
+        .navbar-toggler {
+            border: none;
+        }
+
+        /*quitar borde al dar clic en menu*/
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+
+        .navbar-nav {
+            flex-direction: column;
+            align-items: flex-start;
+
+            a {
+                font-size: $text-small;
+            }
+        }
+    }
+
+
+    /******main******/
+
+    .container__img1 {
+        h1 {
+            padding: $space-xxlarge $space-small $space-small $space-small;
+            margin: 0;
+            font-size: $text-sbase;
+        }
+    }
+
+    /*posicionar elementos inicio nosotros*/
+    .contaniner__inicio-nosotros {
+        flex-direction: column-reverse;
+
+        /*posicionar imagen 1 inicio nosotros*/
+        img {
+            right: 0;
+        }
+
+        /*dar ancho normal al contenedor inicio-nosotros*/
+        .container__article {
+            width: 100%;
+            margin-left: 0;
+
+            h2{
+                width: 80%;
+            }
+        }
+    }
+
+    /*posicionar elementos mision vision valores*/
+    .container__inicio-mision {
+        flex-direction: column;
+    }
+
+    /*posicionar elemntos inicio-servicios*/
+
+    .container__inicio--servicios {
+
+        flex-direction: column;
+        row-gap: $space-smedium;
+    }
+
+    /*titulos grandes proyectos-servicios de inicio*/
+    .container__title{
+
+        /*size de los h2*/
+        h2{
+           font-size: $text-large;
+        }
+    }
+
+    /******footer****/
+    /*orientacion del footer*/
+    .footer__section {
+        flex-direction: column-reverse;
+
+        /*ancho del logo*/
+        & img {
+            width: 100%;
+        }
+
+        .footer__container-redes {
+            align-items: flex-start !important;
+
+            /*size textos mail-what*/
+            .footer__container-mail {
+
+                p {
+                    font-size: $text-small !important;
+                }
+            }
+        }
+
+        /*reducir letra del boton contactanos*/
+        .footer__container-button {
+
+            /*boton contactanos*/
+            button {
+                font-size: $text-small-button;
+            }
+        }
+    }
+
+}
+
+/*mobil small*/
+@media screen and (min-width: 321px) and (max-width: 576px) {
+
+    /*****header******/
+
+    /*dejar fijo navbar */
+    .navbar {
+        position: fixed;
+        z-index: 2;
+
+        /*size contenedor logo*/
+        .container {
+            img {
+                width: $space-logo576px;
+                
+            }
+        }
+
+        /*quitar borde iconolmenu*/
+        .navbar-toggler {
+            border: none;
+        }
+
+        /*quitar borde al dar clic en menu*/
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+
+        .navbar-nav {
+            flex-direction: column;
+            align-items: flex-start;
+
+            a {
+                font-size: $text-small;
+            }
+        }
+    }
+
+
+    /******main******/
+
+    /*parrafo 1 inicio-nosotros*/
+    .container__img1 {
+        h1 {
+            padding: $space-xxxlarge $space-small $space-small $space-small;
+            margin: 0;
+            font-size: $text-xmedium;
+        }
+    }
+
+    /*posicionar elementos inicio nosotros*/
+    .contaniner__inicio-nosotros {
+        flex-direction: column-reverse;
+
+        /*posicionar imagen 1 inicio nosotros*/
+        img {
+            right: 0;
+        }
+
+        /*dar ancho normal al contenedor inicio-nosotros*/
+        .container__article {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+
+    /*posicionar elementos mision vision valores*/
+    .container__inicio-mision {
+        flex-direction: column;
+    }
+
+    /*posicionar elemntos inicio-servicios*/
+
+    .container__inicio--servicios {
+
+        flex-direction: column;
+        row-gap: $space-smedium;
+    }
+
+    /******footer****/
+    /*orientacion del footer*/
+    .footer__section {
+        flex-direction: column-reverse;
+        row-gap: $space-ssmall;
+
+        /*ancho del logo*/
+        & img {
+            width: 100%;
+        }
+
+        .footer__container-redes {
+            align-items: flex-start !important;
+
+            /*size textos mail-what*/
+            .footer__container-mail {
+
+                p {
+                    font-size: $text-small !important;
+                }
+            }
+        }
+
+        /*reducir letra del boton contactanos*/
+        .footer__container-button {
+
+            /*boton contactanos*/
+            button {
+                font-size: $text-small-button;
+            }
+        }
+    }
+}
+
+/****mobil medium****/
+@media screen and (min-width: 577px) and (max-width: 768px) {
+
+    /*****header******/
+
+    /*dejar fijo navbar */
+    .navbar {
+        position: fixed;
+        z-index: 2;
+
+        /*size contenedor logo*/
+        .container {
+            img {
+                width: 100%;
+                
+            }
+        }
+
+        /*quitar borde iconolmenu*/
+        .navbar-toggler {
+            border: none;
+        }
+
+        /*quitar borde al dar clic en menu*/
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+
+        .navbar-nav {
+            flex-direction: column;
+            align-items: flex-start;
+
+            a {
+                font-size: $text-small;
+            }
+        }
+    }
+
+
+    /******main******/
+
+    /*parrafo 1 inicio-nosotros*/
+    .container__img1 {
+        h1 {
+            padding: $space-xsuper $space-xlarge $space-margin-article $space-xlarge;
+            margin: 0;
+            font-size: $text-xmedium;
+        }
+    }
+
+    /*posicionar elementos inicio nosotros*/
+    .contaniner__inicio-nosotros {
+        flex-direction: column-reverse;
+
+        /*posicionar imagen 1 inicio nosotros*/
+        img {
+            right: 0;
+        }
+
+        /*dar ancho normal al contenedor inicio-nosotros*/
+        .container__article {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+
+    /*posicionar elementos mision vision valores*/
+    .container__inicio-mision {
+        flex-direction: column;
+    }
+
+    /*posicionar elemntos inicio-servicios*/
+    .container__inicio--servicios {
+
+        flex-direction: column;
+        row-gap: $space-large;
+
+        h3{
+            font-size: $text-medium;
+        }
+    }
+
+    /******footer****/
+    /*orientacion del footer*/
+    .footer__section {
+        flex-direction: column-reverse;
+        row-gap: $space-ssmall;
+
+        /*ancho del logo*/
+        & img {
+            width: 100%;
+        }
+
+        .footer__container-redes {
+            align-items: flex-start !important;
+
+            /*size textos mail-what*/
+            .footer__container-mail {
+
+                p {
+                    font-size: $text-base !important;
+                }
+            }
+        }
+
+        /*reducir letra del boton contactanos*/
+        .footer__container-button {
+
+            /*boton contactanos*/
+            button {
+                font-size: $text-base;
+            }
+        }
+    }
+}
+
+
+
+/**desktop_small**/
+@media screen and (min-width: 992px) {
+
+    /**header**/
+    .navbar-nav {
+        flex-wrap: wrap;
+    }
+
+    /***main**/
+    /*espacio interno contenedor color-rosa*/
+    .container__article-texto {
+        margin: $space-margin-article 0 $space-margin-article 0;
+    }
+}

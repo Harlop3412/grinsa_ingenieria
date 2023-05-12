@@ -1,0 +1,77 @@
+/**************FOOTER**************/
+
+/*estilos footer*/
+.footer__section {
+    @include flex1(row, center, center, wrap);
+    background-color: $col-primary;
+
+    /*size img footer*/
+    & img {
+        width: 60%;
+    }
+
+    /*flex container logo-copy*/
+    .footer__container {
+        @include flex1(column, center, center, none);
+        margin: $space-xsmall 0 $space-xsmall 0;
+
+        .footer__container-logo {
+            margin-bottom: $space-ssmall;
+        }
+
+        & a {
+            text-align: center;
+        }
+    }
+
+    /*container redes*/
+    .footer__container-2 {
+        @include flex1(column, center, center, none);
+
+        .footer__container-redes {
+            color: $col-secondary;
+            @include flex1(column, center, center, none);
+
+            /*size img mail-what*/
+            & img {
+                width: $space-medium;
+            }
+
+            /*contenedor del texto  mail-whatsapp centrar p*/
+            .footer__container-mail {
+                @include flex1(column, center, center, none);
+                width: 50%;
+
+                /*size texto mail-what*/
+                & p {
+                    font-size: $text-base;
+                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+                }
+
+                /*color textos mail-what*/
+                & a {
+                    color: $col-secondary;
+                    font-weight: 900;
+                }
+            }
+        }
+    }
+
+    /*ancho de los div*/
+    div {
+        width: 33%;
+    }
+
+    /*estilos contactanos boton ocupa ancho total de su div*/
+    .footer__container-button {
+        @extend.footer__container;
+        align-items: stretch;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+        /*estilos tipo de letra boton*/
+        button {
+            font-size: $text-sbase;
+        }
+    }
+}

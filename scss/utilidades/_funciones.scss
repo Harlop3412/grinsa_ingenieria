@@ -1,0 +1,12 @@
+/********************utilidades_funciones*********************/
+@mixin flex1 ($direction, $justify, $aling, $wrap) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $aling;
+    flex-wrap: $wrap;
+}
+
+@mixin flex () {
+    display: flex;
+}
