@@ -7,7 +7,7 @@
     .container__nosotros--img1 {
         @extend .container__img1;
         justify-content: center;
-        background-image: url(../../recursos/seccion_nosotros/imagenes/seccion_nosotros_1.jpg);
+        background-image: url(../recursos/seccion_nosotros/imagenes/seccion_nosotros_1.jpg);
 
         h1 {
             padding: $space-xxxlarge 0 $space-xxxlarge 0;
