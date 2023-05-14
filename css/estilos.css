@@ -192,7 +192,7 @@ html {
 
 /*vistas*/
 /**main__seccion-inicio**/
-.container__inicio, .container__nosotros, .container__proyectos {
+.container__inicio, .container__nosotros, .container__proyectos, .container__servicios {
   display: flex;
   flex-direction: column;
   justify-content: none;
@@ -200,7 +200,7 @@ html {
   flex-wrap: none;
   /**contenedor imagen1**/
   /*estilos texto 1 pading para menu fixed*/ }
-  .container__inicio .container__img1, .container__nosotros .container__img1, .container__proyectos .container__img1, .container__nosotros .container__nosotros--img1, .container__proyectos .container__nosotros--img1, .container__proyectos .container__proyectos--img1 {
+  .container__inicio .container__img1, .container__nosotros .container__img1, .container__proyectos .container__img1, .container__servicios .container__img1, .container__nosotros .container__nosotros--img1, .container__proyectos .container__nosotros--img1, .container__servicios .container__nosotros--img1, .container__inicio .container__proyectos--img1, .container__nosotros .container__proyectos--img1, .container__proyectos .container__proyectos--img1, .container__servicios .container__proyectos--img1, .container__servicios .container__servicios--img1 {
     max-width: 100%;
     background-image: url(../recursos/seccion_inicio/imagenes/seccion_inicio.jpg);
     background-position: center, center;
@@ -211,7 +211,7 @@ html {
     text-align: center;
     z-index: 1;
     padding-top: 10rem; }
-  .container__inicio h1, .container__nosotros h1, .container__proyectos h1 {
+  .container__inicio h1, .container__nosotros h1, .container__proyectos h1, .container__servicios h1 {
     font-weight: bold;
     font-size: 8em;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -298,13 +298,13 @@ html {
 
 /*main*/
 /*contenedor imagen leyenda nosotros*/
-.container__nosotros, .container__proyectos {
+.container__nosotros, .container__proyectos, .container__servicios {
   /*imagen nosotros*/ }
-  .container__nosotros .container__nosotros--img1, .container__proyectos .container__nosotros--img1 {
+  .container__nosotros .container__nosotros--img1, .container__proyectos .container__nosotros--img1, .container__servicios .container__nosotros--img1 {
     background-image: url(../recursos/seccion_nosotros/imagenes/seccion_nosotros_1.jpg);
     justify-content: center;
     /*h1 nosotros*/ }
-    .container__nosotros .container__nosotros--img1 h1, .container__proyectos .container__nosotros--img1 h1 {
+    .container__nosotros .container__nosotros--img1 h1, .container__proyectos .container__nosotros--img1 h1, .container__servicios .container__nosotros--img1 h1 {
       padding: 15rem 0 15rem 0; }
 
 /*contenedor del article e img de nosotros mision y vision*/
@@ -367,11 +367,10 @@ html {
       width: 80%; }
 
 /*contenedor general section 1 proyectos*/
-.container__proyectos {
-  /*imagen contenedor proyectos*/ }
-  .container__proyectos .container__proyectos--img1 {
-    background-image: url(../recursos/seccion_proyectos/seccion_proyectos_1.jpg);
-    justify-content: center; }
+/*imagen contenedor proyectos scope global va extend con servicios*/
+.container__proyectos--img1, .container__servicios .container__servicios--img1 {
+  background-image: url(../recursos/seccion_proyectos/seccion_proyectos_1.jpg);
+  justify-content: center; }
 
 /*seccion galeria proyectos*/
 /*contenedor galeria1 general */
@@ -387,12 +386,13 @@ html {
     .proyectos__galeria .card p {
       font-size: 2.3em;
       font-weight: bold;
-      color: #000000; }
+      color: #000000;
+      text-align: center; }
   .proyectos__galeria .justify-content-md-center {
     margin-top: 2rem; }
 
 /*estilos  grid subgaleria1 debe ser scope global*/
-.proyectos__subgaleria, .proyectos__subgaleria-2 {
+.proyectos__subgaleria, .proyectos__subgaleria-2, .servicios__galeria--grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -400,7 +400,7 @@ html {
   column-gap: 2rem;
   row-gap: 2rem;
   padding: 2rem; }
-  .proyectos__subgaleria img, .proyectos__subgaleria-2 img {
+  .proyectos__subgaleria img, .proyectos__subgaleria-2 img, .servicios__galeria--grid img {
     object-fit: cover; }
 
 /*contenedor subgaleria2 proyecots*/
@@ -420,6 +420,35 @@ html {
 .btn__galeria:hover p {
   color: #be4e04;
   font-weight: bold; }
+
+/*Contenedor general seccion1 servicios*/
+.container__servicios {
+  /*contenedor img y h1*/ }
+  .container__servicios .container__servicios--img1 {
+    background-image: url(../../recursos/seccion_servicios/seccion_serivicios_1.jpg); }
+
+/*seccion cards*/
+/*contenedor grid cards*/
+.servicios__galeria--grid {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  margin: 2rem;
+  /*clase boostrap size img de card*/
+  /*clase en las cards para acomodarlo en el grid*/ }
+  .servicios__galeria--grid .card {
+    background-color: #fddddd;
+    /*size imgs de galeria*/
+    /*parrafos contenedor */ }
+    .servicios__galeria--grid .card img {
+      height: 300px; }
+    .servicios__galeria--grid .card p {
+      font-size: 2em;
+      font-weight: bold;
+      color: #000000;
+      text-align: center;
+      padding: 2rem 0 2rem 0; }
+  .servicios__galeria--grid .servicios__galeria--grid1:nth-of-type(7) {
+    grid-column: 2/3; }
 
 /*@ utilidades_mediaquieries*/
 /***** @ mediaquieries*****/
@@ -450,7 +479,7 @@ html {
         font-size: 2em; }
   /******main******/
   /*parrafo 1 inicio-nosotros*/
-  .container__img1 h1, .container__nosotros .container__nosotros--img1 h1, .container__proyectos .container__nosotros--img1 h1, .container__proyectos .container__proyectos--img1 h1 {
+  .container__img1 h1, .container__nosotros .container__nosotros--img1 h1, .container__proyectos .container__nosotros--img1 h1, .container__servicios .container__nosotros--img1 h1, .container__proyectos--img1 h1, .container__servicios .container__servicios--img1 h1 {
     padding: 2rem;
     margin: 0;
     font-size: 2.3em; }
@@ -500,7 +529,7 @@ html {
     flex-direction: column; }
   /*SECCION PROYECTOS**/
   /*contenedor h1 proyectos */
-  .container__proyectos--img1 {
+  .container__proyectos--img1, .container__servicios .container__servicios--img1 {
     padding: 0 0 4rem 0; }
   /*contenedor general de cards que contienen galerias*/
   .proyectos__galeria {
@@ -511,12 +540,26 @@ html {
     /*clase de subgaleria2*/ }
     .proyectos__galeria .btn__galeria {
       margin-bottom: 5rem; }
-    .proyectos__galeria .proyectos__subgaleria, .proyectos__galeria .proyectos__subgaleria-2 {
+    .proyectos__galeria .proyectos__subgaleria, .proyectos__galeria .proyectos__subgaleria-2, .proyectos__galeria .servicios__galeria--grid {
       display: flex;
       flex-direction: column; }
     .proyectos__galeria .proyectos__subgaleria-2 {
       display: flex;
       flex-direction: column; }
+  /*SECCION SERVICIOS*/
+  /*seccion img1 h1 servicios*/
+  .container__servicios--img1 {
+    /*h1 servicios*/ }
+    .container__servicios--img1 h1 {
+      padding: 15rem 0 3.7rem 0 !important; }
+  /*seccion cards servicios*/
+  /*contenedor grid cards*/
+  .servicios__galeria--grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: none; }
   /******footer****/
   /*orientacion del footer*/
   .footer__section {
@@ -561,7 +604,7 @@ html {
         font-size: 2em; }
   /******main******/
   /*parrafo 1 inicio-nosotros*/
-  .container__img1 h1, .container__nosotros .container__nosotros--img1 h1, .container__proyectos .container__nosotros--img1 h1, .container__proyectos .container__proyectos--img1 h1 {
+  .container__img1 h1, .container__nosotros .container__nosotros--img1 h1, .container__proyectos .container__nosotros--img1 h1, .container__servicios .container__nosotros--img1 h1, .container__proyectos--img1 h1, .container__servicios .container__servicios--img1 h1 {
     padding: 6rem 2rem 2rem 2rem;
     margin: 0;
     font-size: 3.5em; }
@@ -606,7 +649,7 @@ html {
     flex-direction: column; }
   /*SECCION PROYECTOS**/
   /*contenedor h1 proyectos */
-  .container__proyectos--img1 {
+  .container__proyectos--img1, .container__servicios .container__servicios--img1 {
     padding: 0 0 4rem 0; }
   /*contenedor galeria general de cards que contienen galerias*/
   .proyectos__galeria {
@@ -617,12 +660,26 @@ html {
     /*clase de subgaleria2*/ }
     .proyectos__galeria .btn__galeria {
       margin-bottom: 5rem; }
-    .proyectos__galeria .proyectos__subgaleria, .proyectos__galeria .proyectos__subgaleria-2 {
+    .proyectos__galeria .proyectos__subgaleria, .proyectos__galeria .proyectos__subgaleria-2, .proyectos__galeria .servicios__galeria--grid {
       display: flex;
       flex-direction: column; }
     .proyectos__galeria .proyectos__subgaleria-2 {
       display: flex;
       flex-direction: column; }
+  /*SECCION SERVICIOS*/
+  /*seccion img1 h1 servicios*/
+  .container__servicios--img1 {
+    /*h1 servicios*/ }
+    .container__servicios--img1 h1 {
+      padding: 19rem 0 3.7rem 0 !important; }
+  /*seccion cards servicios*/
+  /*contenedor grid cards*/
+  .servicios__galeria--grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: none; }
   /******footer****/
   /*orientacion del footer*/
   .footer__section {
@@ -668,7 +725,7 @@ html {
         font-size: 2em; }
   /******main******/
   /*parrafo 1 inicio-nosotros*/
-  .container__img1 h1, .container__nosotros .container__nosotros--img1 h1, .container__proyectos .container__nosotros--img1 h1, .container__proyectos .container__proyectos--img1 h1 {
+  .container__img1 h1, .container__nosotros .container__nosotros--img1 h1, .container__proyectos .container__nosotros--img1 h1, .container__servicios .container__nosotros--img1 h1, .container__proyectos--img1 h1, .container__servicios .container__servicios--img1 h1 {
     padding: 10rem 7rem 4rem 7rem;
     margin: 0;
     font-size: 3.5em; }
@@ -723,12 +780,24 @@ html {
     /*clase de subgaleria2*/ }
     .proyectos__galeria .btn__galeria {
       margin-bottom: 5rem; }
-    .proyectos__galeria .proyectos__subgaleria, .proyectos__galeria .proyectos__subgaleria-2 {
+    .proyectos__galeria .proyectos__subgaleria, .proyectos__galeria .proyectos__subgaleria-2, .proyectos__galeria .servicios__galeria--grid {
       display: flex;
       flex-direction: column; }
     .proyectos__galeria .proyectos__subgaleria-2 {
       display: flex;
       flex-direction: column; }
+  /*SECCION SERVICIOS*/
+  /*seccion img1 h1 servicios*/
+  .container__servicios--img1 {
+    /*h1 servicios*/ }
+    .container__servicios--img1 h1 {
+      padding: 15rem 0 10rem 0 !important; }
+  /*contenedor grid cards*/
+  .servicios__galeria--grid {
+    grid-template-columns: repeat(2, 1fr);
+    /*clase en las cards para acomodarlo en el grid*/ }
+    .servicios__galeria--grid .servicios__galeria--grid1:nth-of-type(7) {
+      grid-column: 1/3; }
   /******footer****/
   /*orientacion del footer*/
   .footer__section {
@@ -815,13 +884,25 @@ html {
         font-size: 2.8em !important; } }
 
 /**desktop_small**/
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 992px) and (max-width: 1200px) {
   /**header**/
-  /*sacar pading de header*/
+  /*clase header*/
   .header {
-    padding-bottom: 0; }
-  .navbar-nav {
-    flex-wrap: wrap; }
+    /* size fuente nav a*/
+    /*contenedor img logo*/ }
+    .header .navbar-nav a {
+      margin: 0rem 1.5rem 0rem 0rem; }
+    .header .container {
+      /*logo img*/ }
+      .header .container img {
+        width: 23rem; }
+  /***main**/
+  /*espacio interno contenedor color-rosa*/
+  .container__article-texto, .container__nosotros--mision .nosotros__article-misionvision {
+    margin: 4rem 0 4rem 0; } }
+
+/*desktop */
+@media screen and (min-width: 1201px) {
   /***main**/
   /*espacio interno contenedor color-rosa*/
   .container__article-texto, .container__nosotros--mision .nosotros__article-misionvision {
