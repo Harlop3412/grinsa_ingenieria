@@ -192,7 +192,7 @@ html {
 
 /*vistas*/
 /**main__seccion-inicio**/
-.container__inicio, .container__nosotros {
+.container__inicio, .container__nosotros, .container__proyectos {
   display: flex;
   flex-direction: column;
   justify-content: none;
@@ -200,7 +200,7 @@ html {
   flex-wrap: none;
   /**contenedor imagen1**/
   /*estilos texto 1 pading para menu fixed*/ }
-  .container__inicio .container__img1, .container__nosotros .container__img1, .container__nosotros .container__nosotros--img1 {
+  .container__inicio .container__img1, .container__nosotros .container__img1, .container__proyectos .container__img1, .container__nosotros .container__nosotros--img1, .container__proyectos .container__nosotros--img1, .container__proyectos .container__proyectos--img1 {
     max-width: 100%;
     background-image: url(../recursos/seccion_inicio/imagenes/seccion_inicio.jpg);
     background-position: center, center;
@@ -211,7 +211,7 @@ html {
     text-align: center;
     z-index: 1;
     padding-top: 10rem; }
-  .container__inicio h1, .container__nosotros h1 {
+  .container__inicio h1, .container__nosotros h1, .container__proyectos h1 {
     font-weight: bold;
     font-size: 8em;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -298,13 +298,13 @@ html {
 
 /*main*/
 /*contenedor imagen leyenda nosotros*/
-.container__nosotros {
+.container__nosotros, .container__proyectos {
   /*imagen nosotros*/ }
-  .container__nosotros .container__nosotros--img1 {
+  .container__nosotros .container__nosotros--img1, .container__proyectos .container__nosotros--img1 {
     background-image: url(../recursos/seccion_nosotros/imagenes/seccion_nosotros_1.jpg);
     justify-content: center;
     /*h1 nosotros*/ }
-    .container__nosotros .container__nosotros--img1 h1 {
+    .container__nosotros .container__nosotros--img1 h1, .container__proyectos .container__nosotros--img1 h1 {
       padding: 15rem 0 15rem 0; }
 
 /*contenedor del article e img de nosotros mision y vision*/
@@ -366,6 +366,61 @@ html {
     .container__valores .section__svg-valores .container__svg-valores {
       width: 80%; }
 
+/*contenedor general section 1 proyectos*/
+.container__proyectos {
+  /*imagen contenedor proyectos*/ }
+  .container__proyectos .container__proyectos--img1 {
+    background-image: url(../recursos/seccion_proyectos/seccion_proyectos_1.jpg);
+    justify-content: center; }
+
+/*seccion galeria proyectos*/
+/*contenedor galeria1 general */
+.proyectos__galeria {
+  display: flex;
+  padding: 8rem 5rem 8rem 5rem;
+  column-gap: 3.7rem;
+  /*clase tarjeta de boostrap*/
+  /*clase bootsrap margin top boton ver galeria*/ }
+  .proyectos__galeria .card {
+    background-color: #be4e04;
+    /*parrafos contenedor */ }
+    .proyectos__galeria .card p {
+      font-size: 2.3em;
+      font-weight: bold;
+      color: #000000; }
+  .proyectos__galeria .justify-content-md-center {
+    margin-top: 2rem; }
+
+/*estilos  grid subgaleria1 debe ser scope global*/
+.proyectos__subgaleria, .proyectos__subgaleria-2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-items: center;
+  column-gap: 2rem;
+  row-gap: 2rem;
+  padding: 2rem; }
+  .proyectos__subgaleria img, .proyectos__subgaleria-2 img {
+    object-fit: cover; }
+
+/*contenedor subgaleria2 proyecots*/
+.proyectos__subgaleria-2 {
+  grid-template-rows: repeat(1, 1fr); }
+
+/*estilos boton */
+.btn__galeria {
+  background-color: #be4e04;
+  /*texto boton*/ }
+  .btn__galeria p {
+    font-size: 1.7em;
+    font-weight: 600;
+    color: #000000; }
+
+/*hover boton*/
+.btn__galeria:hover p {
+  color: #be4e04;
+  font-weight: bold; }
+
 /*@ utilidades_mediaquieries*/
 /***** @ mediaquieries*****/
 /**** mobil_xsmall**/
@@ -395,7 +450,7 @@ html {
         font-size: 2em; }
   /******main******/
   /*parrafo 1 inicio-nosotros*/
-  .container__img1 h1, .container__nosotros .container__nosotros--img1 h1 {
+  .container__img1 h1, .container__nosotros .container__nosotros--img1 h1, .container__proyectos .container__nosotros--img1 h1, .container__proyectos .container__proyectos--img1 h1 {
     padding: 2rem;
     margin: 0;
     font-size: 2.3em; }
@@ -443,6 +498,25 @@ html {
   /*contenedor general svg nuestros valores*/
   .section__svg-valores {
     flex-direction: column; }
+  /*SECCION PROYECTOS**/
+  /*contenedor h1 proyectos */
+  .container__proyectos--img1 {
+    padding: 0 0 4rem 0; }
+  /*contenedor general de cards que contienen galerias*/
+  .proyectos__galeria {
+    flex-direction: column;
+    padding: 2rem;
+    /*boton ver galeria*/
+    /*clase de subgaleria1 y 3*/
+    /*clase de subgaleria2*/ }
+    .proyectos__galeria .btn__galeria {
+      margin-bottom: 5rem; }
+    .proyectos__galeria .proyectos__subgaleria, .proyectos__galeria .proyectos__subgaleria-2 {
+      display: flex;
+      flex-direction: column; }
+    .proyectos__galeria .proyectos__subgaleria-2 {
+      display: flex;
+      flex-direction: column; }
   /******footer****/
   /*orientacion del footer*/
   .footer__section {
@@ -487,7 +561,7 @@ html {
         font-size: 2em; }
   /******main******/
   /*parrafo 1 inicio-nosotros*/
-  .container__img1 h1, .container__nosotros .container__nosotros--img1 h1 {
+  .container__img1 h1, .container__nosotros .container__nosotros--img1 h1, .container__proyectos .container__nosotros--img1 h1, .container__proyectos .container__proyectos--img1 h1 {
     padding: 6rem 2rem 2rem 2rem;
     margin: 0;
     font-size: 3.5em; }
@@ -530,6 +604,25 @@ html {
   /*contenedor general svg nuestros valores*/
   .section__svg-valores {
     flex-direction: column; }
+  /*SECCION PROYECTOS**/
+  /*contenedor h1 proyectos */
+  .container__proyectos--img1 {
+    padding: 0 0 4rem 0; }
+  /*contenedor galeria general de cards que contienen galerias*/
+  .proyectos__galeria {
+    flex-direction: column;
+    padding: 2rem;
+    /*boton ver galeria*/
+    /*clase de subgaleria1 y 3*/
+    /*clase de subgaleria2*/ }
+    .proyectos__galeria .btn__galeria {
+      margin-bottom: 5rem; }
+    .proyectos__galeria .proyectos__subgaleria, .proyectos__galeria .proyectos__subgaleria-2 {
+      display: flex;
+      flex-direction: column; }
+    .proyectos__galeria .proyectos__subgaleria-2 {
+      display: flex;
+      flex-direction: column; }
   /******footer****/
   /*orientacion del footer*/
   .footer__section {
@@ -575,7 +668,7 @@ html {
         font-size: 2em; }
   /******main******/
   /*parrafo 1 inicio-nosotros*/
-  .container__img1 h1, .container__nosotros .container__nosotros--img1 h1 {
+  .container__img1 h1, .container__nosotros .container__nosotros--img1 h1, .container__proyectos .container__nosotros--img1 h1, .container__proyectos .container__proyectos--img1 h1 {
     padding: 10rem 7rem 4rem 7rem;
     margin: 0;
     font-size: 3.5em; }
@@ -620,6 +713,22 @@ html {
   /*contenedor general svg nuestros valores*/
   .section__svg-valores {
     flex-direction: column; }
+  /*SECCION PROYECTOS*/
+  /*contenedor general de cards que contienen galerias*/
+  .proyectos__galeria {
+    flex-direction: column;
+    padding: 3.7rem;
+    /*boton ver galeria*/
+    /*clase de subgaleria1 y 3*/
+    /*clase de subgaleria2*/ }
+    .proyectos__galeria .btn__galeria {
+      margin-bottom: 5rem; }
+    .proyectos__galeria .proyectos__subgaleria, .proyectos__galeria .proyectos__subgaleria-2 {
+      display: flex;
+      flex-direction: column; }
+    .proyectos__galeria .proyectos__subgaleria-2 {
+      display: flex;
+      flex-direction: column; }
   /******footer****/
   /*orientacion del footer*/
   .footer__section {

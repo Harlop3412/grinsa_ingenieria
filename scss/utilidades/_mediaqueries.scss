@@ -130,6 +130,39 @@
         flex-direction: column;
     }
 
+    /*SECCION PROYECTOS**/
+
+    /*contenedor h1 proyectos */
+    //trae los demas padig  por extend
+    .container__proyectos--img1 {
+        padding: 0 0 $space-margin-article 0;
+    }
+
+    /*contenedor general de cards que contienen galerias*/
+    .proyectos__galeria {
+        flex-direction: column;
+        padding: $space-small;
+
+        /*boton ver galeria*/
+        .btn__galeria {
+            margin-bottom: $space-padig-gallery;
+        }
+
+        /*clase de subgaleria1 y 3*/
+        .proyectos__subgaleria {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /*clase de subgaleria2*/
+        .proyectos__subgaleria-2 {
+            display: flex;
+            flex-direction: column;
+        }
+
+    }
+
+
     /******footer****/
     /*orientacion del footer*/
     .footer__section {
@@ -283,6 +316,38 @@
     /*contenedor general svg nuestros valores*/
     .section__svg-valores {
         flex-direction: column;
+    }
+
+    /*SECCION PROYECTOS**/
+
+    /*contenedor h1 proyectos */
+    //trae los demas padig  por extend
+    .container__proyectos--img1 {
+        padding: 0 0 $space-margin-article 0;
+    }
+
+    /*contenedor galeria general de cards que contienen galerias*/
+    .proyectos__galeria {
+        flex-direction: column;
+        padding: $space-small;
+
+        /*boton ver galeria*/
+        .btn__galeria {
+            margin-bottom: $space-padig-gallery;
+        }
+
+        /*clase de subgaleria1 y 3*/
+        .proyectos__subgaleria {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /*clase de subgaleria2*/
+        .proyectos__subgaleria-2 {
+            display: flex;
+            flex-direction: column;
+        }
+
     }
 
     /******footer****/
@@ -443,6 +508,32 @@
     /*contenedor general svg nuestros valores*/
     .section__svg-valores {
         flex-direction: column;
+    }
+
+    /*SECCION PROYECTOS*/
+
+    /*contenedor general de cards que contienen galerias*/
+    .proyectos__galeria {
+        flex-direction: column;
+        padding: $space-medium;
+
+        /*boton ver galeria*/
+        .btn__galeria {
+            margin-bottom: $space-padig-gallery;
+        }
+
+        /*clase de subgaleria1 y 3*/
+        .proyectos__subgaleria {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /*clase de subgaleria2*/
+        .proyectos__subgaleria-2 {
+            display: flex;
+            flex-direction: column;
+        }
+
     }
 
     /******footer****/
