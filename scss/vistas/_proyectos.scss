@@ -2,12 +2,12 @@
 .container__proyectos {
     @extend .container__nosotros;
 
-    /*imagen contenedor proyectos*/
-    .container__proyectos--img1 {
-        @extend .container__img1;
-        background-image: url(../recursos/seccion_proyectos/seccion_proyectos_1.jpg);
-        justify-content: center;
-    }
+}
+/*imagen contenedor proyectos scope global va extend con servicios*/
+.container__proyectos--img1 {
+    @extend .container__img1;
+    background-image: url(../recursos/seccion_proyectos/seccion_proyectos_1.jpg);
+    justify-content: center;
 }
 
 /*seccion galeria proyectos*/
@@ -27,6 +27,7 @@
             font-size: $text-sbase ;
             font-weight: bold;
             color: $col-alternate;
+            text-align: center;
         }
     }
 

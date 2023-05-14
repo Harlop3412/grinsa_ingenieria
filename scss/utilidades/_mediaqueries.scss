@@ -159,9 +159,24 @@
             display: flex;
             flex-direction: column;
         }
-
     }
 
+    /*SECCION SERVICIOS*/
+
+    /*seccion img1 h1 servicios*/
+    .container__servicios--img1 {
+
+        /*h1 servicios*/
+        h1 {
+            padding: $space-xxxlarge 0 $space-medium 0 !important;
+        }
+    }
+
+    /*seccion cards servicios*/
+    /*contenedor grid cards*/
+    .servicios__galeria--grid {
+        @include flex1(column, center, center, none);
+    }
 
     /******footer****/
     /*orientacion del footer*/
@@ -347,7 +362,23 @@
             display: flex;
             flex-direction: column;
         }
+    }
 
+    /*SECCION SERVICIOS*/
+
+    /*seccion img1 h1 servicios*/
+    .container__servicios--img1 {
+
+        /*h1 servicios*/
+        h1 {
+            padding: $space-logo576px 0 $space-medium 0 !important;
+        }
+    }
+
+    /*seccion cards servicios*/
+    /*contenedor grid cards*/
+    .servicios__galeria--grid {
+        @include flex1(column, center, center, none);
     }
 
     /******footer****/
@@ -533,7 +564,27 @@
             display: flex;
             flex-direction: column;
         }
+    }
 
+    /*SECCION SERVICIOS*/
+
+    /*seccion img1 h1 servicios*/
+    .container__servicios--img1 {
+
+        /*h1 servicios*/
+        h1 {
+            padding: $space-xxxlarge 0 $space-xxlarge 0 !important;
+        }
+    }
+
+    /*contenedor grid cards*/
+    .servicios__galeria--grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        /*clase en las cards para acomodarlo en el grid*/
+        .servicios__galeria--grid1:nth-of-type(7) {
+            grid-column: 1/3;
+        }
     }
 
     /******footer****/
@@ -686,18 +737,43 @@
 }
 
 /**desktop_small**/
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 992px) and (max-width: 1200px) {
 
     /**header**/
 
-    /*sacar pading de header*/
+    /*clase header*/
     .header {
-        padding-bottom: 0;
+
+        /* size fuente nav a*/
+        .navbar-nav {
+            a {
+                margin: 0rem $space-ssmall 0rem 0rem;
+            }
+        }
+
+        /*contenedor img logo*/
+        .container {
+
+            /*logo img*/
+            img {
+                width: $space-logo992px;
+            }
+        }
     }
 
-    .navbar-nav {
-        flex-wrap: wrap;
+    // .navbar-nav {
+    //     flex-wrap: wrap;
+    // }
+
+    /***main**/
+    /*espacio interno contenedor color-rosa*/
+    .container__article-texto {
+        margin: $space-margin-article 0 $space-margin-article 0;
     }
+}
+
+/*desktop */
+@media screen and (min-width: 1201px) {
 
     /***main**/
     /*espacio interno contenedor color-rosa*/
