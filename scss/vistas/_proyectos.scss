@@ -1,0 +1,82 @@
+/*contenedor general section 1 proyectos*/
+.container__proyectos {
+    @extend .container__nosotros;
+
+    /*imagen contenedor proyectos*/
+    .container__proyectos--img1 {
+        @extend .container__img1;
+        background-image: url(../recursos/seccion_proyectos/seccion_proyectos_1.jpg);
+        justify-content: center;
+    }
+}
+
+/*seccion galeria proyectos*/
+
+/*contenedor galeria1 general */
+.proyectos__galeria {
+    @include flex;
+    padding: $space-padig-gallery1 $space-padig-gallery $space-padig-gallery1 $space-padig-gallery;
+    column-gap: $space-medium;
+
+    /*clase tarjeta de boostrap*/
+    .card {
+        background-color: $col-primary;
+
+        /*parrafos contenedor */
+        p {
+            font-size: $text-sbase ;
+            font-weight: bold;
+            color: $col-alternate;
+        }
+    }
+
+    /*clase bootsrap margin top boton ver galeria*/
+    .justify-content-md-center {
+        margin-top: $space-small;
+    }
+}
+
+
+
+/*estilos  grid subgaleria1 debe ser scope global*/
+.proyectos__subgaleria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    column-gap: $space-small;
+    row-gap: $space-small;
+    padding: $space-small;
+
+    img {
+        object-fit: cover;
+    }
+}
+
+/*contenedor subgaleria2 proyecots*/
+.proyectos__subgaleria-2 {
+    @extend .proyectos__subgaleria;
+    grid-template-rows: repeat(1, 1fr);
+}
+
+/*estilos boton */
+.btn__galeria {
+    background-color: $col-primary ;
+
+    /*texto boton*/
+    p {
+        font-size: $text-small-button;
+        font-weight: 600;
+        color: $col-alternate;
+    }
+}
+
+/*hover boton*/
+.btn__galeria:hover {
+
+    p {
+        color: $col-primary;
+        font-weight: bold;
+    }
+
+}
