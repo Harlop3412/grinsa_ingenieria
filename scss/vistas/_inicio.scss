@@ -1,4 +1,5 @@
-/**main__seccion-inicio**/
+/**main__seccion-inicio **/
+//nota: se deriva de esta clase las demas secciones como el textshadow  del h1
 .container__inicio {
     @include flex1(column, none, none, none);
 
@@ -25,6 +26,7 @@
         color: $col-secondary;
         margin: $space-xxlarge;
         padding: $space-xxlarge 0 $space-xxlarge 0;
+        text-shadow: -$space-border-bottom $space-border-bottom $space-border-bottom $col-alternate;
     }
 }
 
@@ -88,11 +90,12 @@
 /*clase boostrap agrega imagenes al carousel*/
 .carousel-item {
 
-    .carousel__letra{
+    .carousel__letra {
         font-size: $text-medium;
         font-weight: 900;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
+
     /*titulos de imagenes carousel inicio*/
     // h5 {
     //     font-size: $text-medium;

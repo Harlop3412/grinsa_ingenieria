@@ -4,8 +4,8 @@
 
     /*contenedor img y h1*/
     .container__servicios--img1 {
-        @extend .container__proyectos--img1;
-        background-image: url(../../recursos/seccion_servicios/seccion_serivicios_1.jpg);
+        @extend .container__proyectos--img1;        
+        background-image: url(../recursos/seccion_servicios/seccion_serivicios_1.jpg) !important; //important container__inicio
         @extend .container__img1;
     }
 }
@@ -20,7 +20,7 @@
 
     /*clase boostrap size img de card*/
     .card {
-        background-color: $col-alternate1;
+        background-color: $col-alternate2;
 
         /*size imgs de galeria*/
         img {

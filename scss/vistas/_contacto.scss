@@ -1,0 +1,104 @@
+/*Contenedor general seccion1 contacto*/
+.container__contacto {
+    @extend .container__servicios;
+
+    /*contenedor img y h1*/
+    .container__contacto--img1 {
+        @extend .container__servicios--img1;
+        @extend .container__proyectos--img1;
+        background-image: url(../recursos/seccion_contacto/seccion_contacto_1.jpg) !important; //important container__inicio
+        @extend .container__img1;
+    }
+
+    /*franjas div3 solo en la seccion de contactos*/
+    .container__div3--contacto {
+        @extend .container__div3;
+        margin-bottom: 0;
+    }
+}
+
+/*Contenedor general mail-whatsapp contacto*/
+.contacto__mail-whatsapp {
+    @include flex1(row, center, center, none);
+    background-color: $col-alternate2;
+
+    /*contenedor img y p mail*/
+    .contacto__mail {
+        padding: $space-small 0 $space-small 0;
+
+        @include flex1(column, center, center, none);
+
+        /*estilos, size img mail y whatsapp*/
+        .contacto__mail-img {
+            width: 12%;
+        }
+
+    }
+
+    /*estilos p correo y numero*/
+    p {
+        color: $col-secondary;
+        font-weight: 700;
+        font-size: $text-base;
+        text-shadow: -$space-border-bottom $space-border-bottom $space-border-bottom $col-alternate;
+    }
+
+}
+
+/*contenedor form y text*/
+.contacto__formulario-texto {
+    background-color: $col-alternate1;
+
+    /*seccion textos*/
+    .textos__formulario {
+        @include flex1(column, center, center, none);
+        padding: $space-medium 0 $space-xsmall 0;
+
+        h2 {
+            font-size: $text-large;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: $text-sbase;
+            font-weight: bold;
+        }
+    }
+
+    /*seccion formulario**/
+    .formulario__boton {
+        row-gap: $space-xsmall;
+        padding-bottom: $space-medium;
+        @include flex1(column, center, center, none);
+
+        /*clases del imput*/
+        .imput {
+            width: $space-imput;
+            font-size: $text-small;
+            text-align: center;
+            border: solid 1px $col-primary;
+            color: $col-primary;
+            font-weight: bold;
+            accent-color: $col-primary; //accen-color cambia color del borde del imput al escogerlo
+        }
+
+        //clase con atributo para cambiar solo un determinado tipo de imput en este caso email 
+        // .imput[type=email]{
+        //     accent-color: $col-alternate;
+        // }
+
+        /*calses boton imput*/
+        .boton {
+            background-color: $col-secondary;
+            @extend.imput;
+            width: $space-xxlarge;
+        }
+
+        .boton:hover{
+            background-color: $col-primary;
+            color: $col-secondary;
+        }
+    }
+
+
+}

@@ -210,6 +210,41 @@
         }
     }
 
+    /**SECCION-CONTACTO**/
+
+    /***main***/
+    /*contenedores generales mail whatsapp textos*/
+    .contacto__mail-whatsapp {
+        @include flex1(column, center, center, none);
+
+        /*textos de email y numero tel*/
+        p {
+            font-size: $text-sbase
+        }
+    }
+
+    /*contenedor de textos del formulario*/
+    .textos__formulario {
+
+        h2 {
+            font-size: $space-margin-article !important;
+            text-align: center;
+        }
+
+        p{
+            text-align: center;
+        }
+    }
+
+    /*reducir ancho de imputs*/
+    .imput{
+        width: 30rem !important;
+    }
+
+    .boton{
+        background-color: $col-primary !important;
+        color: $col-secondary !important;
+    }
 }
 
 /*mobil small*/
@@ -379,6 +414,42 @@
     /*contenedor grid cards*/
     .servicios__galeria--grid {
         @include flex1(column, center, center, none);
+    }
+
+    /**SECCION-CONTACTO**/
+
+    /***main***/
+    /*contenedores generales mail whatsapp textos*/
+    .contacto__mail-whatsapp {
+        @include flex1(column, center, center, none);
+
+        /*textos de email y numero tel*/
+        p {
+            font-size: $text-sbase
+        }
+    }
+
+    /*contenedor de textos del formulario*/
+    .textos__formulario {
+
+        h2 {
+            font-size: $space-margin-article !important;
+            text-align: center;
+        }
+
+        p{
+            text-align: center;
+        }
+    }
+
+    /*reducir ancho de imputs*/
+    .imput{
+        width: $space-super !important;
+    }
+
+    .boton{
+        background-color: $col-primary !important;
+        color: $col-secondary !important;
     }
 
     /******footer****/
@@ -584,6 +655,19 @@
         /*clase en las cards para acomodarlo en el grid*/
         .servicios__galeria--grid1:nth-of-type(7) {
             grid-column: 1/3;
+        }
+    }
+
+    /***SECCION CONTACTO***/
+    /*contenedor de textos del formulario*/
+    .textos__formulario {
+
+        h2 {
+            text-align: center;
+        }
+
+        p{
+            text-align: center;
         }
     }
 
