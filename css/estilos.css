@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*********utilidades_variables********/
 /*******************utilidades_variables*********************/
 /*colors*/
@@ -431,62 +430,22 @@ html {
     font-size: 3.5em;
     font-weight: bold; }
 
-/*modal de cada imagen al hacer clic seccion proyectos */
-.modal__app {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: none; }
-
-/*contenedor de cada imegen de la modal de las galerias*/
+/*contenedor de cada imegen de la submodal */
 .proyectos__subgaleria--modal {
-  border: solid #eb5f07 1px;
-  border-radius: 5px; }
+  border: solid #eb5f07 2px;
+  border-radius: 0.5rem; }
 
-/*contenedor de img y button de ventada modal de galerias MODAL1*/
-.ventana__modal {
-  display: inline-block;
-  position: relative; }
-
+/*contenedor de img  submodal imagen individual de galerias*/
 .ventana__modal.active {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.7);
   height: 90vh;
-  border-radius: 5px;
   display: grid;
   place-items: center;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(1, 1fr);
   row-gap: 2rem;
-  overflow-y: scroll;
-  /*clase de img en boton cerrar estilos de cada img de galeria*/ }
-
-/*modal 2  */
-/*clase en cada div de cada img de la galeria sin active*/
-.container__modal {
-  display: inline-block;
-  position: relative; }
-
-/*se agrega active*/
-.container__modal.active {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.7);
-  top: 0;
-  left: 0;
-  overflow-y: scroll;
-  /*tamaño img dentro de modal*/ }
-  .container__modal.active img {
-    width: 70%; }
-
-.container__modal.active::after {
-  content: '';
-  position: fixed; }
+  overflow-y: scroll; }
 
 /*Contenedor general seccion1 servicios*/
 .container__servicios, .container__contacto {
