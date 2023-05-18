@@ -3,10 +3,11 @@
     @extend .container__nosotros;
 
 }
+
 /*imagen contenedor proyectos scope global va extend con servicios*/
 .container__proyectos--img1 {
     @extend .container__img1;
-    background-image: url(../recursos/seccion_proyectos/seccion_proyectos_1.jpg);
+    background-image: url(../recursos/seccion_proyectos/seccion_proyectos_1.jpg) !important; //important container__inicio
     justify-content: center;
 }
 
@@ -80,4 +81,38 @@
         font-weight: bold;
     }
 
+}
+
+/*contenedor titulo modal de galeria*/
+.titulo__modal-galeria {
+
+    /*estilos titulo modal*/
+    h2 {
+        color: $col-primary;
+        font-size: $text-xmedium;
+        font-weight: bold;
+    }
+
+}
+//fin modal principal
+
+//inicio submodal
+/*contenedor de cada imegen de la submodal */
+.proyectos__subgaleria--modal {
+    border: solid $col-primary $space-border-bottom;
+    border-radius: $space-xxsmall;
+}
+
+/*contenedor de img  submodal imagen individual de galerias*/
+.ventana__modal.active {
+    position: fixed;
+    background-color: $col-alternate-modal;
+    height: 90vh;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    row-gap:2rem ;
+    // transition: .5;
+    overflow-y: scroll;
 }

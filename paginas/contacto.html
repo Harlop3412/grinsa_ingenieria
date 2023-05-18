@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--bloque favicon-->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!--bloque keywords-->
+    <meta name="keywords" content=" ">
+    <!--bloque description-->
+    <meta name="description" content=" ">
+    <!--bloque tipografía google-fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <!-- CSS only bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- libreria iconos bootstrap
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"> -->
+    <!--bloque animacion libreria textos-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- fontawesome libreria iconos
+     <script src="https://kit.fontawesome.com/91007ea3a2.js" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="../css/estilos.css">
+    <title>Contacto</title>
+</head>
+
+<body>
+    <header class="header">
+        <!--menu navbar -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary container-fluid">
+
+            <div class="container">
+                <!--logo-->
+                <img src="../recursos/logos/logo_naranja.png" alt="logo_naranja" class="">
+
+            </div>
+            <div class="">
+
+                <!--clase navbar-toggler borde icono estilos del icono menu-->
+                <button class="navbar-toggler " type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <!--span es de boostrap clase para dar menu hamburguesa-->
+                    <span class="navbar-toggler-icon "></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ">
+                        <a class="nav-link  active" aria-current="page" href="../index.html">Inicio</a>
+                        <a class="nav-link active" href="./nosotros.html">Nosotros</a>
+                        <a class="nav-link active" href="./proyectos.html">Proyectos</a>
+                        <a class="nav-link active" href="./servicios.html">Servicios</a>
+                        <a class="nav-link active" href="#">Contacto</a>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+        <section class="container__contacto">
+            <!--container imagen de fondo inicio1 y leyenda1-->
+            <section class="container__contacto--img1">
+                <div class="">
+                    <h1>
+                        CONTACTO
+                    </h1>
+                </div>
+            </section>
+            <!--container divs de color primario-->
+            <section>
+                <div class="container__div1"></div>
+                <div class="container__div2"></div>
+                <div class="container__div3--contacto"></div>
+            </section>
+        </section>
+
+        <!--seccion numero email contacto-->
+        <section class="contacto__mail-whatsapp">
+            <div class="contacto__mail">
+                <div class="contacto__mail-img">
+                    <img src="../recursos/Pie_de_pagina/mail.png" alt="mail">
+                </div>
+
+                <div>
+                    <p>contacto@grinsa.com.co</p>
+                </div>
+            </div>
+            <div class="contacto__mail">
+                <div class="contacto__mail-img">
+                    <a href="https://api.whatsapp.com/send?phone=573103873180&text=Hola, quiero contactarlos" target="_blank"> <img
+                            src="../recursos/Pie_de_pagina/whatsapp.png" alt="whatsapp"></a>
+                </div>
+                <div>
+                    <a href="https://api.whatsapp.com/send?phone=573103873180&text=Hola, quiero contactarlos" target="_blank">
+                        <p>(+57)&nbsp;3103873180</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!--inicio seccion texto y formulario-->
+        <section class="contacto__formulario-texto">
+            <section class="textos__formulario">
+                <div>
+                    <h2>Comunícate con nosotros</h2>
+                </div>
+                <div class="container__div4"></div>
+                <div>
+                    <p>Déjanos saber la información que requieres llenando
+                        los siguientes campos:</p>
+                </div>
+            </section>
+
+            <!--formulario-->
+            <section class="">
+                <form id="formulario" action="https://formsubmit.co/webmaster@grinsa.com.co" method="POST"
+                    class="formulario__boton">
+
+                    <!--Caja de nombre-->
+                    <div class=" ">
+                        <!-- <label for="nombre">Nombre</label> -->
+                        <input type="text" minlength="1" maxlength="40" name="name" id="nombre" placeholder="Nombre *"
+                            value="" required autofocus class=" form-control-lg imput">
+                    </div>
+
+                    <!--Caja de correo email-->
+                    <div class="">
+                        <!-- <label for="correo">Correo electrónico</label> -->
+                        <input type="email" id="correo" name="correo" placeholder="Email *" value="" required
+                            class="imput form-control-lg ">
+                    </div>
+
+                    <!--Caja number phone-->
+                    <div class="">
+                        <!-- <label for="telefono">Teléfono</label> -->
+                        <input type="text" minlength="7" maxlength="15" placeholder="Teléfono *" id="telefono" value=""
+                            name="phone" required pattern="[0-9]+" class="imput form-control-lg">
+                    </div>
+
+                    <!--Caja de asunto-->
+                    <div class="">
+                        <!-- <label for="asunto">Asunto</label> -->
+                        <input type="text" minlength="1" maxlength="30" name="subject" id="asunto" placeholder="Asunto"
+                            value="" class="imput form-control-lg">
+                    </div>
+
+                    <!--textarea-->
+                    <div class="">
+                        <!-- <label for="mensaje">Mensaje</label> -->
+                        <textarea name="comments" id="mensaje" cols="30" rows="5" maxlength="190" minlength="1" value=""
+                            class="imput form-control-lg" placeholder="Mensaje"></textarea>
+                    </div>
+
+                    <!--input para que cuando se envien los datos se quede en el sitio web y no lo envie fuera -->
+                    <input type='hidden' name='_next' value="http://127.0.0.1:5501/paginas/contacto.html">
+
+                    <!--input para quitar el captcha con value 'false'-->
+                    <input type='hidden' name='_captcha' value="false">
+
+                    <!--boton-->
+                    <div class="">
+                        <button type="submit" class="btn btn-lg boton">Enviar</button>
+                    </div>
+                </form>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <section class="footer__section">
+            <div class="footer__container">
+                <a href=""> <img src="../recursos/logos/logo_blanco.png" alt="logo_blanco"
+                        class="footer__container-logo"></a>
+                <img src="../recursos/logos/copyright.svg" alt="copyright">
+            </div>
+            <div class="footer__container-2">
+                <div class="footer__container-redes">
+                    <div class=""><a href="#"><img src="../recursos/Pie_de_pagina/mail.png" alt="mail"></a></div>
+                    <div class="footer__container-mail">
+                        <a href="">
+                            <p>contacto@grinsa.com.co</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__container-redes">
+                    <div class="footer__container-whatsapp">
+                        <a href="https://api.whatsapp.com/send?phone=573103873180&text=Hola, quiero contactarlos" target="_blank"> <img src="../recursos/Pie_de_pagina/whatsapp.png" alt="whatsapp">
+                        </a>
+                    </div>
+                    <div class="footer__container-mail">
+                        <a href="https://api.whatsapp.com/send?phone=573103873180&text=Hola, quiero contactarlos" target="_blank">
+                            <p>(+57)&nbsp;3103873180</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__container-button ">
+                <button type="button" class="btn btn-dark btn-lg">Contáctanos</button>
+
+            </div>
+        </section>
+    </footer>
+    <!-- JavaScript Bundle with Popper bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <script src=""></script>
+</body>
+
+</html>

@@ -18,6 +18,14 @@
     margin-bottom: $space-xsmall;
 }
 
+/*franjas de textos article*/
+.container__div4 {
+    background-color: $col-primary;
+    height: $space-xsmall;
+    margin-bottom: $space-xsmall;
+    width: 60%;
+}
+
 /*section inicio__nosotros*/
 .contaniner__inicio-nosotros {
     @include flex1(row, none, center, none);
@@ -55,10 +63,4 @@
         width: 60%;
     }
 }
- /*franjas de textos article*/
- .container__div4 {
-    background-color: $col-primary;
-    height: $space-xsmall;
-    margin-bottom: $space-xsmall;
-    width: 60%;
-}
+ 
