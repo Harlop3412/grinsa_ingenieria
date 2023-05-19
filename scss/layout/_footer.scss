@@ -75,3 +75,45 @@
         }
     }
 }
+
+
+
+/*contenedor general del header y del boton cerrar superior de la modal*/
+.modal__titulo-color {
+    background-color: $col-alternate2;
+
+    /* contenedor del p del header modal*/
+    //estilos del titulo de la modal
+    .modal__titulo {
+
+        @include flex1(column, center, center, none);
+
+        /* titulo de la modal*/
+        p {
+            color: $col-alternate;
+            text-align: center;
+            font-size: $text-small-button;
+            position: relative;
+            left: $space-xsuper;
+            font-weight: bold;
+        }
+    }
+}
+
+
+/*clase en boton enviar del form de la modal footer*/
+.boton__modal-footer {
+    @extend .boton;
+    background-color: $col-primary !important;
+    color: white !important;
+}
+
+.boton__modal-footer:hover {
+    background-color: $col-secondary !important;
+    color: $col-primary !important;
+}
+
+/*clase contenedor body de la modal*/
+.modal__cuerpo{
+    background-color: $col-alternate1;
+}

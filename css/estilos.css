@@ -104,13 +104,16 @@ html {
     flex-direction: row;
     justify-content: none;
     align-items: none;
-    flex-wrap: none; }
+    flex-wrap: none;
+    /*nav-link clase boostrap de cada link del menu*/ }
     .navbar .navbar-nav a {
       font-size: 2.8em;
       font-weight: bold;
       margin: 0rem 3.7rem 0rem 0rem; }
     .navbar .navbar-nav .nav-link:hover {
       color: white; }
+    .navbar .navbar-nav .nav-link:active {
+      color: rgba(0, 0, 0, 0.7); }
   .navbar .container {
     background-color: white;
     margin: 0px 0px 0px;
@@ -189,6 +192,38 @@ html {
     /*estilos tipo de letra boton*/ }
     .footer__section .footer__container-button button {
       font-size: 2.3em; }
+
+/*contenedor general del header y del boton cerrar superior de la modal*/
+.modal__titulo-color {
+  background-color: #feb89f;
+  /* contenedor del p del header modal*/ }
+  .modal__titulo-color .modal__titulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: none;
+    /* titulo de la modal*/ }
+    .modal__titulo-color .modal__titulo p {
+      color: #000000;
+      text-align: center;
+      font-size: 1.7em;
+      position: relative;
+      left: 20rem;
+      font-weight: bold; }
+
+/*clase en boton enviar del form de la modal footer*/
+.boton__modal-footer {
+  background-color: #eb5f07 !important;
+  color: white !important; }
+
+.boton__modal-footer:hover {
+  background-color: white !important;
+  color: #eb5f07 !important; }
+
+/*clase contenedor body de la modal*/
+.modal__cuerpo {
+  background-color: #fddddd; }
 
 /*vistas*/
 /**main__seccion-inicio **/
@@ -514,8 +549,7 @@ html {
 /*contenedor form y text*/
 .contacto__formulario-texto {
   background-color: #fddddd;
-  /*seccion textos*/
-  /*seccion formulario**/ }
+  /*seccion textos*/ }
   .contacto__formulario-texto .textos__formulario {
     display: flex;
     flex-direction: column;
@@ -529,30 +563,32 @@ html {
     .contacto__formulario-texto .textos__formulario p {
       font-size: 2.3em;
       font-weight: bold; }
-  .contacto__formulario-texto .formulario__boton {
-    row-gap: 1rem;
-    padding-bottom: 3.7rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: none;
-    /*clases del imput*/
-    /*calses boton imput*/ }
-    .contacto__formulario-texto .formulario__boton .imput, .contacto__formulario-texto .formulario__boton .boton {
-      width: 50rem;
-      font-size: 2em;
-      text-align: center;
-      border: solid 1px #eb5f07;
-      color: #eb5f07;
-      font-weight: bold;
-      accent-color: #eb5f07; }
-    .contacto__formulario-texto .formulario__boton .boton {
-      background-color: white;
-      width: 10rem; }
-    .contacto__formulario-texto .formulario__boton .boton:hover {
-      background-color: #eb5f07;
-      color: white; }
+
+/*seccion formulario**/
+.formulario__boton {
+  row-gap: 1rem;
+  padding-bottom: 3.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: none;
+  /*clases del imput*/
+  /*calses boton imput*/ }
+  .formulario__boton .imput, .formulario__boton .boton, .formulario__boton .boton__modal-footer {
+    width: 50rem;
+    font-size: 2em;
+    text-align: center;
+    border: solid 1px #eb5f07;
+    color: #eb5f07;
+    font-weight: bold;
+    accent-color: #eb5f07; }
+  .formulario__boton .boton, .formulario__boton .boton__modal-footer {
+    background-color: white;
+    width: 10rem; }
+  .formulario__boton .boton:hover, .formulario__boton .boton__modal-footer:hover {
+    background-color: #eb5f07;
+    color: white; }
 
 /*@ utilidades_mediaquieries*/
 /***** @ mediaquieries*****/
@@ -700,9 +736,9 @@ html {
   .textos__formulario p {
     text-align: center; }
   /*reducir ancho de imputs*/
-  .imput, .contacto__formulario-texto .formulario__boton .boton {
+  .imput, .formulario__boton .boton, .formulario__boton .boton__modal-footer {
     width: 30rem !important; }
-  .boton {
+  .boton, .boton__modal-footer {
     background-color: #eb5f07 !important;
     color: white !important; } }
 
@@ -827,9 +863,9 @@ html {
   .textos__formulario p {
     text-align: center; }
   /*reducir ancho de imputs*/
-  .imput, .contacto__formulario-texto .formulario__boton .boton {
+  .imput, .formulario__boton .boton, .formulario__boton .boton__modal-footer {
     width: 37rem !important; }
-  .boton {
+  .boton, .boton__modal-footer {
     background-color: #eb5f07 !important;
     color: white !important; }
   /******footer****/

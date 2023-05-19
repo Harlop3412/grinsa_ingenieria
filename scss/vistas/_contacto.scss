@@ -65,40 +65,40 @@
         }
     }
 
-    /*seccion formulario**/
-    .formulario__boton {
-        row-gap: $space-xsmall;
-        padding-bottom: $space-medium;
-        @include flex1(column, center, center, none);
+}
 
-        /*clases del imput*/
-        .imput {
-            width: $space-imput;
-            font-size: $text-small;
-            text-align: center;
-            border: solid 1px $col-primary;
-            color: $col-primary;
-            font-weight: bold;
-            accent-color: $col-primary; //accen-color cambia color del borde del imput al escogerlo
-        }
+/*seccion formulario**/
+//escope global para modal de boton contactanos
+.formulario__boton {
+    row-gap: $space-xsmall;
+    padding-bottom: $space-medium;
+    @include flex1(column, center, center, none);
 
-        //clase con atributo para cambiar solo un determinado tipo de imput en este caso email 
-        // .imput[type=email]{
-        //     accent-color: $col-alternate;
-        // }
-
-        /*calses boton imput*/
-        .boton {
-            background-color: $col-secondary;
-            @extend.imput;
-            width: $space-xxlarge;
-        }
-
-        .boton:hover{
-            background-color: $col-primary;
-            color: $col-secondary;
-        }
+    /*clases del imput*/
+    .imput {
+        width: $space-imput;
+        font-size: $text-small;
+        text-align: center;
+        border: solid 1px $col-primary;
+        color: $col-primary;
+        font-weight: bold;
+        accent-color: $col-primary; //accen-color cambia color del borde del imput al escogerlo
     }
 
+    //clase con atributo para cambiar solo un determinado tipo de imput en este caso email 
+    // .imput[type=email]{
+    //     accent-color: $col-alternate;
+    // }
 
+    /*calses boton imput*/
+    .boton {
+        background-color: $col-secondary;
+        @extend.imput;
+        width: $space-xxlarge;
+    }
+
+    .boton:hover {
+        background-color: $col-primary;
+        color: $col-secondary;
+    }
 }
