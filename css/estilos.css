@@ -105,11 +105,14 @@ html {
     justify-content: none;
     align-items: none;
     flex-wrap: none;
+    /*nav-link clase boostrap para dar estilos a los link de menu*/
     /*nav-link clase boostrap de cada link del menu*/ }
     .navbar .navbar-nav a {
       font-size: 2.8em;
       font-weight: bold;
       margin: 0rem 3.7rem 0rem 0rem; }
+    .navbar .navbar-nav .nav-link {
+      color: #000000; }
     .navbar .navbar-nav .nav-link:hover {
       color: white; }
     .navbar .navbar-nav .nav-link:active {
@@ -193,7 +196,7 @@ html {
     .footer__section .footer__container-button button {
       font-size: 2.3em; }
 
-/*contenedor general del header y del boton cerrar superior de la modal*/
+/*contenedor general del header y del boton cerrar superior de la modal color footer modal*/
 .modal__titulo-color {
   background-color: #feb89f;
   /* contenedor del p del header modal*/ }
@@ -740,7 +743,11 @@ html {
     width: 30rem !important; }
   .boton, .boton__modal-footer {
     background-color: #eb5f07 !important;
-    color: white !important; } }
+    color: white !important; }
+  /**footer***/
+  .modal__titulo-color .modal__titulo p {
+    position: relative;
+    left: 0; } }
 
 /*mobil small*/
 @media screen and (min-width: 321px) and (max-width: 576px) {
@@ -885,7 +892,11 @@ html {
     .footer__section .footer__container-button {
       /*boton contactanos*/ }
       .footer__section .footer__container-button button {
-        font-size: 1.7em; } }
+        font-size: 1.7em; }
+  /**footer***/
+  .modal__titulo-color .modal__titulo p {
+    position: relative;
+    left: 4rem; } }
 
 /****mobil medium****/
 @media screen and (min-width: 577px) and (max-width: 768px) {
@@ -1009,7 +1020,14 @@ html {
     .footer__section .footer__container-button {
       /*boton contactanos*/ }
       .footer__section .footer__container-button button {
-        font-size: 2.8em; } }
+        font-size: 2.8em; }
+  /*reducir ancho de imputs*/
+  .imput, .formulario__boton .boton, .formulario__boton .boton__modal-footer {
+    width: 37rem !important; }
+  /**modal formulario boton contactanos***/
+  .modal__titulo-color .modal__titulo p {
+    position: relative;
+    left: 4rem; } }
 
 @media screen and (min-width: 769px) and (max-width: 991px) {
   /***header***/

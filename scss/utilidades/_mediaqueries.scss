@@ -231,19 +231,29 @@
             text-align: center;
         }
 
-        p{
+        p {
             text-align: center;
         }
     }
 
     /*reducir ancho de imputs*/
-    .imput{
+    .imput {
         width: 30rem !important;
     }
 
-    .boton{
+    .boton {
         background-color: $col-primary !important;
         color: $col-secondary !important;
+    }
+
+    /**footer***/
+    .modal__titulo-color {
+        .modal__titulo {
+            p {
+                position: relative;
+                left: 0;
+            }
+        }
     }
 }
 
@@ -437,17 +447,17 @@
             text-align: center;
         }
 
-        p{
+        p {
             text-align: center;
         }
     }
 
     /*reducir ancho de imputs*/
-    .imput{
+    .imput {
         width: $space-super !important;
     }
 
-    .boton{
+    .boton {
         background-color: $col-primary !important;
         color: $col-secondary !important;
     }
@@ -481,6 +491,16 @@
             /*boton contactanos*/
             button {
                 font-size: $text-small-button;
+            }
+        }
+    }
+
+    /**footer***/
+    .modal__titulo-color {
+        .modal__titulo {
+            p {
+                position: relative;
+                left: 4rem;
             }
         }
     }
@@ -666,7 +686,7 @@
             text-align: center;
         }
 
-        p{
+        p {
             text-align: center;
         }
     }
@@ -700,6 +720,21 @@
             /*boton contactanos*/
             button {
                 font-size: $text-base;
+            }
+        }
+    }
+    
+    /*reducir ancho de imputs*/
+    .imput {
+        width: $space-super !important;
+    }
+
+    /**modal formulario boton contactanos***/
+    .modal__titulo-color {
+        .modal__titulo {
+            p {
+                position: relative;
+                left: 4rem;
             }
         }
     }
