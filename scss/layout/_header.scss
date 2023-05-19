@@ -25,6 +25,11 @@
             margin: 0rem $space-medium 0rem 0rem;
         }
 
+        /*nav-link clase boostrap para dar estilos a los link de menu*/
+        .nav-link{
+            color: $col-alternate;
+        }
+        
         /*nav-link clase boostrap de cada link del menu*/
         .nav-link:hover {
             color: $col-secondary ;
