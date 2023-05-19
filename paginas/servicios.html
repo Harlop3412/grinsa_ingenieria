@@ -163,39 +163,116 @@
         </section>
         <!--fin seccion cards-->
 
+        <!--seccion modal se despliega con boton contactanos del footer-->
+        <!-- Modal -->
+        <div class="modal fade" id="modalFooter" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header modal__titulo-color">
+                        <div class="modal__titulo">
+                            <p class="modal-title " id="exampleModalLabel">Envíanos un email llenando los
+                                siguientes campos:</p>
+                        </div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body modal__cuerpo">
+                        <!--formulario-->
+                        <section class="">
+                            <form id="" action="https://formsubmit.co/webmaster@grinsa.com.co" method="POST"
+                                class="formulario__boton">
+
+                                <!--Caja de nombre-->
+                                <div class=" ">
+                                    <!-- <label for="nombre">Nombre</label> -->
+                                    <input type="text" minlength="1" maxlength="40" name="name" id="nombre"
+                                        placeholder="Nombre *" value="" required autofocus
+                                        class=" form-control-lg imput">
+                                </div>
+
+                                <!--Caja de correo email-->
+                                <div class="">
+                                    <!-- <label for="correo">Correo electrónico</label> -->
+                                    <input type="email" id="correo" name="correo" placeholder="Email *" value=""
+                                        required class="imput form-control-lg ">
+                                </div>
+
+                                <!--Caja number phone-->
+                                <div class="">
+                                    <!-- <label for="telefono">Teléfono</label> -->
+                                    <input type="text" minlength="7" maxlength="15" placeholder="Teléfono *"
+                                        id="telefono" value="" name="phone" required pattern="[0-9]+"
+                                        class="imput form-control-lg">
+                                </div>
+
+                                <!--Caja de asunto-->
+                                <div class="">
+                                    <!-- <label for="asunto">Asunto</label> -->
+                                    <input type="text" minlength="1" maxlength="30" name="subject" id="asunto"
+                                        placeholder="Asunto" value="" class="imput form-control-lg">
+                                </div>
+
+                                <!--textarea-->
+                                <div class="">
+                                    <!-- <label for="mensaje">Mensaje</label> -->
+                                    <textarea name="comments" id="mensaje" cols="30" rows="5" maxlength="190"
+                                        minlength="1" value="" class="imput form-control-lg"
+                                        placeholder="Mensaje"></textarea>
+                                </div>
+
+                                <!--input para que cuando se envien los datos se quede en el sitio web y no lo envie fuera -->
+                                <input type='hidden' name='_next' value="http://127.0.0.1:5501/paginas/contacto.html">
+
+                                <!--input para quitar el captcha con value 'false'-->
+                                <input type='hidden' name='_captcha' value="false">
+
+                                <!--boton-->
+                                <div class="">
+                                    <button type="submit" class="btn btn-lg boton__modal-footer">Enviar</button>
+                                </div>
+                            </form>
+                    </div>
+                    <div class="modal-footer modal__titulo-color">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <footer>
         <section class="footer__section">
             <div class="footer__container">
-                <a href=""> <img src="../recursos/logos/logo_blanco.png" alt="logo_blanco"
+                <a href="../index.html"> <img src="../recursos/logos/logo_blanco.png" alt="logo_blanco"
                         class="footer__container-logo"></a>
                 <img src="../recursos/logos/copyright.svg" alt="copyright">
             </div>
             <div class="footer__container-2">
                 <div class="footer__container-redes">
-                    <div class=""><a href=""><img src="../recursos/Pie_de_pagina/mail.png" alt="mail"></a></div>
+                    <div class=""><a href="./contacto.html#formulario"><img src="../recursos/Pie_de_pagina/mail.png" alt="mail"></a></div>
                     <div class="footer__container-mail">
-                        <a href="">
+                        <a href="./contacto.html#formulario">
                             <p>contacto@grinsa.com.co</p>
                         </a>
                     </div>
                 </div>
                 <div class="footer__container-redes">
                     <div class="footer__container-whatsapp">
-                        <a href=""> <img src="../recursos/Pie_de_pagina/whatsapp.png" alt="whatsapp">
+                        <a href="https://api.whatsapp.com/send?phone=573103873180&text=Hola, quiero contactarlos" target="_blank"> <img src="../recursos/Pie_de_pagina/whatsapp.png" alt="whatsapp">
                         </a>
                     </div>
                     <div class="footer__container-mail">
-                        <a href="">
+                        <a href="https://api.whatsapp.com/send?phone=573103873180&text=Hola, quiero contactarlos" target="_blank">
                             <p>(+57)&nbsp;3103873180</p>
                         </a>
                     </div>
                 </div>
             </div>
+            <!--seccion boton footer despliega modal con form en el main-->
             <div class="footer__container-button ">
-                <button type="button" class="btn btn-dark btn-lg" data-target="#formulario">Contáctanos</button>
-
+                <button type="button" class="btn btn-dark btn-lg" data-bs-toggle="modal"
+                    data-bs-target="#modalFooter">Contáctanos</button>
+            </div>
             </div>
         </section>
     </footer>
