@@ -596,7 +596,7 @@ html {
 /*@ utilidades_mediaquieries*/
 /***** @ mediaquieries*****/
 /**** mobil_xsmall**/
-@media screen and (min-width: 1px) and (max-width: 320px) {
+@media screen and (min-width: 1px) and (max-width: 400px) {
   /*****header******/
   /*sacar pading de header*/
   .header {
@@ -750,7 +750,7 @@ html {
     left: 0; } }
 
 /*mobil small*/
-@media screen and (min-width: 321px) and (max-width: 576px) {
+@media screen and (min-width: 401px) and (max-width: 576px) {
   /*****header******/
   /*sacar pading de header*/
   .header {
