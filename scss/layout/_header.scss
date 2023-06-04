@@ -23,6 +23,7 @@
             font-size: $text-base;
             font-weight: bold;
             margin: 0rem $space-medium 0rem 0rem;
+            transition: 0.5s ease;
         }
 
         /*nav-link clase boostrap para dar estilos a los link de menu*/
@@ -39,6 +40,13 @@
            color:$col-alternate-modal;
         }
 
+        /*estilos clase active*/
+        .active{
+            color: $col-secondary;
+            border-bottom: .3rem solid $col-secondary;
+            width: 100%;
+            transition: 0.5s ease;
+        }
     }
 
     /*margenes contenedor logo prop clip-path da forma de punta al contenedor*/
