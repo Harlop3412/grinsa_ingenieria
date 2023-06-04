@@ -106,17 +106,24 @@ html {
     align-items: none;
     flex-wrap: none;
     /*nav-link clase boostrap para dar estilos a los link de menu*/
-    /*nav-link clase boostrap de cada link del menu*/ }
+    /*nav-link clase boostrap de cada link del menu*/
+    /*estilos clase active*/ }
     .navbar .navbar-nav a {
       font-size: 2.8em;
       font-weight: bold;
-      margin: 0rem 3.7rem 0rem 0rem; }
+      margin: 0rem 3.7rem 0rem 0rem;
+      transition: 0.5s ease; }
     .navbar .navbar-nav .nav-link {
       color: #000000; }
     .navbar .navbar-nav .nav-link:hover {
       color: white; }
     .navbar .navbar-nav .nav-link:active {
       color: rgba(0, 0, 0, 0.7); }
+    .navbar .navbar-nav .active {
+      color: white;
+      border-bottom: 0.3rem solid white;
+      width: 100%;
+      transition: 0.5s ease; }
   .navbar .container {
     background-color: white;
     margin: 0px 0px 0px;
