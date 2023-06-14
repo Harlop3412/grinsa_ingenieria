@@ -55,7 +55,7 @@
     }
 }
 
-/*contenedor subgaleria2 proyecots*/
+/*contenedor subgaleria2 proyectos*/
 .proyectos__subgaleria-2 {
     @extend .proyectos__subgaleria;
     grid-template-rows: repeat(1, 1fr);
@@ -94,6 +94,7 @@
     }
 
 }
+
 //fin modal principal
 
 //inicio submodal
@@ -104,15 +105,37 @@
 }
 
 /*contenedor de img  submodal imagen individual de galerias*/
-.ventana__modal.active {
+.ventana__modal //.active (esta clase despliega abajo la img al evento click)
+
+    {
     position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: $col-alternate-modal;
-    height: 90vh;
+    // width: 90%;
+    height: 100%;
     display: grid;
     place-items: center;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(1, 1fr);
-    row-gap:2rem ;
-    // transition: .5;
-    overflow-y: scroll;
+    // transition: transform 0.5s ease;
+    gap:1rem;
+    overflow: auto;
+
+    /*size img dentro de la modal*/
+    img{
+        width: 95%;
+    }
+}
+
+/*clase boostrap estilos boton cerrar de cada img galeria*/
+.btn-close {
+    font-size: $space-small;
+    background-color: $col-primary ;
+}
+
+/*clase boton subgaleria para js*/
+.hidden {
+    display: none;
 }
