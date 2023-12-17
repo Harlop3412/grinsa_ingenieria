@@ -2,14 +2,15 @@
 .container__proyectos {
     @extend .container__nosotros;
 
+    /*imagen contenedor proyectos scope global va extend con servicios*/
+    .container__proyectos--img1 {
+        @extend .container__img1;
+        background-image: url(../recursos/seccion_proyectos/seccion_proyectos_1.jpg) !important; //important container__inicio
+        justify-content: center;
+    }
 }
 
-/*imagen contenedor proyectos scope global va extend con servicios*/
-.container__proyectos--img1 {
-    @extend .container__img1;
-    background-image: url(../recursos/seccion_proyectos/seccion_proyectos_1.jpg) !important; //important container__inicio
-    justify-content: center;
-}
+
 
 /*seccion galeria proyectos*/
 
@@ -19,18 +20,23 @@
     padding: $space-padig-gallery1 $space-padig-gallery $space-padig-gallery1 $space-padig-gallery;
     column-gap: $space-medium;
 
-    /*clase tarjeta de boostrap*/
-    .card {
-        background-color: $col-primary;
+    .card__btn {
 
-        /*parrafos contenedor */
-        p {
-            font-size: $text-sbase ;
-            font-weight: bold;
-            color: $col-alternate;
-            text-align: center;
+        /*clase tarjeta de boostrap*/
+        .card {
+            background-color: $col-primary;
+            max-width: 100%;
+
+            /*parrafos contenedor */
+            p {
+                font-size: $text-sbase ;
+                font-weight: bold;
+                color: $col-alternate;
+                text-align: center;
+            }
         }
     }
+
 
     /*clase bootsrap margin top boton ver galeria*/
     .justify-content-md-center {
@@ -49,6 +55,7 @@
     column-gap: $space-small;
     row-gap: $space-small;
     padding: $space-small;
+    cursor: pointer;
 
     img {
         object-fit: cover;
@@ -104,6 +111,10 @@
     border-radius: $space-xxsmall;
 }
 
+.modal-ancho{
+    width: 90%;
+    display: none;
+}
 /*contenedor de img  submodal imagen individual de galerias*/
 .ventana__modal //.active (esta clase despliega abajo la img al evento click)
 
@@ -113,21 +124,25 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: $col-alternate-modal;
-    // width: 90%;
-    height: 100%;
+    // width: 75%; //al poner, se ve en el centro del la modal
+    height: 95%;
     display: grid;
     place-items: center;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(1, 1fr);
     // transition: transform 0.5s ease;
-    gap:1rem;
+    gap: 1rem;
     overflow: auto;
 
     /*size img dentro de la modal*/
-    img{
+    img {
+        padding-top: 1rem;
         width: 95%;
     }
 }
+
+
+
 
 /*clase boostrap estilos boton cerrar de cada img galeria*/
 .btn-close {

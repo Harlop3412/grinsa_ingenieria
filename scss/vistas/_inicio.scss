@@ -16,6 +16,7 @@
         text-align: center;
         z-index: 1;
         padding-top: $space-xxlarge;
+
     }
 
     /*estilos texto 1 pading para menu fixed*/
@@ -24,9 +25,19 @@
         font-size: $text-xxlarge;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         color: $col-secondary;
-        margin: $space-xxlarge;
-        padding: $space-xxlarge 0 $space-xxlarge 0;
+        margin: $space-small;
+        padding: $space-xxlarge 0 $space-margin-article 0;
         text-shadow: -$space-border-bottom $space-border-bottom $space-border-bottom $col-alternate;
+    }
+
+    /*clase para posicionar el h1 en la mitad*/
+    .container__h1 {
+        position: relative;
+        /* Para posicionar en relación con su posición original */
+        left: 50%;
+        /* Se coloca en el 50% del ancho de su contenedor padre */
+        transform: translateX(-50%);
+        /* Centra el elemento restando la mitad de su propio ancho */
     }
 }
 
@@ -73,7 +84,7 @@
     @include flex1(column, none, none, none);
 
     h2 {
-        font-size: $text-xlarge;
+        font-size: $text-medium;
         color: $col-alternate;
         text-align: center;
         font-weight: 900;
@@ -86,33 +97,40 @@
     z-index: 1;
 }
 
+/*clase boostrap carousel ancho contenedor*/
+.carousel {
+    max-width: 85%;
+    position: relative;
+    /* Para posicionar en relación con su posición original */
+    left: 50%;
+    /* Se coloca en el 50% del ancho de su contenedor padre */
+    transform: translateX(-50%);
+    /* Centra el elemento restando la mitad de su propio ancho */
+
+}
 
 /*clase boostrap agrega imagenes al carousel*/
 .carousel-item {
 
     .carousel__letra {
-        font-size: $text-medium;
+        font-size: $text-sbase;
         font-weight: 900;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
-
-    /*titulos de imagenes carousel inicio*/
-    // h5 {
-    //     font-size: $text-medium;
-    //     font-weight: 900;
-    //     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    // }
 }
 
 /* estilos svg inicio-servicios*/
 .container__inicio--servicios {
     @include flex1(row, space-evenly, none, none);
+    align-items: center;
     padding: 4rem;
 
     /*estilos generales img svg*/
     img {
-        width: 60%;
+        width: 40%;
         margin: 0 0 $space-xsmall $space-xlarge;
+        position: relative;
+        left: 10%;
     }
 
     /*estilos h3 de svg inicio-servicios*/

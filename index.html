@@ -8,7 +8,8 @@
     <!--bloque favicon-->
     <link rel="shortcut icon" href="recursos/logos/favicon.png" type="image/x-icon">
     <!--bloque keywords-->
-    <meta name="keywords" content=" servicios, ingeniera industrial, soldadura, hornos de cemento, tuberias de proceso, estructuras metalicas, equipos para sector cementero, siderurgia, disciplina, calidad, pasion, turbogrupos, obras civiles, cimentaciones, interventorías, reparación de calderas, equipos industriales, turbinas, generadores, reductores ">
+    <meta name="keywords"
+        content=" servicios, ingeniera industrial, soldadura, hornos de cemento, tuberias de proceso, estructuras metalicas, equipos para sector cementero, siderurgia, disciplina, calidad, pasion, turbogrupos, obras civiles, cimentaciones, interventorías, reparación de calderas, equipos industriales, turbinas, generadores, reductores ">
     <!--bloque description-->
     <meta name="description"
         content="Grinsa Ingeniería SAS presta sus servicios de ingeniería dentro del sector Industrial, con altos estándares de calidad basados en la normativa actual, con personal calificado cumpliendo con los requisitos legales, y de seguridad y salud en el trabajo y ambiente; cuenta con amplia experiencia para prestar servicios como: motajes, desmontajes y alineación, fabricación y reparación, Construcción de obras civiles, suministro de personal e interventorías entre otros  ">
@@ -25,6 +26,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!-- fontawesome libreria iconos
      <script src="https://kit.fontawesome.com/91007ea3a2.js" crossorigin="anonymous"></script> -->
+    <!--libreria sweetalert-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!--estilos.css-->
     <link rel="stylesheet" href="css/estilos.css">
     <title>Inicio</title>
@@ -67,9 +70,11 @@
         <section class="container__inicio">
             <!--container imagen de fondo inicio1 y leyenda1-->
             <section class="container__img1">
-                <div class="">
+                <div class="container__h1">
                     <h1>
-                        ALTOS ESTÁNDARES EN SERVICIOS DE INGENIERÍA INDUSTRIAL
+                        <p> ALTOS ESTÁNDARES </p>
+                        <p>EN SERVICIOS DE</p>
+                        <p>INGENIERÍA INDUSTRIAL</p>
                     </h1>
                 </div>
             </section>
@@ -286,7 +291,7 @@
                     <div class="modal-body modal__cuerpo">
                         <!--formulario-->
                         <section class="">
-                            <form id="" action="https://formsubmit.co/grinsaingenieria@gmail.com" method="POST"
+                            <form id="modalForm" action="https://formsubmit.co/grinsaingenieria@gmail.com" method="POST"
                                 class="formulario__boton">
 
                                 <!--Caja de nombre-->
@@ -391,6 +396,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
+
+    <!--scripts-->
+    <script src="./js/form.js"></script>
 </body>
 
 </html>

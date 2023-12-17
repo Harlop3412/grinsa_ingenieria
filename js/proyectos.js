@@ -104,19 +104,31 @@ function mostrarModal() {
     const ver7 = document.getElementById('btn7');
     ver7.addEventListener('click', () => {
         boton2();
-        console.log('ver-gal2-1');
+        console.log('ver-gal2-img1');
     })
     //img2
-    const ver8= document.getElementById('btn8');
+    const ver8 = document.getElementById('btn8');
     ver8.addEventListener('click', () => {
         boton2();
-        console.log('ver-gal2-2');
+        console.log('ver-gal2-img2');
     })
     //img3
     const ver9 = document.getElementById('btn9');
     ver9.addEventListener('click', () => {
         boton2();
-        console.log('ver-gal2-3');
+        console.log('ver-gal2-img3');
+    })
+    //img4
+    const ver14 = document.getElementById('btn14');
+    ver14.addEventListener('click', () => {
+        boton2();
+        console.log('ver-gal2-img4');
+    })
+    //img5
+    const ver15 = document.getElementById('btn15');
+    ver15.addEventListener('click', () => {
+        boton2();
+        console.log('ver-gal2-img5');
     })
 
     //ejemplo funcion que cambia estilos del css al  elemento con este id se le aplican estos cambios de estilos
@@ -163,7 +175,7 @@ function mostrarModal() {
         console.log('ver-gal3-1');
     })
     //img2
-    const ver11= document.getElementById('btn11');
+    const ver11 = document.getElementById('btn11');
     ver11.addEventListener('click', () => {
         boton3();
         console.log('ver-gal3-2');

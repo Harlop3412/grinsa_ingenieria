@@ -1,11 +1,12 @@
 /*Contenedor general seccion1 servicios*/
 .container__servicios {
     @extend .container__nosotros;
+    
 
     /*contenedor img y h1*/
     .container__servicios--img1 {
-        @extend .container__proyectos--img1;        
-        background-image: url(../recursos/seccion_servicios/seccion_serivicios_1.jpg) !important; //important container__inicio
+        justify-content: center;
+        background-image: url(../recursos/seccion_servicios/seccion_serivicios_1.jpg);
         @extend .container__img1;
     }
 }
@@ -30,7 +31,7 @@
 
         /*parrafos contenedor */
         p {
-            font-size: $text-small ;
+            font-size: $text-sbase ;
             font-weight: bold;
             color: $col-alternate;
             text-align: center;
