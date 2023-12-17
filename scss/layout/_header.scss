@@ -2,16 +2,20 @@
 
 // .header{
 //     padding-bottom: $space-xxxlarge;
-    
+
 // }
 
 /*color fondo nav, position*/
 .navbar {
     background-color: $col-primary;
-    padding: 0px ;
+    padding: 0px;
     position: fixed;
     z-index: 2;
 
+    .navbar-collapse {
+        opacity: 10;
+        /* se dio el opacity para dejar un valor de referencia pero la clase se llama desde mediaquieries para  darle position al nav*/
+    }
 
     /* size fuente nav*/
     .navbar-nav {
@@ -27,21 +31,21 @@
         }
 
         /*nav-link clase boostrap para dar estilos a los link de menu*/
-        .nav-link{
+        .nav-link {
             color: $col-alternate;
         }
-        
+
         /*nav-link clase boostrap de cada link del menu*/
         .nav-link:hover {
             color: $col-secondary ;
         }
 
         .nav-link:active {
-           color:$col-alternate-modal;
+            color: $col-alternate-modal;
         }
 
         /*estilos clase active*/
-        .active{
+        .active {
             color: $col-secondary;
             border-bottom: .3rem solid $col-secondary;
             width: 100%;
@@ -53,17 +57,21 @@
     .container {
         background-color: $col-secondary;
         margin: 0px 0px 0px;
-        width: 40%;
+        width: 30%;
         justify-content: center;
         clip-path: polygon(0% 0%, 90% 0, 100% 50%, 90% 100%, 0% 100%);
-        // border-radius: 50% 50% 50% 50% / 0% 50% 50% 0%;
 
         /*size contenedor img logo*/
         img {
-            padding: $space-medium;
+            padding: $space-smedium;
             width: 65%;
         }
+
+        a {
+            padding-left: 5em;
+        }
     }
+
+
+
 }
-
-

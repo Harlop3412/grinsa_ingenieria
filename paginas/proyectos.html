@@ -26,6 +26,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!-- fontawesome libreria iconos
      <script src="https://kit.fontawesome.com/91007ea3a2.js" crossorigin="anonymous"></script> -->
+    <!--libreria sweetalert-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!--css-->
     <link rel="stylesheet" href="../css/estilos.css">
     <title>Proyectos</title>
 </head>
@@ -86,7 +89,7 @@
         <section class="proyectos__galeria">
 
             <!--incio seccion card1 y modal-->
-            <section>
+            <section class='card__btn'>
                 <!--incio card1-->
                 <div class="card">
                     <img src="../recursos/seccion_proyectos/seccion_proyectos_cards_1.jpg" class="card-img-top"
@@ -157,7 +160,7 @@
                                             class="proyectos__subgaleria--modal subgaleria__modal-card"></div>
                                 </div>
                                 <!--sub modal galeria1-->
-                                <div class="ventana__modal " id="windowsImg">
+                                <div class="ventana__modal" id="windowsImg">
                                     <img src="" class="ventana__img" alt="" id="ventanaImg">
                                     <button type="button" class="btn-close hidden" aria-label="Close"
                                         id="removeImg"></button>
@@ -174,7 +177,7 @@
             </section>
 
             <!--inicio seccion card2 y modal2-->
-            <section>
+            <section class='card__btn'>
                 <!--incio card2-->
                 <div class="card">
                     <img src="../recursos/seccion_proyectos/seccion_proyectos_cards_2.jpg" class="card-img-top"
@@ -229,6 +232,14 @@
                                             src="../recursos/seccion_proyectos/galeria_2/seccion_proyectos_galeria2_3.jpg"
                                             class="proyectos__subgaleria--modal subgaleria__modal-card"
                                             alt="img3_galeria2"></div>
+                                    <div class="" id="btn14"> <img
+                                            src="../recursos/seccion_proyectos/galeria_2/seccion_proyectos_galeria2_4.jpg"
+                                            class="proyectos__subgaleria--modal subgaleria__modal-card"
+                                            alt="img4_galeria2"></div>
+                                    <div class="" id="btn15"> <img
+                                            src="../recursos/seccion_proyectos/galeria_2/seccion_proyectos_galeria2_5.jpg"
+                                            class="proyectos__subgaleria--modal subgaleria__modal-card"
+                                            alt="img5_galeria2"></div>
                                 </div>
                                 <!--sub modal galeria2-->
                                 <div class="ventana__modal " id="">
@@ -249,7 +260,7 @@
 
 
             <!--inicio seccion card3 y modal3-->
-            <section>
+            <section class='card__btn'>
                 <!--incio card3-->
                 <div class="card">
                     <img src="../recursos/seccion_proyectos/seccion_proyectos_cards_3.jpg" class="card-img-top"
@@ -275,6 +286,12 @@
                         <p>Ver galería 3</p>
                     </button>
                 </div>
+                <!-- <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                    <button type="button" class="btn btn__galeria btn-lg" id="openModalButton">
+                        <p>Ver galería 3</p>
+                    </button>
+                </div> -->
+
                 <!-- Modal -->
                 <div class="modal fade" id="exampleModa3" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
@@ -287,7 +304,7 @@
                                     <h2>Galería 3</h2>
                                 </div>
 
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                <button id="btnCerrarModal3" type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
@@ -313,7 +330,7 @@
                                             class="proyectos__subgaleria--modal subgaleria__modal-card"></div>
                                 </div>
                                 <!--sub modal galeria3-->
-                                <div class="ventana__modal " id="">
+                                <div class="ventana__modal" id="">
                                     <img src="" class="ventana__img" alt="" id="ventanaImg3">
                                     <button type="button" class="btn-close hidden" aria-label="Close"
                                         id="removeImg3"></button>
@@ -327,6 +344,7 @@
                         </div>
                     </div>
                     <!--fin modal-->
+                </div>
             </section>
             <!--fin seccion card y modal-->
         </section>
@@ -347,7 +365,7 @@
                     <div class="modal-body modal__cuerpo">
                         <!--formulario-->
                         <section class="">
-                            <form id="" action="https://formsubmit.co/grinsaingenieria@gmail.com" method="POST"
+                            <form id="modalForm" action="https://formsubmit.co/grinsaingenieria@gmail.com" method="POST"
                                 class="formulario__boton">
 
                                 <!--Caja de nombre-->
@@ -389,7 +407,7 @@
                                 </div>
 
                                 <!--input para que cuando se envien los datos se quede en el sitio web y no lo envie fuera -->
-                                <input type='hidden' name='_next' value="http://127.0.0.1:5501/paginas/nosotros.html">
+                                <input type='hidden' name='_next' value="http://127.0.0.1:5501/paginas/proyectos.html">
 
                                 <!--input para quitar el captcha con value 'false'-->
                                 <input type='hidden' name='_captcha' value="false">
@@ -453,7 +471,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
-    <script src="../js/index.js"></script>
+
+    <!--scripts-->
+    <script src="../js/form.js"></script>
+    <script src="../js/proyectos.js"></script>
 </body>
 
 </html>

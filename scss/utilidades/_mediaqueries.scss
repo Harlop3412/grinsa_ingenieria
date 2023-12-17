@@ -18,8 +18,13 @@
         /*size contenedor logo*/
         .container {
             img {
-                width: 100%;
+                width: 90%;
                 transform: scale(2);
+            }
+
+            //quitar pading para que se vea el logo
+            a {
+                padding-left: 0%;
             }
         }
 
@@ -48,7 +53,7 @@
     /*parrafo 1 inicio-nosotros*/
     .container__img1 {
         h1 {
-            padding: $space-small;
+            padding: $space-padig-gallery $space-small $space-small $space-small;
             margin: 0;
             font-size: $text-sbase;
         }
@@ -61,6 +66,10 @@
         /*posicionar imagen 1 inicio nosotros*/
         img {
             right: 0;
+            left: 50%;
+            /* Se coloca en el 50% del ancho de su contenedor padre */
+            transform: translateX(-50%);
+            /* Centra el elemento restando la mitad de su propio ancho */
         }
 
         /*dar ancho normal al contenedor inicio-nosotros*/
@@ -108,35 +117,60 @@
 
     /**SECCION-NOSOTROS**/
 
-    /*contenedor del h1 nosotros*/
-    .container__nosotros--img1 {
+    .container__nosotros {
 
-        h1 {
-            padding: $space-large 0 $space-large 0 !important;
+        /*contenedor del h1 nosotros*/
+        .container__nosotros--img1 {
+
+            h1 {
+                padding: $space-large 0 $space-large 0;
+            }
         }
     }
 
-    /*contenedor imagen mision vision*/
-    .nosotros__mision-vision {
 
-        /*imagen mision y vision*/
-        img {
-            left: 0rem !important;
+    .container__nosotros--mision {
+
+        /*contenedor imagen mision vision*/
+        .nosotros__mision-vision {
+
+            /*imagen mision y vision*/
+            img {
+                left: 50%;
+                /* Se coloca en el 50% del ancho de su contenedor padre */
+                transform: translateX(-50%);
+                /* Centra el elemento restando la mitad de su propio ancho */
+            }
         }
     }
 
-    /*contenedor general svg nuestros valores*/
-    .section__svg-valores {
-        flex-direction: column;
+
+    //contenedor general nuestos valores
+    .container__valores {
+
+        //texto
+        p {
+            font-size: $text-sbase;
+        }
+
+        /*contenedor general svg nuestros valores*/
+        .section__svg-valores {
+            flex-direction: column;
+        }
     }
+
 
     /*SECCION PROYECTOS**/
 
-    /*contenedor h1 proyectos */
-    //trae los demas padig  por extend
-    .container__proyectos--img1 {
-        padding: 0 0 $space-margin-article 0;
+    .container__proyectos {
+
+        /*contenedor h1 proyectos */
+        //trae los demas padig  por extend
+        .container__proyectos--img1 {
+            padding: $space-large 0 $space-margin-article 0;
+        }
     }
+
 
     /*contenedor general de cards que contienen galerias*/
     .proyectos__galeria {
@@ -159,16 +193,24 @@
             display: flex;
             flex-direction: column;
         }
+
+        /*clase ventana modal de subgaleria*/
+        // .ventana__modal{
+        //     width: 100%;
+        // }
     }
 
     /*SECCION SERVICIOS*/
 
-    /*seccion img1 h1 servicios*/
-    .container__servicios--img1 {
+    .container__servicios {
 
-        /*h1 servicios*/
-        h1 {
-            padding: $space-xxxlarge 0 $space-medium 0 !important;
+        /*seccion img1 h1 servicios*/
+        .container__servicios--img1 {
+
+            /*h1 servicios*/
+            h1 {
+                padding: $space-xlarge 0 $space-medium 0;
+            }
         }
     }
 
@@ -277,6 +319,11 @@
             img {
                 width: $space-logo576px;
             }
+
+            //quitar pading para que se vea el logo
+            a {
+                padding-left: 0%;
+            }
         }
 
         /*quitar borde iconolmenu*/
@@ -305,7 +352,7 @@
     /*parrafo 1 inicio-nosotros*/
     .container__img1 {
         h1 {
-            padding: $space-large $space-small $space-small $space-small;
+            padding: $space-xxlarge $space-small $space-small $space-small;
             margin: 0;
             font-size: $text-xmedium;
         }
@@ -318,6 +365,10 @@
         /*posicionar imagen 1 inicio nosotros*/
         img {
             right: 0;
+            left: 50%;
+            /* Se coloca en el 50% del ancho de su contenedor padre */
+            transform: translateX(-50%);
+            /* Centra el elemento restando la mitad de su propio ancho */
         }
 
         /*dar ancho normal al contenedor inicio-nosotros*/
@@ -356,22 +407,31 @@
 
     /**SECCION-NOSOTROS**/
 
-    /*contenedor del h1 nosotros*/
-    .container__nosotros--img1 {
+    .container__nosotros {
 
-        h1 {
-            padding: $space-xxlarge 0 $space-xxlarge 0 !important;
+        /*contenedor del h1 nosotros*/
+        .container__nosotros--img1 {
+
+            h1 {
+                padding: $space-xxlarge 0 $space-xxlarge 0;
+            }
+        }
+
+    }
+
+    .container__nosotros--mision {
+
+        /*contenedor imagen mision vision*/
+        .nosotros__mision-vision {
+
+            /*imagen mision y vision*/
+            img {
+                left: 50%;
+                transform: translateX(-50%);
+            }
         }
     }
 
-    /*contenedor imagen mision vision*/
-    .nosotros__mision-vision {
-
-        /*imagen mision y vision*/
-        img {
-            left: 0rem !important;
-        }
-    }
 
     /*contenedor general svg nuestros valores*/
     .section__svg-valores {
@@ -411,13 +471,18 @@
 
     /*SECCION SERVICIOS*/
 
-    /*seccion img1 h1 servicios*/
-    .container__servicios--img1 {
+    /*contenedor titulo y franjas*/
+    .container__servicios {
 
-        /*h1 servicios*/
-        h1 {
-            padding: $space-logo576px 0 $space-medium 0 !important;
+        /*seccion img1 h1 servicios*/
+        .container__servicios--img1 {
+
+            /*h1 servicios*/
+            h1 {
+                padding: $space-xxxlarge 0 $space-medium 0;
+            }
         }
+
     }
 
     /*seccion cards servicios*/
@@ -439,28 +504,36 @@
         }
     }
 
-    /*contenedor de textos del formulario*/
-    .textos__formulario {
+    .contacto__formulario-texto {
 
-        h2 {
-            font-size: $space-margin-article !important;
-            text-align: center;
+        /*contenedor de textos del formulario*/
+        .textos__formulario {
+
+            h2 {
+                font-size: $space-margin-article ;
+                text-align: center;
+            }
+
+            p {
+                text-align: center;
+            }
+        }
+    }
+
+
+    .formulario__boton {
+
+        /*reducir ancho de imputs*/
+        .imput {
+            width: $space-super ;
         }
 
-        p {
-            text-align: center;
+        .boton {
+            background-color: $col-primary ;
+            color: $col-secondary ;
         }
     }
 
-    /*reducir ancho de imputs*/
-    .imput {
-        width: $space-super !important;
-    }
-
-    .boton {
-        background-color: $col-primary !important;
-        color: $col-secondary !important;
-    }
 
     /******footer****/
     /*orientacion del footer*/
@@ -473,17 +546,20 @@
             width: 100%;
         }
 
-        .footer__container-redes {
-            align-items: flex-start !important;
+        .footer__container-2 {
+            .footer__container-redes {
+                align-items: flex-start;
 
-            /*size textos mail-what*/
-            .footer__container-mail {
+                /*size textos mail-what*/
+                .footer__container-mail {
 
-                p {
-                    font-size: $text-small !important;
+                    p {
+                        font-size: $text-small ;
+                    }
                 }
             }
         }
+
 
         /*reducir letra del boton contactanos*/
         .footer__container-button {
@@ -524,7 +600,7 @@
         /*size contenedor logo*/
         .container {
             img {
-                width: 100%;
+                width: 90%;
 
             }
         }
@@ -568,6 +644,10 @@
         /*posicionar imagen 1 inicio nosotros*/
         img {
             right: 0;
+            left: 50%;
+            /* Se coloca en el 50% del ancho de su contenedor padre */
+            transform: translateX(-50%);
+            /* Centra el elemento restando la mitad de su propio ancho */
         }
 
         /*dar ancho normal al contenedor inicio-nosotros*/
@@ -723,7 +803,7 @@
             }
         }
     }
-    
+
     /*reducir ancho de imputs*/
     .imput {
         width: $space-super !important;
@@ -863,10 +943,22 @@
     /*clase header*/
     .header {
 
-        /* size fuente nav a*/
-        .navbar-nav {
-            a {
-                margin: 0rem $space-ssmall 0rem 0rem;
+        .navbar {
+
+            /*position para correr un poco el nav*/
+            .navbar-collapse {
+                position: relative;
+                left: 10%;
+
+                /* size fuente nav a*/
+                .navbar-nav {
+                    a {
+                        margin: 0rem $space-ssmall 0rem 0rem;
+                        position: relative;
+                        left: 15%;
+                    }
+                }
+
             }
         }
 
@@ -880,10 +972,6 @@
         }
     }
 
-    // .navbar-nav {
-    //     flex-wrap: wrap;
-    // }
-
     /***main**/
     /*espacio interno contenedor color-rosa*/
     .container__article-texto {
@@ -893,6 +981,25 @@
 
 /*desktop */
 @media screen and (min-width: 1201px) {
+
+    /*header*/
+    .navbar {
+
+        /*position para correr un poco el nav*/
+        .navbar-collapse {
+
+            position: relative;
+            left: 20%;
+
+            /* size fuente nav a*/
+            .navbar-nav {
+                a {
+                    margin: 0rem $space-ssmall 0rem 0rem;
+                }
+            }
+
+        }
+    }
 
     /***main**/
     /*espacio interno contenedor color-rosa*/

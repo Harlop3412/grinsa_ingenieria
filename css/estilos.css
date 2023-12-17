@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*********utilidades_variables********/
 /*******************utilidades_variables*********************/
 /*colors*/
@@ -30,24 +31,24 @@ html {
 /*estilos divs franja color*/
 .container__div1 {
   background-color: #eb5f07;
-  height: 3.7rem;
-  margin-bottom: 1rem; }
+  height: 2rem;
+  margin-bottom: 0.8rem; }
 
 .container__div2 {
   background-color: #eb5f07;
-  height: 2.3rem;
-  margin-bottom: 1rem; }
+  height: 1.5rem;
+  margin-bottom: 0.8rem; }
 
 .container__div3, .container__contacto .container__div3--contacto {
   background-color: #eb5f07;
-  height: 1.5rem;
-  margin-bottom: 1rem; }
+  height: 0.8rem;
+  margin-bottom: 0.8rem; }
 
 /*franjas de textos article*/
 .container__div4, .container__valores .container__div6 {
   background-color: #eb5f07;
-  height: 1rem;
-  margin-bottom: 1rem;
+  height: 0.8rem;
+  margin-bottom: 0.8rem;
   width: 60%; }
 
 /*section inicio__nosotros*/
@@ -62,8 +63,9 @@ html {
   /*size h2 Nosotros*/ }
   .contaniner__inicio-nosotros img, .container__nosotros--mision img {
     position: relative;
-    right: 6rem;
-    z-index: 1; }
+    right: 3%;
+    z-index: 1;
+    width: 85%; }
   .contaniner__inicio-nosotros .container__article, .container__nosotros--mision .container__article {
     display: flex;
     flex-direction: none;
@@ -72,12 +74,12 @@ html {
     flex-wrap: none;
     background-color: #fddddd;
     width: 130%;
-    margin: 1rem 0 2rem 2rem;
+    margin: 0.8rem 0 2rem 2rem;
     /*size p - estilos texto inicio-nosotros*/
     /*centrar texto inicio_nosotros*/ }
     .contaniner__inicio-nosotros .container__article p, .container__nosotros--mision .container__article p {
       text-align: justify;
-      font-size: 2.8em;
+      font-size: 2.1em;
       width: 60%; }
     .contaniner__inicio-nosotros .container__article .container__article-texto, .container__nosotros--mision .container__article .container__article-texto, .contaniner__inicio-nosotros .container__article .container__nosotros--mision .nosotros__article-misionvision, .container__nosotros--mision .container__article .nosotros__article-misionvision {
       display: flex;
@@ -86,7 +88,7 @@ html {
       align-items: center;
       flex-wrap: none; }
   .contaniner__inicio-nosotros h2, .container__nosotros--mision h2, .contaniner__inicio-nosotros .container__valores h3, .container__valores .contaniner__inicio-nosotros h3, .container__nosotros--mision .container__valores h3, .container__valores .container__nosotros--mision h3, .contaniner__inicio-nosotros .container__valores .container__inicio-mision .container__mision p, .container__valores .container__inicio-mision .container__mision .contaniner__inicio-nosotros p, .container__nosotros--mision .container__valores .container__inicio-mision .container__mision p, .container__valores .container__inicio-mision .container__mision .container__nosotros--mision p, .contaniner__inicio-nosotros .container__inicio-mision .container__mision .container__valores p, .container__inicio-mision .container__mision .container__valores .contaniner__inicio-nosotros p, .container__nosotros--mision .container__inicio-mision .container__mision .container__valores p, .container__inicio-mision .container__mision .container__valores .container__nosotros--mision p {
-    font-size: 6em;
+    font-size: 4.1em;
     width: 60%; }
 
 /**************HEADER**************/
@@ -98,6 +100,9 @@ html {
   z-index: 2;
   /* size fuente nav*/
   /*margenes contenedor logo prop clip-path da forma de punta al contenedor*/ }
+  .navbar .navbar-collapse {
+    opacity: 10;
+    /* se dio el opacity para dejar un valor de referencia pero la clase se llama desde mediaquieries para  darle position al nav*/ }
   .navbar .navbar-nav {
     margin-left: 1.5rem;
     display: flex;
@@ -109,7 +114,7 @@ html {
     /*nav-link clase boostrap de cada link del menu*/
     /*estilos clase active*/ }
     .navbar .navbar-nav a {
-      font-size: 2.8em;
+      font-size: 2.1em;
       font-weight: bold;
       margin: 0rem 3.7rem 0rem 0rem;
       transition: 0.5s ease; }
@@ -127,13 +132,15 @@ html {
   .navbar .container {
     background-color: white;
     margin: 0px 0px 0px;
-    width: 40%;
+    width: 30%;
     justify-content: center;
     clip-path: polygon(0% 0%, 90% 0, 100% 50%, 90% 100%, 0% 100%);
     /*size contenedor img logo*/ }
     .navbar .container img {
-      padding: 3.7rem;
+      padding: 2.3rem;
       width: 65%; }
+    .navbar .container a {
+      padding-left: 5em; }
 
 /**************FOOTER**************/
 /*estilos footer*/
@@ -150,14 +157,14 @@ html {
   /*ancho de los div*/
   /*estilos contactanos boton ocupa ancho total de su div*/ }
   .footer__section img {
-    width: 60%; }
+    width: 50%; }
   .footer__section .footer__container, .footer__section .footer__container-button {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-wrap: none;
-    margin: 1rem 0 1rem 0; }
+    margin: 0.8rem 0 0.8rem 0; }
     .footer__section .footer__container .footer__container-logo, .footer__section .footer__container-button .footer__container-logo {
       margin-bottom: 1.5rem; }
     .footer__section .footer__container a, .footer__section .footer__container-button a {
@@ -189,7 +196,7 @@ html {
         /*size texto mail-what*/
         /*color textos mail-what*/ }
         .footer__section .footer__container-2 .footer__container-redes .footer__container-mail p {
-          font-size: 2.8em;
+          font-size: 2.1em;
           font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; }
         .footer__section .footer__container-2 .footer__container-redes .footer__container-mail a {
           color: white;
@@ -201,7 +208,7 @@ html {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     /*estilos tipo de letra boton*/ }
     .footer__section .footer__container-button button {
-      font-size: 2.3em; }
+      font-size: 1.5em; }
 
 /*contenedor general del header y del boton cerrar superior de la modal color footer modal*/
 .modal__titulo-color {
@@ -217,7 +224,7 @@ html {
     .modal__titulo-color .modal__titulo p {
       color: #000000;
       text-align: center;
-      font-size: 1.7em;
+      font-size: 1.5em;
       position: relative;
       left: 20rem;
       font-weight: bold; }
@@ -244,8 +251,9 @@ html {
   align-items: none;
   flex-wrap: none;
   /**contenedor imagen1**/
-  /*estilos texto 1 pading para menu fixed*/ }
-  .container__inicio .container__img1, .container__nosotros .container__img1, .container__proyectos .container__img1, .container__servicios .container__img1, .container__contacto .container__img1, .container__nosotros .container__nosotros--img1, .container__proyectos .container__nosotros--img1, .container__servicios .container__nosotros--img1, .container__contacto .container__nosotros--img1, .container__inicio .container__proyectos--img1, .container__nosotros .container__proyectos--img1, .container__proyectos .container__proyectos--img1, .container__servicios .container__proyectos--img1, .container__contacto .container__proyectos--img1, .container__servicios .container__servicios--img1, .container__contacto .container__servicios--img1, .container__contacto .container__contacto--img1 {
+  /*estilos texto 1 pading para menu fixed*/
+  /*clase para posicionar el h1 en la mitad*/ }
+  .container__inicio .container__img1, .container__nosotros .container__img1, .container__proyectos .container__img1, .container__servicios .container__img1, .container__contacto .container__img1, .container__nosotros .container__nosotros--img1, .container__proyectos .container__nosotros--img1, .container__servicios .container__nosotros--img1, .container__contacto .container__nosotros--img1, .container__proyectos .container__proyectos--img1, .container__servicios .container__servicios--img1, .container__contacto .container__servicios--img1, .container__contacto .container__contacto--img1 {
     max-width: 100%;
     background-image: url(../recursos/seccion_inicio/imagenes/seccion_inicio.jpg);
     background-position: center, center;
@@ -255,15 +263,22 @@ html {
     align-items: center;
     text-align: center;
     z-index: 1;
-    padding-top: 10rem; }
+    padding-top: 2.5em; }
   .container__inicio h1, .container__nosotros h1, .container__proyectos h1, .container__servicios h1, .container__contacto h1 {
     font-weight: bold;
-    font-size: 8em;
+    font-size: 4.5em;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: white;
-    margin: 10rem;
-    padding: 10rem 0 10rem 0;
+    margin: 2rem;
+    padding: 2.5em 0 4rem 0;
     text-shadow: -2px 2px 2px #000000; }
+  .container__inicio .container__h1, .container__nosotros .container__h1, .container__proyectos .container__h1, .container__servicios .container__h1, .container__contacto .container__h1 {
+    position: relative;
+    /* Para posicionar en relación con su posición original */
+    left: 50%;
+    /* Se coloca en el 50% del ancho de su contenedor padre */
+    transform: translateX(-50%);
+    /* Centra el elemento restando la mitad de su propio ancho */ }
 
 /*estilos contenedor general contenedores mision-vision-valores*/
 .container__inicio-mision {
@@ -281,20 +296,20 @@ html {
     /*p contenedores inicio-mision-calores*/
     /*estilos lineas mision-vision-valores*/ }
     .container__inicio-mision .container__mision h3, .container__inicio-mision .container__mision p {
-      font-size: 2.8em;
+      font-size: 2.1em;
       font-weight: 800;
       text-align: center;
       color: white; }
     .container__inicio-mision .container__mision p {
-      font-size: 2.3em; }
+      font-size: 1.5em; }
     .container__inicio-mision .container__mision .container__div5 {
       background-color: white;
-      height: 1rem;
+      height: 0.8rem;
       margin-bottom: 0.4rem; }
 
 /*margin titulo del container__inicio-proyectos*/
 .container__inicio-proyectos {
-  margin-bottom: 1rem; }
+  margin-bottom: 0.8rem; }
 
 /*estilos titulos enteros*/
 .container__title {
@@ -304,7 +319,7 @@ html {
   align-items: none;
   flex-wrap: none; }
   .container__title h2, .container__title .container__valores h3, .container__valores .container__title h3, .container__title .container__valores .container__inicio-mision .container__mision p, .container__valores .container__inicio-mision .container__mision .container__title p, .container__title .container__inicio-mision .container__mision .container__valores p, .container__inicio-mision .container__mision .container__valores .container__title p {
-    font-size: 7em;
+    font-size: 3.3em;
     color: #000000;
     text-align: center;
     font-weight: 900;
@@ -314,13 +329,21 @@ html {
 .carousel-indicators {
   z-index: 1; }
 
+/*clase boostrap carousel ancho contenedor*/
+.carousel {
+  max-width: 85%;
+  position: relative;
+  /* Para posicionar en relación con su posición original */
+  left: 50%;
+  /* Se coloca en el 50% del ancho de su contenedor padre */
+  transform: translateX(-50%);
+  /* Centra el elemento restando la mitad de su propio ancho */ }
+
 /*clase boostrap agrega imagenes al carousel*/
-.carousel-item {
-  /*titulos de imagenes carousel inicio*/ }
-  .carousel-item .carousel__letra {
-    font-size: 4em;
-    font-weight: 900;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; }
+.carousel-item .carousel__letra {
+  font-size: 1.5em;
+  font-weight: 900;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; }
 
 /* estilos svg inicio-servicios*/
 .container__inicio--servicios {
@@ -329,14 +352,17 @@ html {
   justify-content: space-evenly;
   align-items: none;
   flex-wrap: none;
+  align-items: center;
   padding: 4rem;
   /*estilos generales img svg*/
   /*estilos h3 de svg inicio-servicios*/ }
   .container__inicio--servicios img {
-    width: 60%;
-    margin: 0 0 1rem 7rem; }
+    width: 40%;
+    margin: 0 0 0.8rem 7rem;
+    position: relative;
+    left: 10%; }
   .container__inicio--servicios h3, .container__inicio--servicios .container__inicio-mision .container__mision p, .container__inicio-mision .container__mision .container__inicio--servicios p {
-    font-size: 2.8em;
+    font-size: 2.1em;
     color: #eb5f07;
     font-weight: 600;
     text-align: center;
@@ -373,7 +399,7 @@ html {
       font-weight: 900;
       color: #eb5f07; }
     .container__nosotros--mision .nosotros__article-misionvision p {
-      font-size: 2.3em; }
+      font-size: 1.5em; }
 
 /*contenedor seccion nuestros valores*/
 .container__valores {
@@ -384,7 +410,7 @@ html {
   flex-wrap: none;
   background-color: #fddddd;
   padding: 4rem;
-  margin: 1rem 1rem 2rem 1rem;
+  margin: 0.8rem 0.8rem 2rem 0.8rem;
   /*titulo h2 nuestro valores*/
   /*pading top de h3 de svgs*/
   /*parrafo nuestros valores*/
@@ -397,9 +423,10 @@ html {
     padding-bottom: 2rem;
     text-align: center; }
   .container__valores h3, .container__valores .container__inicio-mision .container__mision p, .container__inicio-mision .container__mision .container__valores p {
-    padding-top: 2rem; }
+    padding-top: 2rem;
+    font-size: 2.1em; }
   .container__valores p {
-    font-size: 2.8em;
+    font-size: 2.1em;
     font-weight: 500; }
   .container__valores .container__div6 {
     width: 100%; }
@@ -410,13 +437,16 @@ html {
     column-gap: 12rem;
     /*contenedores de cada svg calidad, pasion, disciplina*/ }
     .container__valores .section__svg-valores .container__svg-valores {
-      width: 80%; }
+      width: 50%;
+      position: relative;
+      left: 25%; }
 
 /*contenedor general section 1 proyectos*/
-/*imagen contenedor proyectos scope global va extend con servicios*/
-.container__proyectos--img1, .container__servicios .container__servicios--img1, .container__contacto .container__servicios--img1, .container__contacto .container__contacto--img1 {
-  background-image: url(../recursos/seccion_proyectos/seccion_proyectos_1.jpg) !important;
-  justify-content: center; }
+.container__proyectos {
+  /*imagen contenedor proyectos scope global va extend con servicios*/ }
+  .container__proyectos .container__proyectos--img1, .container__proyectos .container__contacto .container__contacto--img1, .container__contacto .container__proyectos .container__contacto--img1 {
+    background-image: url(../recursos/seccion_proyectos/seccion_proyectos_1.jpg) !important;
+    justify-content: center; }
 
 /*seccion galeria proyectos*/
 /*contenedor galeria1 general */
@@ -424,16 +454,18 @@ html {
   display: flex;
   padding: 8rem 5rem 8rem 5rem;
   column-gap: 3.7rem;
-  /*clase tarjeta de boostrap*/
   /*clase bootsrap margin top boton ver galeria*/ }
-  .proyectos__galeria .card {
-    background-color: #eb5f07;
-    /*parrafos contenedor */ }
-    .proyectos__galeria .card p {
-      font-size: 2.3em;
-      font-weight: bold;
-      color: #000000;
-      text-align: center; }
+  .proyectos__galeria .card__btn {
+    /*clase tarjeta de boostrap*/ }
+    .proyectos__galeria .card__btn .card {
+      background-color: #eb5f07;
+      max-width: 100%;
+      /*parrafos contenedor */ }
+      .proyectos__galeria .card__btn .card p {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #000000;
+        text-align: center; }
   .proyectos__galeria .justify-content-md-center {
     margin-top: 2rem; }
 
@@ -445,7 +477,8 @@ html {
   justify-items: center;
   column-gap: 2rem;
   row-gap: 2rem;
-  padding: 2rem; }
+  padding: 2rem;
+  cursor: pointer; }
   .proyectos__subgaleria img, .proyectos__subgaleria-2 img, .servicios__galeria--grid img {
     object-fit: cover; }
 
@@ -458,7 +491,7 @@ html {
   background-color: #eb5f07;
   /*texto boton*/ }
   .btn__galeria p {
-    font-size: 1.7em;
+    font-size: 1.5em;
     font-weight: 600;
     color: #000000; }
 
@@ -480,6 +513,10 @@ html {
   border: solid #eb5f07 2px;
   border-radius: 0.5rem; }
 
+.modal-ancho {
+  width: 90%;
+  display: none; }
+
 /*contenedor de img  submodal imagen individual de galerias*/
 .ventana__modal {
   position: fixed;
@@ -487,7 +524,7 @@ html {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.7);
-  height: 100%;
+  height: 95%;
   display: grid;
   place-items: center;
   grid-template-columns: repeat(1, 1fr);
@@ -496,6 +533,7 @@ html {
   overflow: auto;
   /*size img dentro de la modal*/ }
   .ventana__modal img {
+    padding-top: 1rem;
     width: 95%; }
 
 /*clase boostrap estilos boton cerrar de cada img galeria*/
@@ -511,7 +549,8 @@ html {
 .container__servicios, .container__contacto {
   /*contenedor img y h1*/ }
   .container__servicios .container__servicios--img1, .container__contacto .container__servicios--img1, .container__contacto .container__contacto--img1 {
-    background-image: url(../recursos/seccion_servicios/seccion_serivicios_1.jpg) !important; }
+    justify-content: center;
+    background-image: url(../recursos/seccion_servicios/seccion_serivicios_1.jpg); }
 
 /*seccion cards*/
 /*contenedor grid cards*/
@@ -528,7 +567,7 @@ html {
     .servicios__galeria--grid .card img {
       height: 300px; }
     .servicios__galeria--grid .card p {
-      font-size: 2em;
+      font-size: 1.5em;
       font-weight: bold;
       color: #000000;
       text-align: center;
@@ -568,7 +607,7 @@ html {
   .contacto__mail-whatsapp p {
     color: white;
     font-weight: 700;
-    font-size: 2.8em;
+    font-size: 2.1em;
     text-shadow: -2px 2px 2px #000000; }
 
 /*contenedor form y text*/
@@ -581,17 +620,17 @@ html {
     justify-content: center;
     align-items: center;
     flex-wrap: none;
-    padding: 3.7rem 0 1rem 0; }
+    padding: 3.7rem 0 0.8rem 0; }
     .contacto__formulario-texto .textos__formulario h2, .contacto__formulario-texto .textos__formulario .container__valores h3, .container__valores .contacto__formulario-texto .textos__formulario h3, .contacto__formulario-texto .textos__formulario .container__valores .container__inicio-mision .container__mision p, .container__valores .container__inicio-mision .container__mision .contacto__formulario-texto .textos__formulario p, .contacto__formulario-texto .textos__formulario .container__inicio-mision .container__mision .container__valores p, .container__inicio-mision .container__mision .container__valores .contacto__formulario-texto .textos__formulario p {
-      font-size: 6em;
+      font-size: 4.1em;
       font-weight: bold; }
     .contacto__formulario-texto .textos__formulario p {
-      font-size: 2.3em;
+      font-size: 1.5em;
       font-weight: bold; }
 
 /*seccion formulario**/
 .formulario__boton {
-  row-gap: 1rem;
+  row-gap: 0.8rem;
   padding-bottom: 3.7rem;
   display: flex;
   flex-direction: column;
@@ -610,7 +649,7 @@ html {
     accent-color: #eb5f07; }
   .formulario__boton .boton, .formulario__boton .boton__modal-footer {
     background-color: white;
-    width: 10rem; }
+    width: 7rem; }
   .formulario__boton .boton:hover, .formulario__boton .boton__modal-footer:hover {
     background-color: #eb5f07;
     color: white; }
@@ -631,8 +670,10 @@ html {
     /*quitar borde iconolmenu*/
     /*quitar borde al dar clic en menu*/ }
     .navbar .container img {
-      width: 100%;
+      width: 90%;
       transform: scale(2); }
+    .navbar .container a {
+      padding-left: 0%; }
     .navbar .navbar-toggler {
       border: none; }
     .navbar .navbar-toggler:focus {
@@ -644,17 +685,21 @@ html {
         font-size: 2em; }
   /******main******/
   /*parrafo 1 inicio-nosotros*/
-  .container__img1 h1, .container__nosotros .container__nosotros--img1 h1, .container__proyectos .container__nosotros--img1 h1, .container__servicios .container__nosotros--img1 h1, .container__contacto .container__nosotros--img1 h1, .container__proyectos--img1 h1, .container__servicios .container__servicios--img1 h1, .container__contacto .container__servicios--img1 h1, .container__contacto .container__contacto--img1 h1 {
-    padding: 2rem;
+  .container__img1 h1, .container__nosotros .container__nosotros--img1 h1, .container__proyectos .container__nosotros--img1 h1, .container__servicios .container__nosotros--img1 h1, .container__contacto .container__nosotros--img1 h1, .container__proyectos .container__proyectos--img1 h1, .container__servicios .container__servicios--img1 h1, .container__contacto .container__servicios--img1 h1, .container__contacto .container__contacto--img1 h1 {
+    padding: 5rem 2rem 2rem 2rem;
     margin: 0;
-    font-size: 2.3em; }
+    font-size: 1.5em; }
   /*posicionar elementos inicio nosotros*/
   .contaniner__inicio-nosotros, .container__nosotros--mision {
     flex-direction: column-reverse;
     /*posicionar imagen 1 inicio nosotros*/
     /*dar ancho normal al contenedor inicio-nosotros*/ }
     .contaniner__inicio-nosotros img, .container__nosotros--mision img {
-      right: 0; }
+      right: 0;
+      left: 50%;
+      /* Se coloca en el 50% del ancho de su contenedor padre */
+      transform: translateX(-50%);
+      /* Centra el elemento restando la mitad de su propio ancho */ }
     .contaniner__inicio-nosotros .container__article, .container__nosotros--mision .container__article {
       width: 100%;
       margin-left: 0;
@@ -662,11 +707,11 @@ html {
       /*size parrafos*/ }
       .contaniner__inicio-nosotros .container__article h2, .container__nosotros--mision .container__article h2, .contaniner__inicio-nosotros .container__article .container__valores h3, .container__valores .contaniner__inicio-nosotros .container__article h3, .container__nosotros--mision .container__article .container__valores h3, .container__valores .container__nosotros--mision .container__article h3, .contaniner__inicio-nosotros .container__article .container__valores .container__inicio-mision .container__mision p, .container__valores .container__inicio-mision .container__mision .contaniner__inicio-nosotros .container__article p, .container__nosotros--mision .container__article .container__valores .container__inicio-mision .container__mision p, .container__valores .container__inicio-mision .container__mision .container__nosotros--mision .container__article p, .contaniner__inicio-nosotros .container__article .container__inicio-mision .container__mision .container__valores p, .container__inicio-mision .container__mision .container__valores .contaniner__inicio-nosotros .container__article p, .container__nosotros--mision .container__article .container__inicio-mision .container__mision .container__valores p, .container__inicio-mision .container__mision .container__valores .container__nosotros--mision .container__article p {
         width: 80%;
-        font-size: 4em;
+        font-size: 3.3em;
         text-align: center;
         padding: 2rem 0 2rem 0; }
       .contaniner__inicio-nosotros .container__article p, .container__nosotros--mision .container__article p {
-        font-size: 2.3em;
+        font-size: 1.5em;
         padding: 2rem 0 2rem 0; }
   /*posicionar elementos mision vision valores*/
   .container__inicio-mision {
@@ -679,30 +724,40 @@ html {
   .container__title {
     /*size de los h2*/ }
     .container__title h2, .container__title .container__valores h3, .container__valores .container__title h3, .container__title .container__valores .container__inicio-mision .container__mision p, .container__valores .container__inicio-mision .container__mision .container__title p, .container__title .container__inicio-mision .container__mision .container__valores p, .container__inicio-mision .container__mision .container__valores .container__title p {
-      font-size: 6em; }
+      font-size: 4.1em; }
   /**SECCION-NOSOTROS**/
-  /*contenedor del h1 nosotros*/
-  .container__nosotros--img1 h1 {
-    padding: 6rem 0 6rem 0 !important; }
-  /*contenedor imagen mision vision*/
-  .nosotros__mision-vision {
-    /*imagen mision y vision*/ }
-    .nosotros__mision-vision img {
-      left: 0rem !important; }
-  /*contenedor general svg nuestros valores*/
-  .section__svg-valores {
-    flex-direction: column; }
+  .container__nosotros, .container__proyectos, .container__servicios, .container__contacto {
+    /*contenedor del h1 nosotros*/ }
+    .container__nosotros .container__nosotros--img1 h1, .container__proyectos .container__nosotros--img1 h1, .container__servicios .container__nosotros--img1 h1, .container__contacto .container__nosotros--img1 h1 {
+      padding: 6rem 0 6rem 0; }
+  .container__nosotros--mision {
+    /*contenedor imagen mision vision*/ }
+    .container__nosotros--mision .nosotros__mision-vision {
+      /*imagen mision y vision*/ }
+      .container__nosotros--mision .nosotros__mision-vision img {
+        left: 50%;
+        /* Se coloca en el 50% del ancho de su contenedor padre */
+        transform: translateX(-50%);
+        /* Centra el elemento restando la mitad de su propio ancho */ }
+  .container__valores {
+    /*contenedor general svg nuestros valores*/ }
+    .container__valores p {
+      font-size: 1.5em; }
+    .container__valores .section__svg-valores {
+      flex-direction: column; }
   /*SECCION PROYECTOS**/
-  /*contenedor h1 proyectos */
-  .container__proyectos--img1, .container__servicios .container__servicios--img1, .container__contacto .container__servicios--img1, .container__contacto .container__contacto--img1 {
-    padding: 0 0 4rem 0; }
+  .container__proyectos {
+    /*contenedor h1 proyectos */ }
+    .container__proyectos .container__proyectos--img1, .container__proyectos .container__contacto .container__contacto--img1, .container__contacto .container__proyectos .container__contacto--img1 {
+      padding: 6rem 0 4rem 0; }
   /*contenedor general de cards que contienen galerias*/
   .proyectos__galeria {
     flex-direction: column;
     padding: 2rem;
     /*boton ver galeria*/
     /*clase de subgaleria1 y 3*/
-    /*clase de subgaleria2*/ }
+    /*clase de subgaleria2*/
+    /*clase ventana modal de subgaleria*/ }
     .proyectos__galeria .btn__galeria {
       margin-bottom: 5rem; }
     .proyectos__galeria .proyectos__subgaleria, .proyectos__galeria .proyectos__subgaleria-2, .proyectos__galeria .servicios__galeria--grid {
@@ -712,11 +767,12 @@ html {
       display: flex;
       flex-direction: column; }
   /*SECCION SERVICIOS*/
-  /*seccion img1 h1 servicios*/
-  .container__servicios--img1, .container__contacto .container__contacto--img1 {
-    /*h1 servicios*/ }
-    .container__servicios--img1 h1, .container__contacto .container__contacto--img1 h1 {
-      padding: 15rem 0 3.7rem 0 !important; }
+  .container__servicios, .container__contacto {
+    /*seccion img1 h1 servicios*/ }
+    .container__servicios .container__servicios--img1, .container__contacto .container__servicios--img1, .container__contacto .container__contacto--img1 {
+      /*h1 servicios*/ }
+      .container__servicios .container__servicios--img1 h1, .container__contacto .container__servicios--img1 h1, .container__contacto .container__contacto--img1 h1 {
+        padding: 7rem 0 3.7rem 0; }
   /*seccion cards servicios*/
   /*contenedor grid cards*/
   .servicios__galeria--grid {
@@ -741,7 +797,7 @@ html {
     .footer__section .footer__container-button {
       /*boton contactanos*/ }
       .footer__section .footer__container-button button {
-        font-size: 1.7em; }
+        font-size: 1.5em; }
   /**SECCION-CONTACTO**/
   /***main***/
   /*contenedores generales mail whatsapp textos*/
@@ -753,7 +809,7 @@ html {
     flex-wrap: none;
     /*textos de email y numero tel*/ }
     .contacto__mail-whatsapp p {
-      font-size: 2.3em; }
+      font-size: 1.5em; }
   /*contenedor de textos del formulario*/
   .textos__formulario h2, .textos__formulario .container__valores h3, .container__valores .textos__formulario h3, .textos__formulario .container__valores .container__inicio-mision .container__mision p, .container__valores .container__inicio-mision .container__mision .textos__formulario p, .textos__formulario .container__inicio-mision .container__mision .container__valores p, .container__inicio-mision .container__mision .container__valores .textos__formulario p {
     font-size: 4rem !important;
@@ -785,7 +841,9 @@ html {
     /*quitar borde iconolmenu*/
     /*quitar borde al dar clic en menu*/ }
     .navbar .container img {
-      width: 19rem; }
+      width: 18em; }
+    .navbar .container a {
+      padding-left: 0%; }
     .navbar .navbar-toggler {
       border: none; }
     .navbar .navbar-toggler:focus {
@@ -797,8 +855,8 @@ html {
         font-size: 2em; }
   /******main******/
   /*parrafo 1 inicio-nosotros*/
-  .container__img1 h1, .container__nosotros .container__nosotros--img1 h1, .container__proyectos .container__nosotros--img1 h1, .container__servicios .container__nosotros--img1 h1, .container__contacto .container__nosotros--img1 h1, .container__proyectos--img1 h1, .container__servicios .container__servicios--img1 h1, .container__contacto .container__servicios--img1 h1, .container__contacto .container__contacto--img1 h1 {
-    padding: 6rem 2rem 2rem 2rem;
+  .container__img1 h1, .container__nosotros .container__nosotros--img1 h1, .container__proyectos .container__nosotros--img1 h1, .container__servicios .container__nosotros--img1 h1, .container__contacto .container__nosotros--img1 h1, .container__proyectos .container__proyectos--img1 h1, .container__servicios .container__servicios--img1 h1, .container__contacto .container__servicios--img1 h1, .container__contacto .container__contacto--img1 h1 {
+    padding: 2.5em 2rem 2rem 2rem;
     margin: 0;
     font-size: 3.5em; }
   /*posicionar elementos inicio nosotros*/
@@ -807,7 +865,11 @@ html {
     /*posicionar imagen 1 inicio nosotros*/
     /*dar ancho normal al contenedor inicio-nosotros*/ }
     .contaniner__inicio-nosotros img, .container__nosotros--mision img {
-      right: 0; }
+      right: 0;
+      left: 50%;
+      /* Se coloca en el 50% del ancho de su contenedor padre */
+      transform: translateX(-50%);
+      /* Centra el elemento restando la mitad de su propio ancho */ }
     .contaniner__inicio-nosotros .container__article, .container__nosotros--mision .container__article {
       width: 100%;
       margin-left: 0;
@@ -815,11 +877,11 @@ html {
       /*size parrafos*/ }
       .contaniner__inicio-nosotros .container__article h2, .container__nosotros--mision .container__article h2, .contaniner__inicio-nosotros .container__article .container__valores h3, .container__valores .contaniner__inicio-nosotros .container__article h3, .container__nosotros--mision .container__article .container__valores h3, .container__valores .container__nosotros--mision .container__article h3, .contaniner__inicio-nosotros .container__article .container__valores .container__inicio-mision .container__mision p, .container__valores .container__inicio-mision .container__mision .contaniner__inicio-nosotros .container__article p, .container__nosotros--mision .container__article .container__valores .container__inicio-mision .container__mision p, .container__valores .container__inicio-mision .container__mision .container__nosotros--mision .container__article p, .contaniner__inicio-nosotros .container__article .container__inicio-mision .container__mision .container__valores p, .container__inicio-mision .container__mision .container__valores .contaniner__inicio-nosotros .container__article p, .container__nosotros--mision .container__article .container__inicio-mision .container__mision .container__valores p, .container__inicio-mision .container__mision .container__valores .container__nosotros--mision .container__article p {
         width: 80%;
-        font-size: 4em;
+        font-size: 3.3em;
         text-align: center;
         padding: 2rem 0 2rem 0; }
       .contaniner__inicio-nosotros .container__article p, .container__nosotros--mision .container__article p {
-        font-size: 2.3em;
+        font-size: 1.5em;
         padding: 2rem 0 2rem 0; }
   /*posicionar elementos mision vision valores*/
   .container__inicio-mision {
@@ -829,20 +891,23 @@ html {
     flex-direction: column;
     row-gap: 2.3rem; }
   /**SECCION-NOSOTROS**/
-  /*contenedor del h1 nosotros*/
-  .container__nosotros--img1 h1 {
-    padding: 10rem 0 10rem 0 !important; }
-  /*contenedor imagen mision vision*/
-  .nosotros__mision-vision {
-    /*imagen mision y vision*/ }
-    .nosotros__mision-vision img {
-      left: 0rem !important; }
+  .container__nosotros, .container__proyectos, .container__servicios, .container__contacto {
+    /*contenedor del h1 nosotros*/ }
+    .container__nosotros .container__nosotros--img1 h1, .container__proyectos .container__nosotros--img1 h1, .container__servicios .container__nosotros--img1 h1, .container__contacto .container__nosotros--img1 h1 {
+      padding: 2.5em 0 2.5em 0; }
+  .container__nosotros--mision {
+    /*contenedor imagen mision vision*/ }
+    .container__nosotros--mision .nosotros__mision-vision {
+      /*imagen mision y vision*/ }
+      .container__nosotros--mision .nosotros__mision-vision img {
+        left: 50%;
+        transform: translateX(-50%); }
   /*contenedor general svg nuestros valores*/
   .section__svg-valores {
     flex-direction: column; }
   /*SECCION PROYECTOS**/
   /*contenedor h1 proyectos */
-  .container__proyectos--img1, .container__servicios .container__servicios--img1, .container__contacto .container__servicios--img1, .container__contacto .container__contacto--img1 {
+  .container__proyectos--img1, .container__contacto .container__contacto--img1 {
     padding: 0 0 4rem 0; }
   /*contenedor galeria general de cards que contienen galerias*/
   .proyectos__galeria {
@@ -860,11 +925,13 @@ html {
       display: flex;
       flex-direction: column; }
   /*SECCION SERVICIOS*/
-  /*seccion img1 h1 servicios*/
-  .container__servicios--img1, .container__contacto .container__contacto--img1 {
-    /*h1 servicios*/ }
-    .container__servicios--img1 h1, .container__contacto .container__contacto--img1 h1 {
-      padding: 19rem 0 3.7rem 0 !important; }
+  /*contenedor titulo y franjas*/
+  .container__servicios, .container__contacto {
+    /*seccion img1 h1 servicios*/ }
+    .container__servicios .container__servicios--img1, .container__contacto .container__servicios--img1, .container__contacto .container__contacto--img1 {
+      /*h1 servicios*/ }
+      .container__servicios .container__servicios--img1 h1, .container__contacto .container__servicios--img1 h1, .container__contacto .container__contacto--img1 h1 {
+        padding: 15rem 0 3.7rem 0; }
   /*seccion cards servicios*/
   /*contenedor grid cards*/
   .servicios__galeria--grid {
@@ -884,19 +951,21 @@ html {
     flex-wrap: none;
     /*textos de email y numero tel*/ }
     .contacto__mail-whatsapp p {
-      font-size: 2.3em; }
-  /*contenedor de textos del formulario*/
-  .textos__formulario h2, .textos__formulario .container__valores h3, .container__valores .textos__formulario h3, .textos__formulario .container__valores .container__inicio-mision .container__mision p, .container__valores .container__inicio-mision .container__mision .textos__formulario p, .textos__formulario .container__inicio-mision .container__mision .container__valores p, .container__inicio-mision .container__mision .container__valores .textos__formulario p {
-    font-size: 4rem !important;
-    text-align: center; }
-  .textos__formulario p {
-    text-align: center; }
-  /*reducir ancho de imputs*/
-  .imput, .formulario__boton .boton, .formulario__boton .boton__modal-footer {
-    width: 37rem !important; }
-  .boton, .boton__modal-footer {
-    background-color: #eb5f07 !important;
-    color: white !important; }
+      font-size: 1.5em; }
+  .contacto__formulario-texto {
+    /*contenedor de textos del formulario*/ }
+    .contacto__formulario-texto .textos__formulario h2, .contacto__formulario-texto .textos__formulario .container__valores h3, .container__valores .contacto__formulario-texto .textos__formulario h3, .contacto__formulario-texto .textos__formulario .container__valores .container__inicio-mision .container__mision p, .container__valores .container__inicio-mision .container__mision .contacto__formulario-texto .textos__formulario p, .contacto__formulario-texto .textos__formulario .container__inicio-mision .container__mision .container__valores p, .container__inicio-mision .container__mision .container__valores .contacto__formulario-texto .textos__formulario p {
+      font-size: 4rem;
+      text-align: center; }
+    .contacto__formulario-texto .textos__formulario p {
+      text-align: center; }
+  .formulario__boton {
+    /*reducir ancho de imputs*/ }
+    .formulario__boton .imput, .formulario__boton .boton, .formulario__boton .boton__modal-footer {
+      width: 37rem; }
+    .formulario__boton .boton, .formulario__boton .boton__modal-footer {
+      background-color: #eb5f07;
+      color: white; }
   /******footer****/
   /*orientacion del footer*/
   .footer__section {
@@ -906,15 +975,15 @@ html {
     /*reducir letra del boton contactanos*/ }
     .footer__section img {
       width: 100%; }
-    .footer__section .footer__container-redes {
-      align-items: flex-start !important;
+    .footer__section .footer__container-2 .footer__container-redes {
+      align-items: flex-start;
       /*size textos mail-what*/ }
-      .footer__section .footer__container-redes .footer__container-mail p {
-        font-size: 2em !important; }
+      .footer__section .footer__container-2 .footer__container-redes .footer__container-mail p {
+        font-size: 2em; }
     .footer__section .footer__container-button {
       /*boton contactanos*/ }
       .footer__section .footer__container-button button {
-        font-size: 1.7em; }
+        font-size: 1.5em; }
   /**footer***/
   .modal__titulo-color .modal__titulo p {
     position: relative;
@@ -934,7 +1003,7 @@ html {
     /*quitar borde iconolmenu*/
     /*quitar borde al dar clic en menu*/ }
     .navbar .container img {
-      width: 100%; }
+      width: 90%; }
     .navbar .navbar-toggler {
       border: none; }
     .navbar .navbar-toggler:focus {
@@ -946,8 +1015,8 @@ html {
         font-size: 2em; }
   /******main******/
   /*parrafo 1 inicio-nosotros*/
-  .container__img1 h1, .container__nosotros .container__nosotros--img1 h1, .container__proyectos .container__nosotros--img1 h1, .container__servicios .container__nosotros--img1 h1, .container__contacto .container__nosotros--img1 h1, .container__proyectos--img1 h1, .container__servicios .container__servicios--img1 h1, .container__contacto .container__servicios--img1 h1, .container__contacto .container__contacto--img1 h1 {
-    padding: 10rem 7rem 4rem 7rem;
+  .container__img1 h1, .container__nosotros .container__nosotros--img1 h1, .container__proyectos .container__nosotros--img1 h1, .container__servicios .container__nosotros--img1 h1, .container__contacto .container__nosotros--img1 h1, .container__proyectos .container__proyectos--img1 h1, .container__servicios .container__servicios--img1 h1, .container__contacto .container__servicios--img1 h1, .container__contacto .container__contacto--img1 h1 {
+    padding: 2.5em 7rem 4rem 7rem;
     margin: 0;
     font-size: 3.5em; }
   /*posicionar elementos inicio nosotros*/
@@ -956,7 +1025,11 @@ html {
     /*posicionar imagen 1 inicio nosotros*/
     /*dar ancho normal al contenedor inicio-nosotros*/ }
     .contaniner__inicio-nosotros img, .container__nosotros--mision img {
-      right: 0; }
+      right: 0;
+      left: 50%;
+      /* Se coloca en el 50% del ancho de su contenedor padre */
+      transform: translateX(-50%);
+      /* Centra el elemento restando la mitad de su propio ancho */ }
     .contaniner__inicio-nosotros .container__article, .container__nosotros--mision .container__article {
       width: 100%;
       margin-left: 0;
@@ -964,11 +1037,11 @@ html {
       /*size parrafos*/ }
       .contaniner__inicio-nosotros .container__article h2, .container__nosotros--mision .container__article h2, .contaniner__inicio-nosotros .container__article .container__valores h3, .container__valores .contaniner__inicio-nosotros .container__article h3, .container__nosotros--mision .container__article .container__valores h3, .container__valores .container__nosotros--mision .container__article h3, .contaniner__inicio-nosotros .container__article .container__valores .container__inicio-mision .container__mision p, .container__valores .container__inicio-mision .container__mision .contaniner__inicio-nosotros .container__article p, .container__nosotros--mision .container__article .container__valores .container__inicio-mision .container__mision p, .container__valores .container__inicio-mision .container__mision .container__nosotros--mision .container__article p, .contaniner__inicio-nosotros .container__article .container__inicio-mision .container__mision .container__valores p, .container__inicio-mision .container__mision .container__valores .contaniner__inicio-nosotros .container__article p, .container__nosotros--mision .container__article .container__inicio-mision .container__mision .container__valores p, .container__inicio-mision .container__mision .container__valores .container__nosotros--mision .container__article p {
         width: 80%;
-        font-size: 4em;
+        font-size: 3.3em;
         text-align: center;
         padding: 2rem 0 2rem 0; }
       .contaniner__inicio-nosotros .container__article p, .container__nosotros--mision .container__article p {
-        font-size: 2.3em;
+        font-size: 1.5em;
         padding: 2rem 0 2rem 0; }
   /*posicionar elementos mision vision valores*/
   .container__inicio-mision {
@@ -978,11 +1051,11 @@ html {
     flex-direction: column;
     row-gap: 6rem; }
     .container__inicio--servicios h3, .container__inicio--servicios .container__inicio-mision .container__mision p, .container__inicio-mision .container__mision .container__inicio--servicios p {
-      font-size: 4em; }
+      font-size: 3.3em; }
   /**SECCION-NOSOTROS**/
   /*contenedor del h1 nosotros*/
   .container__nosotros--img1 h1 {
-    padding: 10rem 0 10rem 0 !important; }
+    padding: 2.5em 0 2.5em 0 !important; }
   /*contenedor imagen mision vision*/
   .nosotros__mision-vision {
     /*imagen mision y vision*/ }
@@ -1012,7 +1085,7 @@ html {
   .container__servicios--img1, .container__contacto .container__contacto--img1 {
     /*h1 servicios*/ }
     .container__servicios--img1 h1, .container__contacto .container__contacto--img1 h1 {
-      padding: 15rem 0 10rem 0 !important; }
+      padding: 15rem 0 2.5em 0 !important; }
   /*contenedor grid cards*/
   .servicios__galeria--grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1038,11 +1111,11 @@ html {
       align-items: flex-start !important;
       /*size textos mail-what*/ }
       .footer__section .footer__container-redes .footer__container-mail p {
-        font-size: 2.8em !important; }
+        font-size: 2.1em !important; }
     .footer__section .footer__container-button {
       /*boton contactanos*/ }
       .footer__section .footer__container-button button {
-        font-size: 2.8em; }
+        font-size: 2.1em; }
   /*reducir ancho de imputs*/
   .imput, .formulario__boton .boton, .formulario__boton .boton__modal-footer {
     width: 37rem !important; }
@@ -1069,7 +1142,7 @@ html {
     margin-left: 10rem;
     /*size h3*/ }
     .container__inicio--servicios h3, .container__inicio--servicios .container__inicio-mision .container__mision p, .container__inicio-mision .container__mision .container__inicio--servicios p {
-      font-size: 4em; }
+      font-size: 3.3em; }
     .container__inicio--servicios img {
       width: 50%;
       margin-left: 20rem; }
@@ -1088,16 +1161,16 @@ html {
       /*size parrafos*/ }
       .contaniner__inicio-nosotros .container__article h2, .container__nosotros--mision .container__article h2, .contaniner__inicio-nosotros .container__article .container__valores h3, .container__valores .contaniner__inicio-nosotros .container__article h3, .container__nosotros--mision .container__article .container__valores h3, .container__valores .container__nosotros--mision .container__article h3, .contaniner__inicio-nosotros .container__article .container__valores .container__inicio-mision .container__mision p, .container__valores .container__inicio-mision .container__mision .contaniner__inicio-nosotros .container__article p, .container__nosotros--mision .container__article .container__valores .container__inicio-mision .container__mision p, .container__valores .container__inicio-mision .container__mision .container__nosotros--mision .container__article p, .contaniner__inicio-nosotros .container__article .container__inicio-mision .container__mision .container__valores p, .container__inicio-mision .container__mision .container__valores .contaniner__inicio-nosotros .container__article p, .container__nosotros--mision .container__article .container__inicio-mision .container__mision .container__valores p, .container__inicio-mision .container__mision .container__valores .container__nosotros--mision .container__article p {
         width: 80%;
-        font-size: 4em;
+        font-size: 3.3em;
         text-align: center;
         padding: 2rem 0 2rem 0; }
       .contaniner__inicio-nosotros .container__article p, .container__nosotros--mision .container__article p {
-        font-size: 2.3em;
+        font-size: 1.5em;
         padding: 2rem 0 2rem 0; }
   /**SECCION-NOSOTROS**/
   /*contenedor del h1 nosotros*/
   .container__nosotros--img1 h1 {
-    padding: 10rem 0 10rem 0 !important; }
+    padding: 2.5em 0 2.5em 0 !important; }
   /*contenedor imagen mision vision*/
   .nosotros__mision-vision {
     /*imagen mision y vision*/ }
@@ -1115,17 +1188,24 @@ html {
       align-items: flex-start !important;
       /*size textos mail-what*/ }
       .footer__section .footer__container-redes .footer__container-mail p {
-        font-size: 2.8em !important; } }
+        font-size: 2.1em !important; } }
 
 /**desktop_small**/
 @media screen and (min-width: 992px) and (max-width: 1200px) {
   /**header**/
   /*clase header*/
   .header {
-    /* size fuente nav a*/
     /*contenedor img logo*/ }
-    .header .navbar-nav a {
-      margin: 0rem 1.5rem 0rem 0rem; }
+    .header .navbar {
+      /*position para correr un poco el nav*/ }
+      .header .navbar .navbar-collapse {
+        position: relative;
+        left: 10%;
+        /* size fuente nav a*/ }
+        .header .navbar .navbar-collapse .navbar-nav a {
+          margin: 0rem 1.5rem 0rem 0rem;
+          position: relative;
+          left: 15%; }
     .header .container {
       /*logo img*/ }
       .header .container img {
@@ -1137,6 +1217,15 @@ html {
 
 /*desktop */
 @media screen and (min-width: 1201px) {
+  /*header*/
+  .navbar {
+    /*position para correr un poco el nav*/ }
+    .navbar .navbar-collapse {
+      position: relative;
+      left: 20%;
+      /* size fuente nav a*/ }
+      .navbar .navbar-collapse .navbar-nav a {
+        margin: 0rem 1.5rem 0rem 0rem; }
   /***main**/
   /*espacio interno contenedor color-rosa*/
   .container__article-texto, .container__nosotros--mision .nosotros__article-misionvision {

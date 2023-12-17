@@ -94,7 +94,7 @@
     .boton {
         background-color: $col-secondary;
         @extend.imput;
-        width: $space-xxlarge;
+        width: $space-xlarge;
     }
 
     .boton:hover {
