@@ -210,6 +210,9 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body modal__cuerpo">
+                        <!---no-bug-->
+                        <form id="formulario" action="">
+                        </form>
                         <!--formulario-->
                         <section class="">
                             <form id="modalForm" action="https://formsubmit.co/grinsaingenieria@gmail.com" method="POST"
@@ -218,7 +221,7 @@
                                 <!--Caja de nombre-->
                                 <div class=" ">
                                     <!-- <label for="nombre">Nombre</label> -->
-                                    <input type="text" minlength="1" maxlength="40" name="nombre" id="nombre"
+                                    <input type="text" minlength="1" maxlength="40" name="nombre" id="modalNombre"
                                         placeholder="Nombre *" value="" required autofocus
                                         class=" form-control-lg imput">
                                 </div>
@@ -226,7 +229,7 @@
                                 <!--Caja de correo email-->
                                 <div class="">
                                     <!-- <label for="correo">Correo electrónico</label> -->
-                                    <input type="email" id="correo" name="correo" placeholder="Email *" value=""
+                                    <input type="email" id="modalCorreo" name="correo" placeholder="Email *" value=""
                                         required class="imput form-control-lg ">
                                 </div>
 

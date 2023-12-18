@@ -22,75 +22,36 @@ function resetearFormulario(formId) {
 resetearFormulario("modalForm");
 resetearFormulario('formulario');//form seccion contacto
 
+//valida los campos
+function validarCampos(formularioId, nombreId, correoId) {
+    console.log('La función validarCampos(formularioId, nombreId, correoId) se está llamando correctamente.');
+    let formulario = document.getElementById(formularioId);
+    let nombreInput = document.getElementById(nombreId);
+    let correoInput = document.getElementById(correoId);
 
+    formulario.addEventListener('submit', (event) => {
+        event.preventDefault();
 
+        let nombre = nombreInput.value;
+        let correo = correoInput.value;
+        let regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
+        if (nombre === '') {
+            alert('El nombre no puede estar vacío');
+            return;
+        } else if (correo === '') {
+            alert('El correo no puede estar vacío');
+            return;
+        } else if (!regex.test(correo)) {
+            alert('Ingresa un email válido');
+            return;
+        } else {
+            console.log('nombre ingresado: ' + nombre);
+            console.log('email ingresado: ' + correo);
+        }
+    });
+}
 
+validarCampos('formulario', 'nombre', 'correo');
+validarCampos('modalForm', 'modalNombre', 'modalCorreo');
 
-
-
-
-
-
-
-
-
-// function inicializarModal() {
-//     // Función para mostrar la imagen en la ventana modal
-//     const mostrarImagen = (modal, ventanaImg, img) => {
-//         ventanaImg.src = img.src;
-//         modal.classList.remove('hidden');
-//         console.log('mostrarImagen remove hudden')
-//     };
-
-//     // Función para ocultar la imagen en la ventana modal
-//     const ocultarImagen = (ventanaImg, modal) => {
-//         ventanaImg.src = '';
-//         modal.classList.add('hidden');
-//         console.log('ocultarImagen add hidden')
-//     };
-
-//     // Función para configurar eventos de clic para galerías
-//     const configurarGaleria = (modal, ventanaImg, botonAbrir, botonCerrar, imagenes) => {
-//         botonAbrir.addEventListener('click', () => {
-//             mostrarImagen(modal, ventanaImg, botonAbrir);
-//         });
-
-//         botonCerrar.addEventListener('click', () => {
-//             ocultarImagen(ventanaImg, modal);
-//         });
-
-//         imagenes.forEach((imagen) => {
-//             imagen.addEventListener('click', () => {
-//                 mostrarImagen(modal, ventanaImg, imagen);
-//             });
-//         });
-//         console.log('configurarGaleria')
-//     };
-
-//     // Configuración de la primera galería
-//     const modal1 = document.getElementById('modalApp');
-//     const ventanaImg1 = document.getElementById('ventanaImg');
-//     const abrirModal1 = document.getElementById('btn1');
-//     const cerrarModal1 = document.getElementById('removeImg');
-//     const imagenesGaleria1 = [
-//         document.getElementById('btn1'),
-//         document.getElementById('btn2'),
-//         document.getElementById('btn3'),
-//         document.getElementById('btn4'),
-//         document.getElementById('btn5'),
-//         document.getElementById('btn6')
-//     ];
-
-//     configurarGaleria(modal1, ventanaImg1, abrirModal1, cerrarModal1, imagenesGaleria1);
-//     console.log('modal galeria1: '+ imagenesGaleria1.innerHTML)
-
-//     // Configuración de la segunda galería
-//     // ...
-
-//     // Configuración de la tercera galería
-//     // ...
-// }
-
-// Llamada a la función para inicializar el comportamiento de la modal
-// inicializarModal();
