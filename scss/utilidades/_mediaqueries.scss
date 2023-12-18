@@ -61,7 +61,7 @@
 
     /*posicionar elementos inicio nosotros*/
     .contaniner__inicio-nosotros {
-        flex-direction: column-reverse;
+        flex-direction: column;
 
         /*posicionar imagen 1 inicio nosotros*/
         img {
@@ -360,7 +360,7 @@
 
     /*posicionar elementos inicio nosotros*/
     .contaniner__inicio-nosotros {
-        flex-direction: column-reverse;
+        flex-direction: column;
 
         /*posicionar imagen 1 inicio nosotros*/
         img {
@@ -639,7 +639,7 @@
 
     /*posicionar elementos inicio nosotros*/
     .contaniner__inicio-nosotros {
-        flex-direction: column-reverse;
+        flex-direction: column;
 
         /*posicionar imagen 1 inicio nosotros*/
         img {
@@ -690,20 +690,29 @@
 
     /**SECCION-NOSOTROS**/
 
-    /*contenedor del h1 nosotros*/
-    .container__nosotros--img1 {
+    .container__nosotros {
 
-        h1 {
-            padding: $space-xxlarge 0 $space-xxlarge 0 !important;
+        /*contenedor del h1 nosotros*/
+        .container__nosotros--img1 {
+
+            h1 {
+                padding: $space-xxlarge 0 $space-xxlarge 0;
+            }
         }
     }
 
-    /*contenedor imagen mision vision*/
-    .nosotros__mision-vision {
 
-        /*imagen mision y vision*/
-        img {
-            left: 0rem !important;
+    /*contenedor imagen mision vision*/
+    .container__nosotros--mision {
+
+        /*contenedor imagen mision vision*/
+        .nosotros__mision-vision {
+
+            /*imagen mision y vision*/
+            img {
+                left: 50%;
+                transform: translateX(-50%);
+            }
         }
     }
 
@@ -739,14 +748,18 @@
 
     /*SECCION SERVICIOS*/
 
-    /*seccion img1 h1 servicios*/
-    .container__servicios--img1 {
+    .container__servicios {
 
-        /*h1 servicios*/
-        h1 {
-            padding: $space-xxxlarge 0 $space-xxlarge 0 !important;
+        /*seccion img1 h1 servicios*/
+        .container__servicios--img1 {
+
+            /*h1 servicios*/
+            h1 {
+                padding: $space-xxxlarge 0 $space-xxlarge 0;
+            }
         }
     }
+
 
     /*contenedor grid cards*/
     .servicios__galeria--grid {
@@ -781,6 +794,7 @@
         & img {
             width: 100%;
         }
+
 
         .footer__container-redes {
             align-items: flex-start !important;
@@ -860,11 +874,13 @@
     /**main**/
     /*posicionar elementos inicio nosotros*/
     .contaniner__inicio-nosotros {
-        flex-direction: column-reverse;
+        flex-direction: column;
 
         /*posicionar imagen 1 inicio nosotros*/
         img {
             right: 0;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         /*dar ancho normal al contenedor inicio-nosotros*/
@@ -892,21 +908,31 @@
     /**SECCION-NOSOTROS**/
 
     /*contenedor del h1 nosotros*/
-    .container__nosotros--img1 {
+    .container__nosotros {
 
-        h1 {
-            padding: $space-xxlarge 0 $space-xxlarge 0 !important;
+        .container__nosotros--img1 {
+
+            h1 {
+                padding: $space-xxlarge 0 $space-xxlarge 0;
+            }
         }
     }
 
-    /*contenedor imagen mision vision*/
-    .nosotros__mision-vision {
 
-        /*imagen mision y vision*/
-        img {
-            left: 0rem !important;
+    .container__nosotros--mision {
+
+        /*contenedor imagen mision vision*/
+        .nosotros__mision-vision {
+
+            /*imagen mision y vision*/
+            img {
+                right: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
         }
     }
+
 
     /******footer****/
     /*orientacion del footer*/
