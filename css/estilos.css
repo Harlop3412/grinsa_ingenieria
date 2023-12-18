@@ -691,7 +691,7 @@ html {
     font-size: 1.5em; }
   /*posicionar elementos inicio nosotros*/
   .contaniner__inicio-nosotros, .container__nosotros--mision {
-    flex-direction: column-reverse;
+    flex-direction: column;
     /*posicionar imagen 1 inicio nosotros*/
     /*dar ancho normal al contenedor inicio-nosotros*/ }
     .contaniner__inicio-nosotros img, .container__nosotros--mision img {
@@ -861,7 +861,7 @@ html {
     font-size: 3.5em; }
   /*posicionar elementos inicio nosotros*/
   .contaniner__inicio-nosotros, .container__nosotros--mision {
-    flex-direction: column-reverse;
+    flex-direction: column;
     /*posicionar imagen 1 inicio nosotros*/
     /*dar ancho normal al contenedor inicio-nosotros*/ }
     .contaniner__inicio-nosotros img, .container__nosotros--mision img {
@@ -1021,7 +1021,7 @@ html {
     font-size: 3.5em; }
   /*posicionar elementos inicio nosotros*/
   .contaniner__inicio-nosotros, .container__nosotros--mision {
-    flex-direction: column-reverse;
+    flex-direction: column;
     /*posicionar imagen 1 inicio nosotros*/
     /*dar ancho normal al contenedor inicio-nosotros*/ }
     .contaniner__inicio-nosotros img, .container__nosotros--mision img {
@@ -1053,14 +1053,18 @@ html {
     .container__inicio--servicios h3, .container__inicio--servicios .container__inicio-mision .container__mision p, .container__inicio-mision .container__mision .container__inicio--servicios p {
       font-size: 3.3em; }
   /**SECCION-NOSOTROS**/
-  /*contenedor del h1 nosotros*/
-  .container__nosotros--img1 h1 {
-    padding: 2.5em 0 2.5em 0 !important; }
+  .container__nosotros, .container__proyectos, .container__servicios, .container__contacto {
+    /*contenedor del h1 nosotros*/ }
+    .container__nosotros .container__nosotros--img1 h1, .container__proyectos .container__nosotros--img1 h1, .container__servicios .container__nosotros--img1 h1, .container__contacto .container__nosotros--img1 h1 {
+      padding: 2.5em 0 2.5em 0; }
   /*contenedor imagen mision vision*/
-  .nosotros__mision-vision {
-    /*imagen mision y vision*/ }
-    .nosotros__mision-vision img {
-      left: 0rem !important; }
+  .container__nosotros--mision {
+    /*contenedor imagen mision vision*/ }
+    .container__nosotros--mision .nosotros__mision-vision {
+      /*imagen mision y vision*/ }
+      .container__nosotros--mision .nosotros__mision-vision img {
+        left: 50%;
+        transform: translateX(-50%); }
   /*contenedor general svg nuestros valores*/
   .section__svg-valores {
     flex-direction: column; }
@@ -1081,11 +1085,12 @@ html {
       display: flex;
       flex-direction: column; }
   /*SECCION SERVICIOS*/
-  /*seccion img1 h1 servicios*/
-  .container__servicios--img1, .container__contacto .container__contacto--img1 {
-    /*h1 servicios*/ }
-    .container__servicios--img1 h1, .container__contacto .container__contacto--img1 h1 {
-      padding: 15rem 0 2.5em 0 !important; }
+  .container__servicios, .container__contacto {
+    /*seccion img1 h1 servicios*/ }
+    .container__servicios .container__servicios--img1, .container__contacto .container__servicios--img1, .container__contacto .container__contacto--img1 {
+      /*h1 servicios*/ }
+      .container__servicios .container__servicios--img1 h1, .container__contacto .container__servicios--img1 h1, .container__contacto .container__contacto--img1 h1 {
+        padding: 15rem 0 2.5em 0; }
   /*contenedor grid cards*/
   .servicios__galeria--grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1149,11 +1154,13 @@ html {
   /**main**/
   /*posicionar elementos inicio nosotros*/
   .contaniner__inicio-nosotros, .container__nosotros--mision {
-    flex-direction: column-reverse;
+    flex-direction: column;
     /*posicionar imagen 1 inicio nosotros*/
     /*dar ancho normal al contenedor inicio-nosotros*/ }
     .contaniner__inicio-nosotros img, .container__nosotros--mision img {
-      right: 0; }
+      right: 0;
+      left: 50%;
+      transform: translateX(-50%); }
     .contaniner__inicio-nosotros .container__article, .container__nosotros--mision .container__article {
       width: 100%;
       margin-left: 0;
@@ -1169,13 +1176,16 @@ html {
         padding: 2rem 0 2rem 0; }
   /**SECCION-NOSOTROS**/
   /*contenedor del h1 nosotros*/
-  .container__nosotros--img1 h1 {
-    padding: 2.5em 0 2.5em 0 !important; }
-  /*contenedor imagen mision vision*/
-  .nosotros__mision-vision {
-    /*imagen mision y vision*/ }
-    .nosotros__mision-vision img {
-      left: 0rem !important; }
+  .container__nosotros .container__nosotros--img1 h1, .container__proyectos .container__nosotros--img1 h1, .container__servicios .container__nosotros--img1 h1, .container__contacto .container__nosotros--img1 h1 {
+    padding: 2.5em 0 2.5em 0; }
+  .container__nosotros--mision {
+    /*contenedor imagen mision vision*/ }
+    .container__nosotros--mision .nosotros__mision-vision {
+      /*imagen mision y vision*/ }
+      .container__nosotros--mision .nosotros__mision-vision img {
+        right: 0;
+        left: 50%;
+        transform: translateX(-50%); }
   /******footer****/
   /*orientacion del footer*/
   .footer__section {
