@@ -30,6 +30,9 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!--estilos.css-->
     <link rel="stylesheet" href="css/estilos.css">
+
+    <!-- Precarga la imagen LCP con una alta prioridad de recuperación para que comience a cargarse con la hoja de estilos. -->
+    <link rel="preload" fetchpriority="high" as="image" href="./recursos/seccion_inicio/imagenes/seccion_inicio.jpg" type="image/webp">
     <title>Inicio</title>
 </head>
 
@@ -40,7 +43,7 @@
 
             <div class="container">
                 <!--logo-->
-                <img src=".//recursos/logos/logo_naranja.png" alt="logo_naranja" class="">
+                <img src="./recursos/logos/logo_naranja.png" alt="logo_naranja" class="" width="300" height="auto">
 
             </div>
             <div class="">
@@ -104,7 +107,7 @@
                 </div>
             </article>
             <div class="">
-                <img src="./recursos/seccion_inicio/imagenes/seccion_inicio_nosotros.jpg" alt="incio_nosotros">
+                <img src="./recursos/seccion_inicio/imagenes/seccion_inicio_nosotros.jpg" alt="incio_nosotros" width="800" height="auto">
             </div>
         </section>
 
@@ -193,7 +196,7 @@
                     </div>
                     <div class="carousel-item">
                         <img src="./recursos/seccion_inicio/imagenes/seccion_inicio_proyectos_carrusel_2.jpg"
-                            class="d-block w-100" alt="inicio_carousel2">
+                            class="d-block w-100" alt="inicio_carousel2" width="1000" height="auto">
                         <div class="carousel-caption d-none d-md-block">
                             <h5 class="carousel__letra">FABRICACIÓN Y MONTAJE DE TUBERIAS DE PROCESO</h5>
                         </div>
@@ -237,7 +240,7 @@
                 <div>
                     <a href="paginas/servicios.html"> <img
                             src="./recursos/seccion_inicio/svg/seccion_inicio_servicios_montajes.svg"
-                            alt="svg_montajes">
+                            alt="svg_montajes" width="300" height="auto">
                         <div>
                             <h3>Montajes, desmontajes
                                 y alineación</h3>
@@ -247,7 +250,7 @@
                 <div class="">
                     <a href="paginas/servicios.html"><img
                             src="./recursos/seccion_inicio/svg/seccion_inicio_servicios_fabricacion.svg"
-                            alt="svg_fabriacion">
+                            alt="svg_fabriacion" width="300" height="auto">
                         <div>
                             <h3>Fabricación y reparación</h3>
                         </div>
@@ -256,7 +259,7 @@
                 <div class="">
                     <a href="paginas/servicios.html"><img
                             src="./recursos/seccion_inicio/svg/seccion_inicio_servicios_construccion.svg"
-                            alt="svg_construccion">
+                            alt="svg_construccion" width="300" height="auto">
                         <div>
                             <h3>Construcción de
                                 obras civiles</h3>
@@ -266,7 +269,7 @@
                 <div>
                     <a href="paginas/servicios.html"><img
                             src="./recursos/seccion_inicio/svg/seccion_inicio_servicios_suministro.svg"
-                            alt="svg_suministro">
+                            alt="svg_suministro" width="300" height="auto">
                         <div>
                             <h3>Suministro de personal
                                 e interventorías</h3>
@@ -358,14 +361,14 @@
     <footer>
         <section class="footer__section">
             <div class="footer__container">
-                <a href="#"> <img src="./recursos/logos/logo_blanco.png" alt="logo_blanco"
+                <a href="#"> <img src="./recursos/logos/logo_blanco.png" alt="logo_blanco" width="300" height="auto"
                         class="footer__container-logo"></a>
                 <img src="./recursos/logos/copyright.svg" alt="copyright">
             </div>
             <div class="footer__container-2">
                 <div class="footer__container-redes">
                     <div class=""><a href="paginas/contacto.html#formulario"><img
-                                src="./recursos/Pie_de_pagina/mail.png" alt="mail"></a></div>
+                                src="./recursos/Pie_de_pagina/mail.png" alt="mail" width="20" height="auto"></a></div>
                     <div class="footer__container-mail">
                         <a href="paginas/contacto.html#formulario">
                             <p>contacto@grinsa.com.co</p>
@@ -376,7 +379,7 @@
                     <div class="footer__container-whatsapp">
                         <a href="footer__container-whatsapp">
                             <a href="https://api.whatsapp.com/send?phone=573103873180&text=Hola, quiero contactarlos"
-                                target="_blank"> <img src="./recursos/Pie_de_pagina/whatsapp.png" alt="whatsapp">
+                                target="_blank"> <img src="./recursos/Pie_de_pagina/whatsapp.png" alt="whatsapp" width="20" height="auto">
                             </a>
                     </div>
                     <div class="footer__container-mail">
